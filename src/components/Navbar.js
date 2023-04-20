@@ -17,9 +17,9 @@ export default function Navbar() {
   };
 
   return (
-    <div className="p-6 font-bold">
-      <div className="p-3 ml-60 flex justify-between">
-        <div className="flex w-1/2 justify-between">
+    <div className="p-6 pl-0 font-bold">
+      <div className="p-3 pl-0 ml-60 flex justify-between">
+        <div className="flex w-1/2 justify-between z-50">
           <span>
             <img src="/assets/logo.svg" alt="logo" />
           </span>
@@ -38,7 +38,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="flex">
+        <div className="flex z-50">
           <div
             className="flex items-center mr-20 cursor-pointer hover:text-berkand-orange"
             onMouseOver={() => setOver(true)}
@@ -69,7 +69,7 @@ export default function Navbar() {
               />
             </div>
             <ul
-              className={`z-50 absolute top-20 right-10 py-3 px-3 font-light border-[3px] rounded-lg border-black w-[185px] cursor-default ${
+              className={`z-50 absolute -top-64 right-10 py-3 px-3 font-light border-[3px] rounded-lg border-black w-[185px] cursor-default ${
                 open ? "top-20" : "-top-64"
               } ease-in-out duration-500`}
             >
