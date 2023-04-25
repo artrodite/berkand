@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import References from "../components/References";
-import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
 
 export default function Home() {
@@ -22,18 +21,17 @@ export default function Home() {
 
   return (
     <div>
-    
       {sticky && <GoTop />}
 
       {/* cable */}
 
-      <div className="absolute z-10 -top-12 left-[10px]">
+      {/* <div className="absolute z-10 -top-12 left-[10px]">
         <img className="" src="/assets/cable.svg" alt="" />
-      </div>
+      </div> */}
 
       {/* section1 */}
 
-      <section className="flex pl-60 pr-36 pt-28 pb-72 h-full z-50">
+      <section className="xl:flex pt-28 pb-72 h-full z-50 hidden container mx-auto">
         <div className="flex flex-col pr-28">
           <span className="font-normal text-[64px] leading-tight">
             Parlak Bir Gelecek için Çalışıyoruz.
@@ -65,46 +63,49 @@ export default function Home() {
       </section>
 
       {/* section2 */}
-
-      <section className="bg-black w-full h-screen relative flex pl-60">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50">
-          <img src="/assets/world.png" alt="" />
-        </div>
-        <div className="text-white flex flex-col w-2/5 justify-center pr-44">
-          <span className="font-black text-2xl">BERKAND MAKİNA</span>
-          <span className="font-semibold">Kablo Makinaları Üreticisi.</span>
-          <div className="font-normal text-xl mt-9 flex flex-col">
-            <span>
-              Berkand Makina 2010 yılından bu yana kablo makinaları
-              üretmektedir.
-            </span>
-            <span className="mt-7">
-              Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden,
-              kapsamlı makine çözümlerine ve mühendislik alanındaki teknolojik
-              geliştirmelere kadar faaliyet göstermektedir.
-            </span>
-            <span className="mt-7">
-              Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde
-              karşılamak, stratejimiz ise yeni bilgiler keşfetmeye ve mevcut
-              yöntemlerimizi geliştirmeye odaklanmaktır.
-            </span>
+      <section className="bg-black">
+        <div className="w-auto h-screen relative flex  container md:mx-auto mx-7 xl:justify-normal justify-center">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50">
+            <img className="xl:inline hidden" src="/assets/world.png" alt="" />
+            <img className="xl:hidden" src="/assets/world-mobile.png" alt="" />
+          </div>
+          <div className="text-white flex flex-col xl:w-2/5 justify-center items-start xl:pr-44 w-80">
+            <span className="font-black text-2xl">BERKAND MAKİNA</span>
+            <span className="font-semibold">Kablo Makinaları Üreticisi.</span>
+            <div className="font-normal xl:text-xl text-sm mt-9 flex flex-col">
+              <span>
+                Berkand Makina 2010 yılından bu yana kablo makinaları
+                üretmektedir.
+              </span>
+              <span className="mt-7">
+                Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden,
+                kapsamlı makine çözümlerine ve mühendislik alanındaki teknolojik
+                geliştirmelere kadar faaliyet göstermektedir.
+              </span>
+              <span className="mt-7">
+                Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde
+                karşılamak, stratejimiz ise yeni bilgiler keşfetmeye ve mevcut
+                yöntemlerimizi geliştirmeye odaklanmaktır.
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* section3 */}
 
-      <section className="relative px-60 py-52">
+      <section className="w-auto relative py-52 container md:mx-auto mx-7">
         <div className="absolute left-1/2 -translate-x-1/2 z-10 top-11">
-          <img src="/assets/lamp.svg" alt="" />
+          <img className="xl:inline hidden" src="/assets/lamp.png" alt="" />
+          <img className="xl:hidden" src="/assets/lamp-mobile.png" alt="" />
         </div>
         <div className="flex flex-col">
-          <span className="font-semibold text-4xl">
+          <span className="font-semibold xl:text-4xl text-2xl">
             Dünyayı Aydınlatıyoruz.
           </span>
           <div className="flex flex-col mt-16">
             <span className="font-semibold text-xl">EN YENİ TEKLONOJİ.</span>
-            <span className="font-normal text-xl mt-6">
+            <span className="font-normal xl:text-xl text-sm mt-6">
               Üretim süreçlerimizin tamamında, yeni teknolojilerden tam
               anlamıyla yararlanmak için gerekli araştırma ve geliştirmenin
               çalışmalarını sürdürüyor, yenilikçi süreçleri takip ediyoruz.
@@ -112,7 +113,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col mt-16">
             <span className="font-semibold text-xl">Çözüm Üretiyoruz.</span>
-            <span className="font-normal text-xl mt-6">
+            <span className="font-normal xl:text-xl text-sm mt-6">
               Tecrübeli ekibimiz makinelerimizi kapasitenize ve ihtiyaçlarınıza
               göre en verimli şekilde kullanabilmeniz için tasarlıyor.
               Hedefimiz, fabrikanızda en düşük maliyet ile en kaliteli bir ürünü
@@ -121,7 +122,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col mt-16">
             <span className="font-semibold text-xl">ONARIM & YENİLEME.</span>
-            <span className="font-normal text-xl mt-6">
+            <span className="font-normal xl:text-xl text-sm mt-6">
               Kablo ekipmanlarının bakımında yerli ve yabancı müşterilerimizin
               tüm marka ve modelleri ile ilgili kapsamlı bir çalışma yapıyor,
               onarım ve bakım işlemlerini gerçekleştiriyoruz.
@@ -129,7 +130,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col mt-16">
             <span className="font-semibold text-xl">DİNAMİK GELİŞME.</span>
-            <span className="font-normal text-xl mt-6">
+            <span className="font-normal xl:text-xl text-sm mt-6">
               Uluslararası pazardaki aktif faaliyetlerimiz sayesinde son
               yıllardaki üretim ciromuz %35 artış gösterdi.
             </span>
@@ -138,7 +139,6 @@ export default function Home() {
       </section>
 
       <References />
-      <Footer />
     </div>
   );
 }
