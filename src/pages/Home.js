@@ -1,13 +1,30 @@
 import React, { useState } from "react";
 import References from "../components/References";
 import Footer from "../components/Footer";
+import GoTop from "../components/GoTop";
 
 export default function Home() {
   let [over, setOver] = useState(false);
   let support_agent = "/assets/icons/support_agent.svg";
   let support_agentHover = "/assets/icons/support_agent-hover.svg";
+
+  const [sticky, setSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 30) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <div>
+    
+      {sticky && <GoTop />}
+
       {/* cable */}
 
       <div className="absolute z-10 -top-12 left-[10px]">
@@ -82,7 +99,9 @@ export default function Home() {
           <img src="/assets/lamp.svg" alt="" />
         </div>
         <div className="flex flex-col">
-          <span className="font-semibold text-4xl">Dünyayı Aydınlatıyoruz.</span>
+          <span className="font-semibold text-4xl">
+            Dünyayı Aydınlatıyoruz.
+          </span>
           <div className="flex flex-col mt-16">
             <span className="font-semibold text-xl">EN YENİ TEKLONOJİ.</span>
             <span className="font-normal text-xl mt-6">
@@ -117,9 +136,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      <References/>
-      <Footer/>
+
+      <References />
+      <Footer />
     </div>
   );
 }

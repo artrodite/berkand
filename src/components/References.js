@@ -7,7 +7,7 @@ export default function References() {
         for (let i=1; i<18; i++) {
             obj.push(<div className="" key={i}>
                 <img
-                    className="w-28 h-28"
+                    className="w-28 h-28 object-contain"
                     src={'/assets/brands/' + i + '.png'}
                     alt=""
                 />
@@ -18,14 +18,12 @@ export default function References() {
     }
     return (
         <section className="px-60 py-44">
-            <div className="flex">
+            <div className="flex mb-16">
                 <span className="font-normal text-2xl">Referanslarımız</span>
                 <img className="ml-2" src="/assets/icons/union.svg" alt=""/>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-20">
                 {createReferences()}
-
-
             </div>
             {/*<div className="flex flex-col mt-20">*/}
             {/*  <div className="flex justify-between">*/}
