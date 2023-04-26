@@ -12,6 +12,7 @@ module.exports = {
         "white": "#FFFFFF",
         "grey": "#A8A8A8",
         "text-grey": "#585858",
+        "form-input": "#F4F4F4",
       },
     },
   },

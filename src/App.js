@@ -1,12 +1,12 @@
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
 import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <div className="App font-[Roboto]">
       <Navbar />
-      <About />
+      <Contact />
       <Footer />
     </div>
   );
