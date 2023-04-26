@@ -17,13 +17,22 @@ export default function Navbar() {
   };
 
   return (
-    <div className="p-6 pl-0 font-bold">
-      <div className="p-3 pl-0 ml-60 flex justify-between">
-        <div className="flex w-1/2 justify-between z-50">
+    <div className="p-6 pl-0 font-bold container mx-auto">
+      <div className="p-3 pl-0 flex xl:justify-between justify-end">
+        <div className="flex w-auto md:justify-between z-50 xl:static xl:left-0 xl:-translate-x-0 absolute top-10 left-1/2 -translate-x-1/2">
           <span>
-            <img src="/assets/logo.svg" alt="logo" />
+            <img
+              className="xl:inline hidden"
+              src="/assets/logo.svg"
+              alt="logo"
+            />
+            <img
+              className="xl:hidden"
+              src="/assets/logo-mobile.svg"
+              alt="logo"
+            />
           </span>
-          <ul className="flex">
+          <ul className="xl:flex md:justify-center bg-white xl:w-auto w-full hidden">
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
               Ana Sayfa
             </li>
@@ -40,16 +49,20 @@ export default function Navbar() {
         </div>
         <div className="flex z-50">
           <div
-            className="flex items-center mr-20 cursor-pointer hover:text-berkand-orange"
+            className="items-center mr-20 cursor-pointer hover:text-berkand-orange xl:inline hidden"
             onMouseOver={() => setOver(true)}
             onMouseOut={() => setOver(false)}
           >
-          <a className="flex" href="/assets/catalog.pdf" download>
-            <span>Katalog</span>
-            <img className="ml-1" src={over ? catalogHover : catalog} alt="" />
-          </a>
+            <a className="flex" href="/assets/catalog.pdf" download>
+              <span>Katalog</span>
+              <img
+                className="ml-1"
+                src={over ? catalogHover : catalog}
+                alt=""
+              />
+            </a>
           </div>
-          <div className="items-center mr-20 cursor-pointer">
+          <div className="items-center cursor-pointer">
             <div
               className="flex hover:text-berkand-orange"
               onClick={languageHandler}
@@ -57,19 +70,27 @@ export default function Navbar() {
               onMouseOut={() => setOver2(false)}
             >
               <img
-                className="mr-[2px]"
+                className="mr-[2px] xl:inline hidden"
                 src={over2 ? languageHover : language}
                 alt=""
               />
-              <span>Dil</span>
+              <span className="xl:inline hidden">Dil</span>
               <img
-                className="ml-[2px]"
+                className="ml-[2px] xl:inline hidden"
                 src={over2 ? arrowDownHover : arrowDown}
+                alt=""
+              />
+
+              {/* mobile */}
+
+              <img
+                className="xl:hidden inline"
+                src="/assets/icons/language-mobile.svg"
                 alt=""
               />
             </div>
             <ul
-              className={`z-50 absolute -top-64 right-10 py-3 px-3 font-light border-[3px] rounded-lg border-black w-[185px] cursor-default ${
+              className={`bg-white z-50 absolute -top-64 right-10 py-3 px-3 font-light border-[3px] rounded-lg border-black w-[185px] cursor-default ${
                 open ? "top-20" : "-top-64"
               } ease-in-out duration-500`}
             >
@@ -105,6 +126,27 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div className="bg-white flex flex-col justify-center items-baseline xl:hidden mb-5">
+        <div className="mx-auto mt-10">
+          <span className="text-4xl font-normal">Hoşgeliniz!</span>
+          <ul className="md:justify-center bg-white xl:w-auto">
+            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+              Hakkımızda
+            </li>
+            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+              Ürünlerimiz
+            </li>
+            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+              <a className="flex" href="/assets/catalog.pdf" download>
+                <span>Katalog</span>
+              </a>
+            </li>
+            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+              İletişim
+            </li>
+          </ul>
         </div>
       </div>
     </div>
