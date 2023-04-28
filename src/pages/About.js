@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Swiper from "../components/Swiper";
 import References from "../components/References";
 import GoTop from "../components/GoTop";
@@ -16,9 +16,12 @@ export default function About() {
 
   window.addEventListener("scroll", handleScroll);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
-
       {sticky && <GoTop />}
 
       <Swiper />
@@ -45,7 +48,9 @@ export default function About() {
 
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row-reverse flex-col container mx-7 w-auto">
         <div className="flex flex-col lg:w-1/2">
-          <span className="font-black md:text-2xl text-base">Gelişen sektör</span>
+          <span className="font-black md:text-2xl text-base">
+            Gelişen sektör
+          </span>
           <span className="md:text-2xl text-base md:mt-8 mt-1">
             Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden,
             kapsamlı makine çözümlerine ve mühendislik alanındaki teknolojik
@@ -65,7 +70,9 @@ export default function About() {
 
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row flex-col container mx-7 w-auto">
         <div className="flex flex-col lg:w-1/2">
-          <span className="font-black md:text-2xl text-base">Müşteri Odaklı</span>
+          <span className="font-black md:text-2xl text-base">
+            Müşteri Odaklı
+          </span>
           <span className="md:text-2xl text-base md:mt-8 mt-1">
             Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde
             karşılamak, stratejimiz ise yeni bilgiler keşfetmeye ve mevcut

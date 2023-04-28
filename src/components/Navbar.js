@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   let [open, setOpen] = useState(false);
@@ -16,34 +17,40 @@ export default function Navbar() {
     setOpen(!open);
   };
 
+  const path = useLocation().pathname;
+
   return (
-    <div className="p-6 pl-0 font-bold container mx-auto">
+    <div className="xl:py-6 pr-0 pl-0 font-bold container mx-auto">
       <div className="p-3 pl-0 flex xl:justify-between justify-end">
-        <div className="flex w-auto md:justify-between z-50 xl:static xl:left-0 xl:-translate-x-0 absolute top-10 left-1/2 -translate-x-1/2">
-          <span>
-            <img
-              className="xl:inline hidden"
-              src="/assets/logo.svg"
-              alt="logo"
-            />
-            <img
-              className="xl:hidden"
-              src="/assets/logo-mobile.svg"
-              alt="logo"
-            />
-          </span>
+        <div className="flex w-auto md:justify-between z-50 xl:static xl:left-0 xl:-translate-x-0 absolute top-5 left-1/2 -translate-x-1/2">
+          <Link to="/">
+            <span>
+              <img
+                className="xl:inline hidden"
+                src="/assets/logo.svg"
+                alt="logo"
+              />
+              {path === "/" && (
+                <img
+                  className="xl:hidden"
+                  src="/assets/logo-mobile.svg"
+                  alt="logo"
+                />
+              )}
+            </span>
+          </Link>
           <ul className="xl:flex md:justify-center bg-white xl:w-auto w-full hidden">
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              Ana Sayfa
+              <Link to="/">Ana Sayfa</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              Hakkımızda
+              <Link to="/about">Hakkımızda</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              Ürünlerimiz
+              <Link to="/product">Ürünlerimiz</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              İletişim
+              <Link to="/contact">İletişim</Link>
             </li>
           </ul>
         </div>
@@ -83,11 +90,13 @@ export default function Navbar() {
 
               {/* mobile */}
 
-              <img
-                className="xl:hidden inline"
-                src="/assets/icons/language-mobile.svg"
-                alt=""
-              />
+              {path === "/" && (
+                <img
+                  className="xl:hidden inline"
+                  src="/assets/icons/language-mobile.svg"
+                  alt=""
+                />
+              )}
             </div>
             <ul
               className={`bg-white z-50 absolute -top-64 right-10 py-3 px-3 font-light border-[3px] rounded-lg border-black w-[185px] cursor-default ${
@@ -128,27 +137,56 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="bg-white flex flex-col justify-center items-baseline xl:hidden mb-5">
-        <div className="mx-auto mt-10">
-          <span className="text-4xl font-normal">Hoşgeliniz!</span>
-          <ul className="md:justify-center bg-white xl:w-auto">
-            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              Hakkımızda
-            </li>
-            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              Ürünlerimiz
-            </li>
-            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              <a className="flex" href="/assets/catalog.pdf" download>
-                <span>Katalog</span>
-              </a>
-            </li>
-            <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              İletişim
-            </li>
-          </ul>
+      {path === "/" && (
+        <div className="bg-white flex flex-col justify-center xl:hidden mb-5">
+          <div className="mx-auto mt-10 flex flex-col items-center">
+            <span className="text-4xl font-normal">Hoşgeldiniz!</span>
+            <ul className="md:justify-center mt-4 bg-white xl:w-auto flex flex-col justify-center items-center">
+              <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+                <Link to="/about">Hakkımızda</Link>
+              </li>
+              <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+                <Link to="/product">Ürünlerimiz</Link>
+              </li>
+              <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+                <a className="flex" href="/assets/catalog.pdf" download>
+                  <span>Katalog</span>
+                </a>
+              </li>
+              <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+                <Link to="/contact">İletişim</Link>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      )}
+      {path === "/about" && (
+        <div className="flex justify-between items-center my-10 mx-8 xl:hidden">
+          <Link to="/">
+            <img src="/assets/icons/home.svg" alt="" />
+          </Link>
+          <span className="font-bold text-berkand-blue">Hakkımızda</span>
+          <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
+        </div>
+      )}
+      {path === "/product" && (
+        <div className="flex justify-between items-center my-10 mx-8 xl:hidden">
+          <Link to="/">
+            <img src="/assets/icons/home.svg" alt="" />
+          </Link>
+          <span className="font-bold text-berkand-blue">Ürünlerimiz</span>
+          <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
+        </div>
+      )}
+      {path === "/contact" && (
+        <div className="flex justify-between items-center mt-10 mb-16 mx-8 xl:hidden">
+          <Link to="/">
+            <img src="/assets/icons/home.svg" alt="" />
+          </Link>
+          <span className="font-bold text-berkand-blue">İletişim</span>
+          <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
+        </div>
+      )}
     </div>
   );
 }

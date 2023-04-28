@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import References from "../components/References";
 import GoTop from "../components/GoTop";
 
@@ -18,6 +18,10 @@ export default function Home() {
   };
 
   window.addEventListener("scroll", handleScroll);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
