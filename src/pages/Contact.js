@@ -77,7 +77,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="w-auto container mx-auto xl:flex flex-col hidden">
+      <div className="w-auto container mx-auto min-[1741px]:flex flex-col hidden">
         <div className="w-7/12 container xl:mt-28 xl:flex xl:flex-col hidden">
           <span className="font-bold xl:text-3xl">İletişim Bilgilerimiz</span>
           <div>
