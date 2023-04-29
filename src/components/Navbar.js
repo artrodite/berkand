@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 export default function Navbar() {
   let [open, setOpen] = useState(false);
@@ -18,6 +20,19 @@ export default function Navbar() {
   };
 
   const path = useLocation().pathname;
+
+  const { t, i18n } = useTranslation(["common"]);
+
+  useEffect((e) => {
+    if (localStorage.getItem("i18nextLng")?.length > 2) {
+      i18next.changeLanguage("tr");
+    }
+  }, []);
+
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+    setOpen(false);
+  };
 
   return (
     <div className="xl:py-6 pr-0 pl-0 font-bold container mx-auto">
@@ -41,16 +56,16 @@ export default function Navbar() {
           </Link>
           <ul className="xl:flex md:justify-center bg-white xl:w-auto w-full hidden">
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              <Link to="/">Ana Sayfa</Link>
+              <Link to="/">{t("home")}</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              <Link to="/about">Hakkımızda</Link>
+              <Link to="/about">{t("about")}</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              <Link to="/product">Ürünlerimiz</Link>
+              <Link to="/product">{t("products")}</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              <Link to="/contact">İletişim</Link>
+              <Link to="/contact">{t("contact")}</Link>
             </li>
           </ul>
         </div>
@@ -61,7 +76,7 @@ export default function Navbar() {
             onMouseOut={() => setOver(false)}
           >
             <a className="flex" href="/assets/catalog.pdf" download>
-              <span>Katalog</span>
+              <span>{t("catalog")}</span>
               <img
                 className="ml-1"
                 src={over ? catalogHover : catalog}
@@ -81,7 +96,7 @@ export default function Navbar() {
                 src={over2 ? languageHover : language}
                 alt=""
               />
-              <span className="xl:inline hidden">Dil</span>
+              <span className="xl:inline hidden">{t("lang")}</span>
               <img
                 className="ml-[2px] xl:inline hidden"
                 src={over2 ? arrowDownHover : arrowDown}
@@ -98,63 +113,77 @@ export default function Navbar() {
                 />
               )}
             </div>
-            <ul
-              className={`bg-white z-50 absolute -top-64 right-10 py-3 px-3 font-light border-[3px] rounded-lg border-black w-[185px] cursor-default ${
-                open ? "top-20" : "-top-64"
-              } ease-in-out duration-500`}
-            >
-              <li className="my-3 flex items-center justify-between" value="tr">
-                <img
-                  className="cursor-pointer"
-                  src="/assets/icons/checked.svg"
-                  alt=""
-                  onClick={languageHandler}
-                />
-                <span>Turkish</span>
-                <img src="/assets/flags/tr-flag.png" alt="" />
-              </li>
-              <li className="my-3 flex items-center justify-between" value="en">
-                <img
-                  className="cursor-pointer"
-                  src="/assets/icons/check_blank.svg"
-                  alt=""
-                  onClick={languageHandler}
-                />
-                <span>English</span>
-                <img src="/assets/flags/en-flag.png" alt="" />
-              </li>
-              <li className="my-3 flex items-center justify-between" value="ru">
-                <img
-                  className="cursor-pointer"
-                  src="/assets/icons/check_blank.svg"
-                  alt=""
-                  onClick={languageHandler}
-                />
-                <span>Russian</span>
-                <img src="/assets/flags/ru-flag.png" alt="" />
-              </li>
-            </ul>
+            <div className="relative">
+              <ul
+                className={`bg-white z-50 absolute -top-64 right-0 py-3 px-3 font-light border-[3px] rounded-lg border-black w-[185px] cursor-default ${
+                  open ? "top-5" : "-top-64"
+                } ease-in-out duration-500`}
+              >
+                <li className="my-3 flex items-center justify-between">
+                  <img
+                    className="cursor-pointer"
+                    src={
+                      localStorage.getItem("i18nextLng") === "tr"
+                        ? "/assets/icons/checked.svg"
+                        : "/assets/icons/check_blank.svg"
+                    }
+                    alt=""
+                    onClick={() => handleLanguageChange("tr")}
+                  />
+                  <span>Turkish</span>
+                  <img src="/assets/flags/tr-flag.png" alt="" />
+                </li>
+                <li className="my-3 flex items-center justify-between">
+                  <img
+                    className="cursor-pointer"
+                    src={
+                      localStorage.getItem("i18nextLng") === "en"
+                        ? "/assets/icons/checked.svg"
+                        : "/assets/icons/check_blank.svg"
+                    }
+                    alt=""
+                    onClick={() => handleLanguageChange("en")}
+                  />
+                  <span>English</span>
+                  <img src="/assets/flags/en-flag.png" alt="" />
+                </li>
+                <li className="my-3 flex items-center justify-between">
+                  <img
+                    className="cursor-pointer"
+                    src={
+                      localStorage.getItem("i18nextLng") === "ru"
+                        ? "/assets/icons/checked.svg"
+                        : "/assets/icons/check_blank.svg"
+                    }
+                    alt=""
+                    onClick={() => handleLanguageChange("ru")}
+                  />
+                  <span>Russian</span>
+                  <img src="/assets/flags/ru-flag.png" alt="" />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       {path === "/" && (
         <div className="bg-white flex flex-col justify-center xl:hidden mb-5">
           <div className="mx-auto mt-10 flex flex-col items-center">
-            <span className="text-4xl font-normal">Hoşgeldiniz!</span>
+            <span className="text-4xl font-normal">{t("welcome")}</span>
             <ul className="md:justify-center mt-4 bg-white xl:w-auto flex flex-col justify-center items-center">
               <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-                <Link to="/about">Hakkımızda</Link>
+                <Link to="/about">{t("about")}</Link>
               </li>
               <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-                <Link to="/product">Ürünlerimiz</Link>
+                <Link to="/product">{t("products")}</Link>
               </li>
               <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
                 <a className="flex" href="/assets/catalog.pdf" download>
-                  <span>Katalog</span>
+                  <span>{t("catalog")}</span>
                 </a>
               </li>
               <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-                <Link to="/contact">İletişim</Link>
+                <Link to="/contact">{t("contact")}</Link>
               </li>
             </ul>
           </div>
@@ -165,7 +194,7 @@ export default function Navbar() {
           <Link to="/">
             <img src="/assets/icons/home.svg" alt="" />
           </Link>
-          <span className="font-bold text-berkand-blue">Hakkımızda</span>
+          <span className="font-bold text-berkand-blue">{t("about")}</span>
           <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
         </div>
       )}
@@ -174,7 +203,7 @@ export default function Navbar() {
           <Link to="/">
             <img src="/assets/icons/home.svg" alt="" />
           </Link>
-          <span className="font-bold text-berkand-blue">Ürünlerimiz</span>
+          <span className="font-bold text-berkand-blue">{t("products")}</span>
           <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
         </div>
       )}
@@ -183,7 +212,7 @@ export default function Navbar() {
           <Link to="/">
             <img src="/assets/icons/home.svg" alt="" />
           </Link>
-          <span className="font-bold text-berkand-blue">İletişim</span>
+          <span className="font-bold text-berkand-blue">{t("contact")}</span>
           <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
         </div>
       )}
