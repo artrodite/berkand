@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Swiper from "../components/Swiper";
 import References from "../components/References";
 import GoTop from "../components/GoTop";
+import { useTranslation } from "react-i18next";
+import { about } from "../data";
 
 export default function About() {
   const [sticky, setSticky] = useState(false);
@@ -20,6 +22,10 @@ export default function About() {
     window.scrollTo(0, 0);
   }, []);
 
+  useTranslation();
+
+  let lng = localStorage.getItem("i18nextLng");
+
   return (
     <div>
       {sticky && <GoTop />}
@@ -30,9 +36,11 @@ export default function About() {
 
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row flex-col container mx-7 w-auto">
         <div className="flex flex-col lg:w-1/2">
-          <span className="font-black md:text-2xl text-base">2010</span>
+          <span className="font-black md:text-2xl text-base">
+            {about[0].title1[`${lng}`]}
+          </span>
           <span className="md:text-2xl text-base md:mt-8 mt-1">
-            Berkand Makina 2010 yılından bu yana kablo makinaları üretmektedir.
+            {about[0].desc1[`${lng}`]}
           </span>
         </div>
         <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5">
@@ -49,12 +57,10 @@ export default function About() {
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row-reverse flex-col container mx-7 w-auto">
         <div className="flex flex-col lg:w-1/2">
           <span className="font-black md:text-2xl text-base">
-            Gelişen sektör
+            {about[0].title2[`${lng}`]}
           </span>
           <span className="md:text-2xl text-base md:mt-8 mt-1">
-            Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden,
-            kapsamlı makine çözümlerine ve mühendislik alanındaki teknolojik
-            geliştirmelere kadar faaliyet göstermektedir.
+            {about[0].desc2[`${lng}`]}
           </span>
         </div>
         <div className="xl:mr-20 lg:mr-10 lg:mt-0 mt-5">
@@ -71,12 +77,10 @@ export default function About() {
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row flex-col container mx-7 w-auto">
         <div className="flex flex-col lg:w-1/2">
           <span className="font-black md:text-2xl text-base">
-            Müşteri Odaklı
+            {about[0].title3[`${lng}`]}
           </span>
           <span className="md:text-2xl text-base md:mt-8 mt-1">
-            Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde
-            karşılamak, stratejimiz ise yeni bilgiler keşfetmeye ve mevcut
-            yöntemlerimizi geliştirmeye odaklanmaktır.
+            {about[0].desc3[`${lng}`]}
           </span>
         </div>
         <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5">
