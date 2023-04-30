@@ -62,7 +62,7 @@ export default function Navbar() {
               <Link to="/about">{t("about")}</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-              <Link to="/product">{t("products")}</Link>
+              <Link to="/products">{t("products")}</Link>
             </li>
             <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
               <Link to="/contact">{t("contact")}</Link>
@@ -175,7 +175,7 @@ export default function Navbar() {
                 <Link to="/about">{t("about")}</Link>
               </li>
               <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
-                <Link to="/product">{t("products")}</Link>
+                <Link to="/products">{t("products")}</Link>
               </li>
               <li className="mt-14 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
                 <a className="flex" href="/assets/catalog.pdf" download>
@@ -198,7 +198,7 @@ export default function Navbar() {
           <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
         </div>
       )}
-      {path === "/product" && (
+      {path === "/products" && (
         <div className="flex justify-between items-center my-10 mx-8 xl:hidden">
           <Link to="/">
             <img src="/assets/icons/home.svg" alt="" />
@@ -213,6 +213,15 @@ export default function Navbar() {
             <img src="/assets/icons/home.svg" alt="" />
           </Link>
           <span className="font-bold text-berkand-blue">{t("contact")}</span>
+          <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
+        </div>
+      )}
+      {path === "/product" && (
+        <div className="flex justify-between items-center mt-10 mb-16 mx-8 xl:hidden">
+          <Link to="/products">
+            <img src="/assets/icons/arrow-back.svg" alt="" />
+          </Link>
+          <span className="font-bold text-berkand-blue">EKSTRUDER</span>
           <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
         </div>
       )}

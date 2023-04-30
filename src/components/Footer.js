@@ -22,7 +22,7 @@ export default function Footer() {
                 <Link to="/">{common[0].home[`${lng}`]}</Link>
               </li>
               <li className="mt-2 underline hover:text-berkand-orange duration-200">
-                <Link to="/product">{common[0].products[`${lng}`]}</Link>
+                <Link to="/products">{common[0].products[`${lng}`]}</Link>
               </li>
               <li className="mt-2 underline hover:text-berkand-orange duration-200">
                 <Link to="/about">{common[0].about[`${lng}`]}</Link>
