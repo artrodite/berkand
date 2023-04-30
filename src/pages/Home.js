@@ -50,9 +50,9 @@ export default function Home() {
           <span className="font-normal text-2xl leading-7 mt-5 text-text-grey">
             {home[0].section1[0].desc[`${lng}`]}
           </span>
-          <Link to="/contact">
+          <Link className="w-max mt-10" to="/contact">
             <button
-              className="z-50 w-64 h-11 mt-10 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
+              className="z-50 w-64 h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
               onMouseOver={() => {
                 setTimeout(() => setOver(true), 100);
               }}
