@@ -237,3 +237,198 @@ export const contact = [
     },
   },
 ];
+
+export const products = [
+  {
+    index:0,
+    title: {
+      tr: "Makine Grupları",
+      en: "en-Makine Grupları",
+      ru: "ru-Makine Grupları",
+    },
+    types: [
+      {
+        name: {
+          tr: "Ekstruder",
+          en: "en-Ekstruder",
+          ru: "ru-Ekstruder",
+        },
+        icon: "/assets/products/icons/machine-groups/ekstruder.svg",
+      },
+      {
+        name: {
+          tr: "Rigid Tambur",
+          en: "en-Rigid Tambur",
+          ru: "ru-Rigid Tambur",
+        },
+        icon: "/assets/products/icons/machine-groups/rigid-tambur.svg",
+      },
+      {
+        name: {
+          tr: "Tübüler Tambur",
+          en: "en-Tübüler Tambur",
+          ru: "ru-Tübüler Tambur",
+        },
+        icon: "/assets/products/icons/machine-groups/tubuler-tambur.svg",
+      },
+      {
+        name: {
+          tr: "Kapistan",
+          en: "en-Kapistan",
+          ru: "ru-Kapistan",
+        },
+        icon: "/assets/products/icons/machine-groups/kapistan.svg",
+      },
+      {
+        name: {
+          tr: "Katerpiller",
+          en: "en-Katerpiller",
+          ru: "ru-Katerpiller",
+        },
+        icon: "/assets/products/icons/machine-groups/katerpiller.svg",
+      },
+      {
+        name: {
+          tr: "Akümülatör",
+          en: "en-Akümülatör",
+          ru: "ru-Akümülatör",
+        },
+        icon: "/assets/products/icons/machine-groups/akumulator.svg",
+      },
+      {
+        name: {
+          tr: "Kangallama Makineleri",
+          en: "en-Kangallama Makineleri",
+          ru: "ru-Kangallama Makineleri",
+        },
+        icon: "/assets/products/icons/machine-groups/kangallama-makineleri.svg",
+      },
+    ],
+  },
+  {
+    index:1,
+    title: {
+      tr: "Verici ve Toplayıcılar",
+      en: "en-Verici ve Toplayıcılar",
+      ru: "ru-Verici ve Toplayıcılar",
+    },
+    types: [
+      {
+        name: {
+          tr: "Portal Tip Toplayıcılar",
+          en: "en-Portal Tip Toplayıcılar",
+          ru: "ru-Portal Tip Toplayıcılar",
+        },
+        icon: "/assets/products/icons/transmitter-collector/portal-toplayici.svg",
+      },
+      {
+        name: {
+          tr: "Portal Tip Vericiler",
+          en: "en-Portal Tip Vericiler",
+          ru: "ru-Portal Tip Vericiler",
+        },
+        icon: "/assets/products/icons/transmitter-collector/portal-verici.svg",
+      },
+      {
+        name: {
+          tr: "Çatal Tip Toplayıcılar",
+          en: "en-Çatal Tip Toplayıcılar",
+          ru: "ru-Çatal Tip Toplayıcılar",
+        },
+        icon: "/assets/products/icons/transmitter-collector/catal-toplayici.svg",
+      },
+      {
+        name: {
+          tr: "Çatal Tip Vericiler",
+          en: "en-Çatal Tip Vericiler",
+          ru: "ru-Çatal Tip Vericiler",
+        },
+        icon: "/assets/products/icons/transmitter-collector/catal-verici.svg",
+      },
+      {
+        name: {
+          tr: "Drum Çatal Toplayıcı",
+          en: "en-Drum Çatal Toplayıcı",
+          ru: "ru-Drum Çatal Toplayıcı",
+        },
+        icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
+      },
+      {
+        name: {
+          tr: "Drum Çatal Verici",
+          en: "en-Drum Çatal Verici",
+          ru: "ru-Drum Çatal Verici",
+        },
+        icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
+      },
+      {
+        name: {
+          tr: "Double Verici",
+          en: "en-Double Verici",
+          ru: "ru-Double Verici",
+        },
+        icon: "/assets/products/icons/transmitter-collector/double-verici.svg",
+      },
+    ],
+  },
+  {
+    index:2,
+    title: {
+      tr: "Ekstrüzyon Hatları",
+      en: "en-Ekstrüzyon Hatları",
+      ru: "ru-Ekstrüzyon Hatları",
+    },
+    types: [
+      {
+        name: {
+          tr: "İzolasyon Ekstrüder Hattı",
+          en: "en-İzolasyon Ekstrüder Hattı",
+          ru: "ru-İzolasyon Ekstrüder Hattı",
+        },
+        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+      },
+      {
+        name: {
+          tr: "Kılıf Ekstrüder hattı",
+          en: "en-Kılıf Ekstrüder hattı",
+          ru: "ru-Kılıf Ekstrüder hattı",
+        },
+        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+      },
+      {
+        name: {
+          tr: "Tandem Ekstrüder Hattı",
+          en: "en-Tandem Ekstrüder Hattı",
+          ru: "ru-Tandem Ekstrüder Hattı",
+        },
+        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+      },
+    ],
+  },
+  {
+    index:3,
+    title: {
+      tr: "Double Twist Büküm Hatları",
+      en: "en-Double Twist Büküm Hatları",
+      ru: "ru-Double Twist Büküm Hatları",
+    },
+    types: [
+      {
+        name: {
+          tr: "630-800 Buncher Büküm Hattı",
+          en: "en-630-800 Buncher Büküm Hattı",
+          ru: "ru-630-800 Buncher Büküm Hattı",
+        },
+        icon: "/assets/products/icons/double-twist/double-twist.svg",
+      },
+      {
+        name: {
+          tr: "1000-1250 Buncher Büküm Hattı",
+          en: "en-1000-1250 Buncher Büküm Hattı",
+          ru: "ru-1000-1250 Buncher Büküm Hattı",
+        },
+        icon: "/assets/products/icons/double-twist/double-twist.svg",
+      },
+    ],
+  },
+];
