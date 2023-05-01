@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GoTop from "../components/GoTop";
+import { useTranslation } from "react-i18next";
+import { common, contact } from "../data";
 
 export default function Contact() {
   const [sticky, setSticky] = useState(false);
@@ -18,13 +20,17 @@ export default function Contact() {
     window.scrollTo(0, 0);
   }, []);
 
+  useTranslation();
+
+  let lng = localStorage.getItem("i18nextLng");
+
   return (
     <div>
       {sticky && <GoTop />}
 
       <div className="w-auto container sm:mx-auto mx-7 flex flex-col xl:my-28">
         <span className="text-2xl xl:text-5xl font-black">
-          Bir mesaj yakınınızdayız.
+          {contact[0].title[`${lng}`]}
         </span>
         <div className="flex flex-col xl:flex-row xl:mt-12 mt-0">
           <form className="flex flex-col xl:w-7/12">
@@ -33,14 +39,14 @@ export default function Contact() {
                 className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 outline-black"
                 type="text"
                 name="name"
-                placeholder="Adınız Soyadınız"
+                placeholder={contact[0].name[`${lng}`]}
                 required
               />
               <input
                 className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 outline-black"
                 type="email"
                 name="email"
-                placeholder="örnek@mail.com"
+                placeholder={contact[0].email[`${lng}`]}
                 required
               />
               <input
@@ -55,13 +61,13 @@ export default function Contact() {
               className="rounded bg-form-input mt-5 h-64 xl:h-96 py-3 px-2 resize-none outline-black"
               type="textarea"
               name="message"
-              placeholder="Mesajınız"
+              placeholder={contact[0].message[`${lng}`]}
               required
             />
             <div className="flex justify-between items-center">
               <input
                 type="submit"
-                value="Gönder"
+                value={contact[0].send[`${lng}`]}
                 className="cursor-pointer mt-8 xl:mt-5 bg-berkand-orange hover:bg-white hover:text-berkand-orange duration-500 text-white border-2 border-berkand-orange xl:text-lg text-base w-full p-3 rounded"
               />
             </div>
@@ -79,7 +85,9 @@ export default function Contact() {
       </div>
       <div className="w-auto container mx-auto min-[1741px]:flex flex-col hidden">
         <div className="w-7/12 container xl:mt-28 xl:flex xl:flex-col hidden">
-          <span className="font-bold xl:text-3xl">İletişim Bilgilerimiz</span>
+          <span className="font-bold xl:text-3xl">
+            {common[0].contactinfo[`${lng}`]}
+          </span>
           <div>
             <div className="mt-11 xl:mt-24 flex flex-col xl:flex-row">
               <span className="font-semibold xl:text-xl xl:mr-[123px]">
@@ -90,14 +98,14 @@ export default function Contact() {
             </div>
             <div className="mt-11 flex flex-col xl:flex-row">
               <span className="font-semibold xl:text-xl xl:mr-[222px]">
-                Pazarlama
+                {common[0].marketing[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 552 295 96 11</span>
               <span className="mt-3 xl:mt-0">sales@berkandmakina.com.tr</span>
             </div>
             <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row">
               <span className="font-semibold xl:text-xl xl:mr-[230px]">
-                Sabit Hat
+                {common[0].fixedline[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 258 251 25 82</span>
               <span className="mt-3 xl:mt-0">info@berkandmakina.com.tr</span>
@@ -108,7 +116,7 @@ export default function Contact() {
         <div className="w-7/12 container xl:flex xl:flex-col hidden">
           <div className="xl:my-24 xl:flex">
             <span className="font-semibold xl:mr-48 xl:text-xl">
-              Sosyal Medya
+              {common[0].socialmedia[`${lng}`]}
             </span>
             <div className="flex flex-col">
               <span className="mt-3 xl:mt-0">Instagram /</span>
@@ -119,7 +127,7 @@ export default function Contact() {
           <hr className="w-auto border-black border my-11" />
           <div className="xl:flex xl:flex-row flex-col mt-24 mb-44 hidden">
             <span className="font-semibold xl:mr-[265px] xl:text-xl">
-              Adres
+              {common[0].address[`${lng}`]}
             </span>
             <span className="mt-3 xl:mt-0">
               Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ

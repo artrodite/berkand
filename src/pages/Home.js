@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import References from "../components/References";
 import GoTop from "../components/GoTop";
+import { useTranslation } from "react-i18next";
+import { home } from "../data";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   let [over, setOver] = useState(false);
@@ -23,6 +26,10 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  useTranslation();
+
+  let lng = localStorage.getItem("i18nextLng");
+
   return (
     <div>
       {sticky && <GoTop />}
@@ -38,28 +45,29 @@ export default function Home() {
       <section className="xl:flex pt-28 pb-72 h-full z-50 hidden container mx-auto">
         <div className="flex flex-col pr-28">
           <span className="font-normal text-[64px] leading-tight">
-            Parlak Bir Gelecek için Çalışıyoruz.
+            {home[0].section1[0].title[`${lng}`]}
           </span>
           <span className="font-normal text-2xl leading-7 mt-5 text-text-grey">
-            Hedefimiz, fabrikanızda en düşük maliyet ile en kaliteli bir ürünü
-            elde etmeniz.
+            {home[0].section1[0].desc[`${lng}`]}
           </span>
-          <button
-            className="z-50 w-64 h-11 mt-10 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
-            onMouseOver={() => {
-              setTimeout(() => setOver(true), 100);
-            }}
-            onMouseOut={() => {
-              setTimeout(() => setOver(false), 100);
-            }}
-          >
-            <img
-              className="mr-2"
-              src={over ? support_agentHover : support_agent}
-              alt=""
-            />
-            İletişim
-          </button>
+          <Link className="w-max mt-10" to="/contact">
+            <button
+              className="z-50 w-64 h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
+              onMouseOver={() => {
+                setTimeout(() => setOver(true), 100);
+              }}
+              onMouseOut={() => {
+                setTimeout(() => setOver(false), 100);
+              }}
+            >
+              <img
+                className="mr-2"
+                src={over ? support_agentHover : support_agent}
+                alt=""
+              />
+              {home[0].section1[0].button[`${lng}`]}
+            </button>
+          </Link>
         </div>
         <div className="w-full">
           <img src="/assets/dram-hatti-311.png" alt="" />
@@ -74,22 +82,19 @@ export default function Home() {
             <img className="xl:hidden" src="/assets/world-mobile.png" alt="" />
           </div>
           <div className="text-white flex flex-col xl:w-2/5 justify-center items-start xl:pr-44 w-80">
-            <span className="font-black text-2xl">BERKAND MAKİNA</span>
-            <span className="font-semibold">Kablo Makinaları Üreticisi.</span>
+            <span className="font-black text-2xl">
+              {home[0].section2[0].title[`${lng}`]}
+            </span>
+            <span className="font-semibold">
+              {home[0].section2[0].subtitle[`${lng}`]}
+            </span>
             <div className="font-normal xl:text-xl text-sm mt-9 flex flex-col">
-              <span>
-                Berkand Makina 2010 yılından bu yana kablo makinaları
-                üretmektedir.
+              <span>{home[0].section2[0].desc1[`${lng}`]}</span>
+              <span className="mt-7">
+                {home[0].section2[0].desc2[`${lng}`]}
               </span>
               <span className="mt-7">
-                Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden,
-                kapsamlı makine çözümlerine ve mühendislik alanındaki teknolojik
-                geliştirmelere kadar faaliyet göstermektedir.
-              </span>
-              <span className="mt-7">
-                Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde
-                karşılamak, stratejimiz ise yeni bilgiler keşfetmeye ve mevcut
-                yöntemlerimizi geliştirmeye odaklanmaktır.
+                {home[0].section2[0].desc3[`${lng}`]}
               </span>
             </div>
           </div>
@@ -105,38 +110,38 @@ export default function Home() {
         </div>
         <div className="flex flex-col">
           <span className="font-semibold xl:text-4xl text-2xl">
-            Dünyayı Aydınlatıyoruz.
+            {home[0].section3[0].title[`${lng}`]}
           </span>
           <div className="flex flex-col mt-16">
-            <span className="font-semibold text-xl">EN YENİ TEKLONOJİ.</span>
+            <span className="font-semibold text-xl">
+              {home[0].section3[1].subtitle[`${lng}`]}
+            </span>
             <span className="font-normal xl:text-xl text-sm mt-6">
-              Üretim süreçlerimizin tamamında, yeni teknolojilerden tam
-              anlamıyla yararlanmak için gerekli araştırma ve geliştirmenin
-              çalışmalarını sürdürüyor, yenilikçi süreçleri takip ediyoruz.
+              {home[0].section3[1].desc[`${lng}`]}
             </span>
           </div>
           <div className="flex flex-col mt-16">
-            <span className="font-semibold text-xl">Çözüm Üretiyoruz.</span>
+            <span className="font-semibold text-xl">
+              {home[0].section3[2].subtitle[`${lng}`]}
+            </span>
             <span className="font-normal xl:text-xl text-sm mt-6">
-              Tecrübeli ekibimiz makinelerimizi kapasitenize ve ihtiyaçlarınıza
-              göre en verimli şekilde kullanabilmeniz için tasarlıyor.
-              Hedefimiz, fabrikanızda en düşük maliyet ile en kaliteli bir ürünü
-              elde etmeniz!
+              {home[0].section3[2].desc[`${lng}`]}
             </span>
           </div>
           <div className="flex flex-col mt-16">
-            <span className="font-semibold text-xl">ONARIM & YENİLEME.</span>
+            <span className="font-semibold text-xl">
+              {home[0].section3[3].subtitle[`${lng}`]}
+            </span>
             <span className="font-normal xl:text-xl text-sm mt-6">
-              Kablo ekipmanlarının bakımında yerli ve yabancı müşterilerimizin
-              tüm marka ve modelleri ile ilgili kapsamlı bir çalışma yapıyor,
-              onarım ve bakım işlemlerini gerçekleştiriyoruz.
+              {home[0].section3[3].desc[`${lng}`]}
             </span>
           </div>
           <div className="flex flex-col mt-16">
-            <span className="font-semibold text-xl">DİNAMİK GELİŞME.</span>
+            <span className="font-semibold text-xl">
+              {home[0].section3[4].subtitle[`${lng}`]}
+            </span>
             <span className="font-normal xl:text-xl text-sm mt-6">
-              Uluslararası pazardaki aktif faaliyetlerimiz sayesinde son
-              yıllardaki üretim ciromuz %35 artış gösterdi.
+              {home[0].section3[4].desc[`${lng}`]}
             </span>
           </div>
         </div>
