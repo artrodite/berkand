@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import References from "../components/References";
 import GoTop from "../components/GoTop";
+import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import { home } from "../data";
 import { Link } from "react-router-dom";
@@ -34,11 +35,13 @@ export default function Home() {
     <div>
       {sticky && <GoTop />}
 
+      <Navbar/>
+
       {/* cable */}
 
-      {/* <div className="absolute z-10 -top-12 left-[10px]">
+      <div className="absolute z-10 -top-0 left-[18px] min-[1920px]:inline hidden">
         <img className="" src="/assets/cable.svg" alt="" />
-      </div> */}
+      </div>
 
       {/* section1 */}
 
@@ -50,7 +53,7 @@ export default function Home() {
           <span className="font-normal text-2xl leading-7 mt-5 text-text-grey">
             {home[0].section1[0].desc[`${lng}`]}
           </span>
-          <Link className="w-max mt-10" to="/contact">
+          <Link className="w-max mt-10 z-50" to="/contact">
             <button
               className="z-50 w-64 h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
               onMouseOver={() => {
@@ -70,7 +73,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="w-full">
-          <img src="/assets/dram-hatti-311.png" alt="" />
+          <img src="/assets/630-buncher-hatti-1.png" alt="" />
         </div>
       </section>
 

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { products } from "../data";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -10,9 +12,16 @@ import "swiper/css/thumbs";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
+import { useParams } from "react-router-dom";
 
 export default function ProductSwiper() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const { group, types } = useParams();
+
+  const product = products
+    .filter((item) => item.url === group)[0]
+    .types.filter((item) => item.url === types)[0];
 
   return (
     <div className="xl:h-auto mb-16 mx-auto select-none container w-full xl:block hidden">
@@ -24,76 +33,15 @@ export default function ProductSwiper() {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-[649px] w-full object-cover mx-auto rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-            alt=""
-          />
-        </SwiperSlide>
+        {product.slide.map((p) => (
+          <SwiperSlide>
+            <img
+              className="h-[649px] w-full object-cover mx-auto rounded-2xl"
+              src={p.src}
+              alt=""
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -105,76 +53,11 @@ export default function ProductSwiper() {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper mt-7"
       >
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="h-16 w-24 rounded-xl"
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-            alt=""
-          />
-        </SwiperSlide>
+        {product.slide.map((p) => (
+          <SwiperSlide>
+            <img className="h-16 w-24 rounded-xl" src={p.src} alt="" />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

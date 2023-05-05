@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GoTop from "../components/GoTop";
+import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import { common, contact } from "../data";
 
@@ -28,8 +29,10 @@ export default function Contact() {
     <div>
       {sticky && <GoTop />}
 
+      <Navbar/>
+
       <div className="w-auto container sm:mx-auto mx-7 flex flex-col xl:my-28">
-        <span className="text-2xl xl:text-5xl font-black">
+        <span className="text-2xl xl:text-5xl font-bold">
           {contact[0].title[`${lng}`]}
         </span>
         <div className="flex flex-col xl:flex-row xl:mt-12 mt-0">
@@ -75,7 +78,7 @@ export default function Contact() {
 
           <div className="mt-8 xl:mt-0 xl:ml-16 xl:w-5/12">
             <iframe
-              className="w-full h-80 xl:h-full rounded-xl border-black border-2"
+              className="w-full h-80 xl:h-full rounded-xl border-berkand-blue border-2"
               title="This is an unique title"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.326954185578!2d29.028566712462293!3d37.829230971854635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c76aa44bceb091%3A0x2fca4193fea905ce!2zSGFjxLFlecO8cGzDvCwgMzA3NS4gU2suIE5vOjIwIEQ6MiwgMjAwNTAgTWVya2V6ZWZlbmRpL0Rlbml6bGk!5e0!3m2!1sen!2str!4v1682525775398!5m2!1sen!2str"
               loading="lazy"
@@ -89,26 +92,41 @@ export default function Contact() {
             {common[0].contactinfo[`${lng}`]}
           </span>
           <div>
-            <div className="mt-11 xl:mt-24 flex flex-col xl:flex-row">
+            <div className="mt-11 xl:mt-24 flex flex-col xl:flex-row items-center">
               <span className="font-semibold xl:text-xl xl:mr-[123px]">
                 CEO Ramazan Yılmaz{" "}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 536 630 96 11</span>
-              <span className="mt-3 xl:mt-0">info@berkandmakina.com.tr</span>
+              <span className="mt-3 xl:mt-0 mr-5">
+                info@berkandmakina.com.tr
+              </span>
+              <a href="mailto:info@berkandmakina.com.tr">
+                <img src="/assets/icons/north-east-arrow.svg" alt="" />
+              </a>
             </div>
-            <div className="mt-11 flex flex-col xl:flex-row">
+            <div className="mt-11 flex flex-col xl:flex-row items-center">
               <span className="font-semibold xl:text-xl xl:mr-[222px]">
                 {common[0].marketing[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 552 295 96 11</span>
-              <span className="mt-3 xl:mt-0">sales@berkandmakina.com.tr</span>
+              <span className="mt-3 xl:mt-0 mr-5">
+                sales@berkandmakina.com.tr
+              </span>
+              <a href="mailto:sales@berkandmakina.com.tr">
+                <img src="/assets/icons/north-east-arrow.svg" alt="" />
+              </a>
             </div>
-            <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row">
+            <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row items-center">
               <span className="font-semibold xl:text-xl xl:mr-[230px]">
                 {common[0].fixedline[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 258 251 25 82</span>
-              <span className="mt-3 xl:mt-0">info@berkandmakina.com.tr</span>
+              <span className="mt-3 xl:mt-0 mr-5">
+                info@berkandmakina.com.tr
+              </span>
+              <a href="mailto:info@berkandmakina.com.tr">
+                <img src="/assets/icons/north-east-arrow.svg" alt="" />
+              </a>
             </div>
             <hr className="w-auto border-black border my-11" />
           </div>
@@ -119,19 +137,37 @@ export default function Contact() {
               {common[0].socialmedia[`${lng}`]}
             </span>
             <div className="flex flex-col">
-              <span className="mt-3 xl:mt-0">Instagram /</span>
-              <span className="mt-3">Facebook /</span>
-              <span className="mt-3">Linkedin /</span>
+              <div className="flex items-center">
+                <span className="mt-3 xl:mt-0 mr-5">Instagram</span>
+                <a href="/link">
+                  <img src="/assets/icons/north-east-arrow.svg" alt="" />
+                </a>
+              </div>
+              <div className="flex items-center mt-3">
+                <span className="mr-5">Facebook</span>
+                <a href="/link">
+                  <img src="/assets/icons/north-east-arrow.svg" alt="" />
+                </a>
+              </div>
+              <div className="flex items-center mt-3">
+                <span className="mr-5">Linkedin</span>
+                <a href="/link">
+                  <img src="/assets/icons/north-east-arrow.svg" alt="" />
+                </a>
+              </div>
             </div>
           </div>
           <hr className="w-auto border-black border my-11" />
-          <div className="xl:flex xl:flex-row flex-col mt-24 mb-44 hidden">
+          <div className="xl:flex xl:flex-row flex-col mt-24 mb-44 hidden items-center">
             <span className="font-semibold xl:mr-[265px] xl:text-xl">
               {common[0].address[`${lng}`]}
             </span>
-            <span className="mt-3 xl:mt-0">
+            <span className="mt-3 xl:mt-0 mr-5">
               Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
             </span>
+            <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en">
+              <img src="/assets/icons/north-east-arrow.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>

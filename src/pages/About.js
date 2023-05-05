@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Swiper from "../components/Swiper";
 import References from "../components/References";
 import GoTop from "../components/GoTop";
+import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import { about } from "../data";
 
@@ -29,6 +30,8 @@ export default function About() {
   return (
     <div>
       {sticky && <GoTop />}
+
+      <Navbar />
 
       <Swiper />
 
