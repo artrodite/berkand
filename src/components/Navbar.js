@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
-export default function Navbar() {
+export default function Navbar({ group, types, product }) {
   let [open, setOpen] = useState(false);
   let [over, setOver] = useState(false);
   let [over2, setOver2] = useState(false);
@@ -33,6 +33,10 @@ export default function Navbar() {
     i18n.changeLanguage(language);
     setOpen(false);
   };
+
+  useTranslation();
+
+  let lng = localStorage.getItem("i18nextLng");
 
   return (
     <div className="xl:py-6 pr-0 pl-0 font-bold container mx-auto">
@@ -216,12 +220,14 @@ export default function Navbar() {
           <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
         </div>
       )}
-      {path === "/product" && (
-        <div className="flex justify-between items-center mt-10 mb-16 mx-8 xl:hidden">
+      {path === `/products/${group}/${types}` && (
+        <div className="flex justify-between items-center mt-10 mb-16 mx-8 xl:hidden text-center">
           <Link to="/products">
             <img src="/assets/icons/arrow-back.svg" alt="" />
           </Link>
-          <span className="font-bold text-berkand-blue">EKSTRUDER</span>
+          <span className="font-bold text-berkand-blue uppercase mx-5">
+            {product[`${lng}`]}
+          </span>
           <img src="/assets/icons/logo-mobil-navbar.svg" alt="" />
         </div>
       )}

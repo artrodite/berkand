@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -9,17 +8,18 @@ import Product from "./pages/Product";
 
 function App() {
   return (
-    <Router className="App font-[Roboto]">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/product" element={<Product />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="bg-white">
+      <Router className="App font-[Roboto]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:group/:types" element={<Product />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

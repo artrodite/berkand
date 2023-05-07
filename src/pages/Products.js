@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { products } from "../data";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
-const AccordionItem = ({ title, isOpen, setIsOpen, index, product }) => {
+const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
   useTranslation();
 
   let lng = localStorage.getItem("i18nextLng");
-
-  console.log();
 
   return (
     <div className="mb-9">
@@ -32,7 +31,7 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product }) => {
               />
             )}
           </span>
-          <span className="ml-5 font-medium text-xl md:font-black md:text-3xl">
+          <span className="ml-5 font-medium text-xl md:font-bold md:text-3xl">
             {title[`${lng}`]}
           </span>
         </div>
@@ -42,7 +41,7 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product }) => {
           <ul className="">
             {product.map((p) => (
               <li className="flex ml-8 md:ml-12 mt-7 items-center w-max1">
-                <Link to="/product" className="flex">
+                <Link to={`/products/${url}/${p.url}`} className="flex">
                   <img className="h-6 w-6 md:h-8 md:w-8" src={p.icon} alt="" />
                   <span className="font-normal md:font-medium ml-5">
                     {p.name[`${lng}`]}
@@ -58,19 +57,28 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product }) => {
 };
 
 export default function Products() {
-  const [isOpen, setIsOpen] = useState(-1);
 
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const openIndex = queryParams.get("open") ? parseInt(queryParams.get("open"), 10) : -1;
+  const [isOpen, setIsOpen] = useState(openIndex);
+  
   return (
-    <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-24 md:mb-52">
-      {products.map((p) => (
-        <AccordionItem
-          title={p.title}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          index={p.index}
-          product={p.types}
-        />
-      ))}
+    <div>
+      <Navbar />
+
+      <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-24 md:mb-52">
+        {products.map((p) => (
+          <AccordionItem
+            title={p.title}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            index={p.index}
+            product={p.types}
+            url={p.url}
+          />
+        ))}
+      </div>
     </div>
   );
 }
