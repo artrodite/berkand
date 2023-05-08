@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GoTop from "../components/GoTop";
 import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import { common, contact } from "../data";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [sticky, setSticky] = useState(false);
@@ -25,18 +26,38 @@ export default function Contact() {
 
   let lng = localStorage.getItem("i18nextLng");
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAIL_PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    e.target.reset();
+  };
+
   return (
     <div>
       {sticky && <GoTop />}
 
-      <Navbar/>
+      <Navbar />
 
       <div className="w-auto container sm:mx-auto mx-7 flex flex-col xl:my-28">
         <span className="text-2xl xl:text-5xl font-bold">
           {contact[0].title[`${lng}`]}
         </span>
         <div className="flex flex-col xl:flex-row xl:mt-12 mt-0">
-          <form className="flex flex-col xl:w-7/12">
+          <form
+            className="flex flex-col xl:w-7/12"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <div className="flex flex-col xl:flex-row xl:justify-between">
               <input
                 className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 outline-black"
@@ -67,7 +88,7 @@ export default function Contact() {
               placeholder={contact[0].message[`${lng}`]}
               required
             />
-            <div className="flex justify-between items-center">
+            <div className="flex items-center">
               <input
                 type="submit"
                 value={contact[0].send[`${lng}`]}
@@ -165,7 +186,11 @@ export default function Contact() {
             <span className="mt-3 xl:mt-0 mr-5">
               Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
             </span>
-            <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en"
+            >
               <img src="/assets/icons/north-east-arrow.svg" alt="" />
             </a>
           </div>
