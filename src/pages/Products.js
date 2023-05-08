@@ -21,6 +21,7 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
         className="w-full p-4 pb-0 text-left focus:outline-none"
         onClick={() => setIsOpen(isOpen === index ? -1 : index)}
         data-aos="fade-up"
+        data-aos-delay={index*50}
       >
         <div className="flex items-center">
           <span>
@@ -44,7 +45,7 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
         </div>
       </button>
       {isOpen === index && (
-        <div className="p-4 pt-0" data-aos="fade-up">
+        <div className="p-4 pt-0" data-aos="fade-up" data-aos-delay="50">
           <ul className="">
             {product.map((p) => (
               <li className="flex ml-8 md:ml-12 mt-7 items-center w-max1">

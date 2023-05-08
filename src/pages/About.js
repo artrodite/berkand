@@ -44,15 +44,15 @@ export default function About() {
       {/* section1 */}
 
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row flex-col container mx-7 w-auto" data-aos="fade-up">
-        <div className="flex flex-col lg:w-1/2" data-aos="fade-right">
-          <span className="font-black md:text-2xl text-base">
+        <div className="flex flex-col lg:w-1/2" data-aos="fade-left">
+          <span className="font-black md:text-2xl text-base" data-aos="fade-left" data-aos-delay="50">
             {about[0].title1[`${lng}`]}
           </span>
-          <span className="md:text-2xl text-base md:mt-8 mt-1">
+          <span className="md:text-2xl text-base md:mt-8 mt-1" data-aos="fade-left" data-aos-delay="100">
             {about[0].desc1[`${lng}`]}
           </span>
         </div>
-        <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5" data-aos="fade-right">
+        <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5" data-aos="fade-right" data-aos-delay="50">
           <img
             className="h-3/4 lg:h-full object-cover  rounded-3xl"
             src="https://www.gannett-cdn.com/media/USATODAY/popcandy/2012/10/30/regularshow-16_9.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
@@ -64,15 +64,15 @@ export default function About() {
       {/* section2 */}
 
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row-reverse flex-col container mx-7 w-auto" data-aos="fade-up">
-        <div className="flex flex-col lg:w-1/2" data-aos="fade-left">
-          <span className="font-black md:text-2xl text-base">
+        <div className="flex flex-col lg:w-1/2" data-aos="fade-right">
+          <span className="font-black md:text-2xl text-base" data-aos="fade-left" data-aos-delay="50">
             {about[0].title2[`${lng}`]}
           </span>
-          <span className="md:text-2xl text-base md:mt-8 mt-1">
+          <span className="md:text-2xl text-base md:mt-8 mt-1" data-aos="fade-left" data-aos-delay="100">
             {about[0].desc2[`${lng}`]}
           </span>
         </div>
-        <div className="xl:mr-20 lg:mr-10 lg:mt-0 mt-5" data-aos="fade-left">
+        <div className="xl:mr-20 lg:mr-10 lg:mt-0 mt-5" data-aos="fade-right" data-aos-delay="50">
           <img
             className="h-3/4 lg:h-full object-cover rounded-3xl"
             src="/assets/about2.png"
@@ -84,15 +84,15 @@ export default function About() {
       {/* section3 */}
 
       <section className="my-16 md:my-56 sm:mx-auto flex lg:flex-row flex-col container mx-7 w-auto" data-aos="fade-up">
-        <div className="flex flex-col lg:w-1/2" data-aos="fade-right">
-          <span className="font-black md:text-2xl text-base">
+        <div className="flex flex-col lg:w-1/2" data-aos="fade-left">
+          <span className="font-black md:text-2xl text-base" data-aos="fade-left" data-aos-delay="50">
             {about[0].title3[`${lng}`]}
           </span>
-          <span className="md:text-2xl text-base md:mt-8 mt-1">
+          <span className="md:text-2xl text-base md:mt-8 mt-1" data-aos="fade-left" data-aos-delay="100">
             {about[0].desc3[`${lng}`]}
           </span>
         </div>
-        <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5" data-aos="fade-right">
+        <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5" data-aos="fade-right" data-aos-delay="50">
           <img
             className="h-3/4 lg:h-full object-cover rounded-3xl"
             src="https://a.ltrbxd.com/resized/sm/upload/1o/yl/2i/c5/xHGTnvmrNaDLyysdvqOGKAcaNpQ-1200-1200-675-675-crop-000000.jpg?v=6d89778ce0"

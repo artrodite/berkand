@@ -1660,9 +1660,10 @@ export const productIcons = [
       en: "The Best Option for You and Your Team.",
       ru: "ru-Siz Ve Takımınız İçin En İyi Seçenek.",
     },
-    icons:[
+    icons: [
       {
-        icon:"/assets/icons/eco.svg",
+        index: 0,
+        icon: "/assets/icons/eco.svg",
         title: {
           tr: "Tasarruflu",
           en: "Thrifty",
@@ -1675,7 +1676,8 @@ export const productIcons = [
         },
       },
       {
-        icon:"/assets/icons/durable.svg",
+        index: 1,
+        icon: "/assets/icons/durable.svg",
         title: {
           tr: "Dayanıklı",
           en: "Resistant",
@@ -1688,7 +1690,8 @@ export const productIcons = [
         },
       },
       {
-        icon:"/assets/icons/speed.svg",
+        index: 2,
+        icon: "/assets/icons/speed.svg",
         title: {
           tr: "Hızlı",
           en: "Fast",
@@ -1701,7 +1704,8 @@ export const productIcons = [
         },
       },
       {
-        icon:"/assets/icons/safe.svg",
+        index: 3,
+        icon: "/assets/icons/safe.svg",
         title: {
           tr: "Garanti",
           en: "Guarantee",
@@ -1714,7 +1718,8 @@ export const productIcons = [
         },
       },
       {
-        icon:"/assets/icons/easy.svg",
+        index: 4,
+        icon: "/assets/icons/easy.svg",
         title: {
           tr: "Basit",
           en: "Simple",
@@ -1726,6 +1731,6 @@ export const productIcons = [
           ru: "ru-Kullanımı ve bakımı basit, tek tuşta işinizi halledin.",
         },
       },
-    ]
+    ],
   },
 ];
