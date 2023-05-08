@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { products } from "../data";
 import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
   useTranslation();
 
   let lng = localStorage.getItem("i18nextLng");
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="mb-9">
       <button
         className="w-full p-4 pb-0 text-left focus:outline-none"
         onClick={() => setIsOpen(isOpen === index ? -1 : index)}
+        data-aos="fade-up"
       >
         <div className="flex items-center">
           <span>
@@ -37,7 +44,7 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
         </div>
       </button>
       {isOpen === index && (
-        <div className="p-4 pt-0">
+        <div className="p-4 pt-0" data-aos="fade-up">
           <ul className="">
             {product.map((p) => (
               <li className="flex ml-8 md:ml-12 mt-7 items-center w-max1">
@@ -57,12 +64,13 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
 };
 
 export default function Products() {
-
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const openIndex = queryParams.get("open") ? parseInt(queryParams.get("open"), 10) : -1;
+  const openIndex = queryParams.get("open")
+    ? parseInt(queryParams.get("open"), 10)
+    : -1;
   const [isOpen, setIsOpen] = useState(openIndex);
-  
+
   return (
     <div>
       <Navbar />

@@ -182,27 +182,27 @@ export const about = [
     },
     desc1: {
       tr: "Berkand Makina 2010 yılından bu yana kablo makinaları üretmektedir.",
-      en: "En-Berkand Makina 2010 yılından bu yana kablo makinaları üretmektedir.",
+      en: "Berkand Machine has been producing cable machines since 2010.",
       ru: "Ru-Berkand Makina 2010 yılından bu yana kablo makinaları üretmektedir.",
     },
     title2: {
       tr: "Gelişen sektör",
-      en: "En-Gelişen sektör",
+      en: "Emerging sector",
       ru: "Ru-Gelişen sektör",
     },
     desc2: {
       tr: "Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden, kapsamlı makine çözümlerine ve mühendislik alanındaki teknolojik geliştirmelere kadar faaliyet göstermektedir.",
-      en: "En-Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden, kapsamlı makine çözümlerine",
+      en: "Our factory operates from the production of spare parts for the cable industry, to comprehensive machine solutions and technological developments in the field of engineering.",
       ru: "Ru-Fabrikamız, kablo sektörüne yönelik yedek parça üretiminden, kapsamlı makine çözümlerine",
     },
     title3: {
       tr: "Müşteri Odaklı",
-      en: "En-Müşteri Odaklı",
+      en: "Customer focused",
       ru: "Ru-Müşteri Odaklı",
     },
     desc3: {
       tr: "Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde karşılamak, stratejimiz ise yeni bilgiler keşfetmeye ve mevcut yöntemlerimizi geliştirmeye odaklanmaktır.",
-      en: "En-Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde karşılamak, stratejimiz",
+      en: "Our main goal is to meet the needs of our customers at the highest level, and our strategy is to focus on discovering new knowledge and improving our existing methods.",
       ru: "Ru-Ana hedefimiz müşterilerin gereksinimlerini en üst düzeyde karşılamak, stratejimiz",
     },
   },
