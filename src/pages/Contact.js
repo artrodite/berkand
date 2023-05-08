@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GoTop from "../components/GoTop";
 import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import { common, contact } from "../data";
+import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Contact() {
   const [sticky, setSticky] = useState(false);
@@ -25,18 +28,55 @@ export default function Contact() {
 
   let lng = localStorage.getItem("i18nextLng");
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       {sticky && <GoTop />}
 
-      <Navbar/>
+      <Navbar />
 
       <div className="w-auto container sm:mx-auto mx-7 flex flex-col xl:my-28">
-        <span className="text-2xl xl:text-5xl font-bold">
+        <span
+          className="text-2xl xl:text-5xl font-bold"
+          data-aos="fade-left"
+          data-aos-delay="50"
+        >
           {contact[0].title[`${lng}`]}
         </span>
         <div className="flex flex-col xl:flex-row xl:mt-12 mt-0">
-          <form className="flex flex-col xl:w-7/12">
+          <form
+            className="flex flex-col xl:w-7/12"
+            ref={form}
+            onSubmit={sendEmail}
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             <div className="flex flex-col xl:flex-row xl:justify-between">
               <input
                 className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 outline-black"
@@ -67,7 +107,7 @@ export default function Contact() {
               placeholder={contact[0].message[`${lng}`]}
               required
             />
-            <div className="flex justify-between items-center">
+            <div className="flex items-center">
               <input
                 type="submit"
                 value={contact[0].send[`${lng}`]}
@@ -76,7 +116,11 @@ export default function Contact() {
             </div>
           </form>
 
-          <div className="mt-8 xl:mt-0 xl:ml-16 xl:w-5/12">
+          <div
+            className="mt-8 xl:mt-0 xl:ml-16 xl:w-5/12"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <iframe
               className="w-full h-80 xl:h-full rounded-xl border-berkand-blue border-2"
               title="This is an unique title"
@@ -88,11 +132,19 @@ export default function Contact() {
       </div>
       <div className="w-auto container mx-auto min-[1741px]:flex flex-col hidden">
         <div className="w-7/12 container xl:mt-28 xl:flex xl:flex-col hidden">
-          <span className="font-bold xl:text-3xl">
+          <span
+            className="font-bold xl:text-3xl"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
             {common[0].contactinfo[`${lng}`]}
           </span>
           <div>
-            <div className="mt-11 xl:mt-24 flex flex-col xl:flex-row items-center">
+            <div
+              className="mt-11 xl:mt-24 flex flex-col xl:flex-row items-center"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               <span className="font-semibold xl:text-xl xl:mr-[123px]">
                 CEO Ramazan Yılmaz{" "}
               </span>
@@ -104,7 +156,11 @@ export default function Contact() {
                 <img src="/assets/icons/north-east-arrow.svg" alt="" />
               </a>
             </div>
-            <div className="mt-11 flex flex-col xl:flex-row items-center">
+            <div
+              className="mt-11 flex flex-col xl:flex-row items-center"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               <span className="font-semibold xl:text-xl xl:mr-[222px]">
                 {common[0].marketing[`${lng}`]}
               </span>
@@ -116,7 +172,11 @@ export default function Contact() {
                 <img src="/assets/icons/north-east-arrow.svg" alt="" />
               </a>
             </div>
-            <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row items-center">
+            <div
+              className="mt-11 xl:mb-24 flex flex-col xl:flex-row items-center"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               <span className="font-semibold xl:text-xl xl:mr-[230px]">
                 {common[0].fixedline[`${lng}`]}
               </span>
@@ -128,44 +188,94 @@ export default function Contact() {
                 <img src="/assets/icons/north-east-arrow.svg" alt="" />
               </a>
             </div>
-            <hr className="w-auto border-black border my-11" />
+            <hr
+              className="w-auto border-black border my-11"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            />
           </div>
         </div>
         <div className="w-7/12 container xl:flex xl:flex-col hidden">
           <div className="xl:my-24 xl:flex">
-            <span className="font-semibold xl:mr-48 xl:text-xl">
+            <span
+              className="font-semibold xl:mr-48 xl:text-xl"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               {common[0].socialmedia[`${lng}`]}
             </span>
             <div className="flex flex-col">
-              <div className="flex items-center">
+              <div
+                className="flex items-center"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
                 <span className="mt-3 xl:mt-0 mr-5">Instagram</span>
-                <a href="/link">
+                <a
+                  href="https://www.instagram.com/berkandmakina/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src="/assets/icons/north-east-arrow.svg" alt="" />
                 </a>
               </div>
-              <div className="flex items-center mt-3">
+              <div
+                className="flex items-center mt-3"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
                 <span className="mr-5">Facebook</span>
-                <a href="/link">
+                <a
+                  href="https://www.facebook.com/berkand.makina.37/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src="/assets/icons/north-east-arrow.svg" alt="" />
                 </a>
               </div>
-              <div className="flex items-center mt-3">
+              <div
+                className="flex items-center mt-3"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
                 <span className="mr-5">Linkedin</span>
-                <a href="/link">
+                <a
+                  href="https://www.linkedin.com/company/berkand-makina/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src="/assets/icons/north-east-arrow.svg" alt="" />
                 </a>
               </div>
             </div>
           </div>
-          <hr className="w-auto border-black border my-11" />
+          <hr
+            className="w-auto border-black border my-11"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          />
           <div className="xl:flex xl:flex-row flex-col mt-24 mb-44 hidden items-center">
-            <span className="font-semibold xl:mr-[265px] xl:text-xl">
+            <span
+              className="font-semibold xl:mr-[265px] xl:text-xl"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               {common[0].address[`${lng}`]}
             </span>
-            <span className="mt-3 xl:mt-0 mr-5">
+            <span
+              className="mt-3 xl:mt-0 mr-5"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
             </span>
-            <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               <img src="/assets/icons/north-east-arrow.svg" alt="" />
             </a>
           </div>

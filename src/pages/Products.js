@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { products } from "../data";
 import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
   useTranslation();
 
   let lng = localStorage.getItem("i18nextLng");
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="mb-9">
       <button
         className="w-full p-4 pb-0 text-left focus:outline-none"
         onClick={() => setIsOpen(isOpen === index ? -1 : index)}
+        data-aos="fade-up"
+        data-aos-delay={index*50}
       >
         <div className="flex items-center">
           <span>
@@ -40,7 +48,7 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
         <div className="p-4 pt-0">
           <ul className="">
             {product.map((p) => (
-              <li className="flex ml-8 md:ml-12 mt-7 items-center w-max1">
+              <li className="flex ml-8 md:ml-12 mt-7 items-center w-max1" data-aos="fade-up" data-aos-delay={p.index*50}>
                 <Link to={`/products/${url}/${p.url}`} className="flex">
                   <img className="h-6 w-6 md:h-8 md:w-8" src={p.icon} alt="" />
                   <span className="font-normal md:font-medium ml-5">
@@ -57,12 +65,13 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
 };
 
 export default function Products() {
-
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const openIndex = queryParams.get("open") ? parseInt(queryParams.get("open"), 10) : -1;
+  const openIndex = queryParams.get("open")
+    ? parseInt(queryParams.get("open"), 10)
+    : -1;
   const [isOpen, setIsOpen] = useState(openIndex);
-  
+
   return (
     <div>
       <Navbar />

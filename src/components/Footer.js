@@ -18,16 +18,16 @@ export default function Footer() {
           <div className="mr-24">
             <span className="font-semibold">{common[0].site[`${lng}`]}</span>
             <ul>
-              <li className="mt-4 underline hover:text-berkand-orange duration-200">
+              <li className="mt-4 underline hover:text-berkand-orange duration-200 w-max">
                 <Link to="/">{common[0].home[`${lng}`]}</Link>
               </li>
-              <li className="mt-2 underline hover:text-berkand-orange duration-200">
+              <li className="mt-2 underline hover:text-berkand-orange duration-200 w-max">
                 <Link to="/products">{common[0].products[`${lng}`]}</Link>
               </li>
-              <li className="mt-2 underline hover:text-berkand-orange duration-200">
+              <li className="mt-2 underline hover:text-berkand-orange duration-200 w-max">
                 <Link to="/about">{common[0].about[`${lng}`]}</Link>
               </li>
-              <li className="mt-2 underline hover:text-berkand-orange duration-200">
+              <li className="mt-2 underline hover:text-berkand-orange duration-200 w-max">
                 <Link to="/contact">{common[0].contact[`${lng}`]}</Link>
               </li>
             </ul>
@@ -37,15 +37,46 @@ export default function Footer() {
               {common[0].socialmedia[`${lng}`]}
             </span>
             <ul>
-              <li className="mt-2">Instagram</li>
-              <li className="mt-2">Facebook</li>
-              <li className="mt-2">LinkedIn</li>
+              <li className="mt-2 hover:text-berkand-orange duration-200 w-max">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.instagram.com/berkandmakina/"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li className="mt-2 hover:text-berkand-orange duration-200 w-max">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.facebook.com/berkand.makina.37/"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li className="mt-2 hover:text-berkand-orange duration-200 w-max">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.linkedin.com/company/berkand-makina/"
+                >
+                  LinkedIn
+                </a>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col mr-24 w-60">
             <span className="font-semibold">{common[0].address[`${lng}`]}</span>
             <span className="mt-4 font-normal">
-              Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
+              <a
+                className="hover:text-berkand-orange duration-200 w-max"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en"
+              >
+                Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
+              </a>
             </span>
           </div>
           <div>
@@ -64,9 +95,24 @@ export default function Footer() {
                 <span className="mt-2">+90 258 251 25 82</span>
               </div>
               <div className="flex flex-col">
-                <span>sales@berkandmakina.com.tr</span>
-                <span className="mt-2">info@berkandmakina.com.tr</span>
-                <span className="mt-2">info@berkandmakina.com.tr</span>
+                <a
+                  className="hover:text-berkand-orange duration-200 w-max"
+                  href="mailto:info@berkandmakina.com.tr"
+                >
+                  <span>info@berkandmakina.com.tr</span>
+                </a>
+                <a
+                  className="mt-2 hover:text-berkand-orange duration-200 w-max"
+                  href="mailto:sales@berkandmakina.com.tr"
+                >
+                  <span>sales@berkandmakina.com.tr</span>
+                </a>
+                <a
+                  className="mt-2 hover:text-berkand-orange duration-200 w-max"
+                  href="mailto:info@berkandmakina.com.tr"
+                >
+                  <span>info@berkandmakina.com.tr</span>
+                </a>
               </div>
             </div>
           </div>
@@ -78,7 +124,7 @@ export default function Footer() {
           <a href="https://artrodite.com/" target="_blank" rel="noreferrer">
             <img
               className="absolute left-1/2 -translate-x-1/2"
-              src="/assets/artrodite.png"
+              src="/assets/artrodite.svg"
               alt=""
             />
           </a>
@@ -88,10 +134,17 @@ export default function Footer() {
         <div className="sm:w-full w-auto container sm:mx-auto mx-7">
           <div className="flex xl:flex-row flex-col">
             <span className="font-semibold xl:mr-[265px] xl:text-xl">
-            {common[0].address[`${lng}`]}
+              {common[0].address[`${lng}`]}
             </span>
             <span className="mt-3 xl:mt-0">
-              Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
+              <a
+                className="hover:text-berkand-orange duration-200 w-max"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en"
+              >
+                Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
+              </a>
             </span>
           </div>
           <hr className="w-auto border-black border my-11" />
@@ -104,21 +157,42 @@ export default function Footer() {
                 CEO Ramazan Yılmaz{" "}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 536 630 96 11</span>
-              <span className="mt-3 xl:mt-0">info@berkandmakina.com.tr</span>
+              <span className="mt-3 xl:mt-0">
+                <a
+                  className="hover:text-berkand-orange duration-200 w-max"
+                  href="mailto:info@berkandmakina.com.tr"
+                >
+                  <span>info@berkandmakina.com.tr</span>
+                </a>
+              </span>
             </div>
             <div className="mt-11 flex flex-col xl:flex-row">
               <span className="font-semibold xl:text-xl xl:mr-[222px]">
                 {common[0].marketing[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 552 295 96 11</span>
-              <span className="mt-3 xl:mt-0">sales@berkandmakina.com.tr</span>
+              <span className="mt-3 xl:mt-0">
+                <a
+                  className="mt-2 hover:text-berkand-orange duration-200 w-max"
+                  href="mailto:sales@berkandmakina.com.tr"
+                >
+                  <span>sales@berkandmakina.com.tr</span>
+                </a>
+              </span>
             </div>
             <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row">
               <span className="font-semibold xl:text-xl xl:mr-[235px]">
                 {common[0].fixedline[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 258 251 25 82</span>
-              <span className="mt-3 xl:mt-0">info@berkandmakina.com.tr</span>
+              <span className="mt-3 xl:mt-0">
+                <a
+                  className="mt-2 hover:text-berkand-orange duration-200 w-max"
+                  href="mailto:info@berkandmakina.com.tr"
+                >
+                  <span>info@berkandmakina.com.tr</span>
+                </a>
+              </span>
             </div>
             <hr className="w-auto border-black border my-11" />
           </div>
@@ -128,9 +202,33 @@ export default function Footer() {
                 {common[0].socialmedia[`${lng}`]}
               </span>
               <div className="flex flex-col">
-                <span className="mt-3 xl:mt-0">Instagram /</span>
-                <span className="mt-3">Facebook /</span>
-                <span className="mt-3">Linkedin /</span>
+                <span className="mt-3 xl:mt-0">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.instagram.com/berkandmakina/"
+                  >
+                    Instagram
+                  </a>
+                </span>
+                <span className="mt-3">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.facebook.com/berkand.makina.37/"
+                  >
+                    Facebook
+                  </a>
+                </span>
+                <span className="mt-3">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.linkedin.com/company/berkand-makina/"
+                  >
+                    LinkedIn
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -138,8 +236,8 @@ export default function Footer() {
             <span className="font-normal font-[Catamaran] text-xs">
               © {new Date().getFullYear()} {common[0].rights[`${lng}`]}
             </span>
-            <a href="https://artrodite.com/" target="_blank" rel="noreferrer">
-              <img className="mt-10" src="/assets/artrodite.png" alt="" />
+            <a className="mt-10" href="https://artrodite.com/" target="_blank" rel="noreferrer">
+              <img src="/assets/artrodite.svg" alt="" />
             </a>
           </div>
         </div>

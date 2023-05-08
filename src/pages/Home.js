@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import { home } from "../data";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   let [over, setOver] = useState(false);
@@ -31,11 +33,15 @@ export default function Home() {
 
   let lng = localStorage.getItem("i18nextLng");
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       {sticky && <GoTop />}
 
-      <Navbar/>
+      <Navbar />
 
       {/* cable */}
 
@@ -46,11 +52,19 @@ export default function Home() {
       {/* section1 */}
 
       <section className="xl:flex pt-28 pb-72 h-full z-50 hidden container mx-auto">
-        <div className="flex flex-col pr-28">
-          <span className="font-normal text-[64px] leading-tight">
+        <div className="flex flex-col pr-28" data-aos="fade-left">
+          <span
+            className="font-normal text-[64px] leading-tight"
+            data-aos="fade-left"
+            data-aos-delay="50"
+          >
             {home[0].section1[0].title[`${lng}`]}
           </span>
-          <span className="font-normal text-2xl leading-7 mt-5 text-text-grey">
+          <span
+            className="font-normal text-2xl leading-7 mt-5 text-text-grey"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             {home[0].section1[0].desc[`${lng}`]}
           </span>
           <Link className="w-max mt-10 z-50" to="/contact">
@@ -62,6 +76,8 @@ export default function Home() {
               onMouseOut={() => {
                 setTimeout(() => setOver(false), 100);
               }}
+              data-aos="fade-left"
+              data-aos-delay="150"
             >
               <img
                 className="mr-2"
@@ -72,7 +88,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="w-full">
+        <div className="w-full" data-aos="fade-right" data-aos-delay="50">
           <img src="/assets/630-buncher-hatti-1.png" alt="" />
         </div>
       </section>
@@ -84,7 +100,10 @@ export default function Home() {
             <img className="xl:inline hidden" src="/assets/world.png" alt="" />
             <img className="xl:hidden" src="/assets/world-mobile.png" alt="" />
           </div>
-          <div className="text-white flex flex-col xl:w-2/5 justify-center items-start xl:pr-44 w-80">
+          <div
+            className="text-white flex flex-col xl:w-2/5 justify-center items-start xl:pr-44 w-80"
+            data-aos="fade-up"
+          >
             <span className="font-black text-2xl">
               {home[0].section2[0].title[`${lng}`]}
             </span>
@@ -112,10 +131,13 @@ export default function Home() {
           <img className="xl:hidden" src="/assets/lamp-mobile.png" alt="" />
         </div>
         <div className="flex flex-col">
-          <span className="font-semibold xl:text-4xl text-2xl">
+          <span
+            className="font-semibold xl:text-4xl text-2xl"
+            data-aos="fade-up"
+          >
             {home[0].section3[0].title[`${lng}`]}
           </span>
-          <div className="flex flex-col mt-16">
+          <div className="flex flex-col mt-16" data-aos="fade-up">
             <span className="font-semibold text-xl">
               {home[0].section3[1].subtitle[`${lng}`]}
             </span>
@@ -123,7 +145,7 @@ export default function Home() {
               {home[0].section3[1].desc[`${lng}`]}
             </span>
           </div>
-          <div className="flex flex-col mt-16">
+          <div className="flex flex-col mt-16" data-aos="fade-up">
             <span className="font-semibold text-xl">
               {home[0].section3[2].subtitle[`${lng}`]}
             </span>
@@ -131,7 +153,7 @@ export default function Home() {
               {home[0].section3[2].desc[`${lng}`]}
             </span>
           </div>
-          <div className="flex flex-col mt-16">
+          <div className="flex flex-col mt-16" data-aos="fade-up">
             <span className="font-semibold text-xl">
               {home[0].section3[3].subtitle[`${lng}`]}
             </span>
@@ -139,7 +161,7 @@ export default function Home() {
               {home[0].section3[3].desc[`${lng}`]}
             </span>
           </div>
-          <div className="flex flex-col mt-16">
+          <div className="flex flex-col mt-16" data-aos="fade-up">
             <span className="font-semibold text-xl">
               {home[0].section3[4].subtitle[`${lng}`]}
             </span>
