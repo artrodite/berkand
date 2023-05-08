@@ -45,10 +45,10 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
         </div>
       </button>
       {isOpen === index && (
-        <div className="p-4 pt-0" data-aos="fade-up" data-aos-delay="50">
+        <div className="p-4 pt-0">
           <ul className="">
             {product.map((p) => (
-              <li className="flex ml-8 md:ml-12 mt-7 items-center w-max1">
+              <li className="flex ml-8 md:ml-12 mt-7 items-center w-max1" data-aos="fade-up" data-aos-delay={p.index*50}>
                 <Link to={`/products/${url}/${p.url}`} className="flex">
                   <img className="h-6 w-6 md:h-8 md:w-8" src={p.icon} alt="" />
                   <span className="font-normal md:font-medium ml-5">

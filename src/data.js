@@ -249,6 +249,7 @@ export const products = [
     url: "machine-groups",
     types: [
       {
+        index: 0,
         name: {
           tr: "Ekstruder",
           en: "Extruder",
@@ -319,6 +320,7 @@ export const products = [
         ],
       },
       {
+        index: 1,
         name: {
           tr: "Rigid Tambur",
           en: "Rigid Drum",
@@ -396,6 +398,7 @@ export const products = [
         ],
       },
       {
+        index: 2,
         name: {
           tr: "Tübüler Tambur",
           en: "Tubular Drum",
@@ -466,6 +469,7 @@ export const products = [
         ],
       },
       {
+        index: 3,
         name: {
           tr: "Kapistan",
           en: "Tensioner",
@@ -536,6 +540,7 @@ export const products = [
         ],
       },
       {
+        index: 4,
         name: {
           tr: "Katerpiller",
           en: "Caterpillars",
@@ -606,6 +611,7 @@ export const products = [
         ],
       },
       {
+        index: 5,
         name: {
           tr: "Akümülatör",
           en: "Accumulator",
@@ -676,6 +682,7 @@ export const products = [
         ],
       },
       {
+        index: 6,
         name: {
           tr: "Kangallama Makineleri",
           en: "Wire Coiling Machines",
@@ -743,6 +750,7 @@ export const products = [
     url: "pay-off-and-take-ups",
     types: [
       {
+        index: 0,
         name: {
           tr: "Portal Tip Toplayıcılar",
           en: "Portal-Type Take-Up",
@@ -813,6 +821,7 @@ export const products = [
         ],
       },
       {
+        index: 1,
         name: {
           tr: "Portal Tip Vericiler",
           en: "Portal-Type Pay-Off",
@@ -883,6 +892,7 @@ export const products = [
         ],
       },
       {
+        index: 2,
         name: {
           tr: "Çatal Tip Toplayıcılar",
           en: "Fork-Type Take-Up",
@@ -953,6 +963,7 @@ export const products = [
         ],
       },
       {
+        index: 3,
         name: {
           tr: "Çatal Tip Vericiler",
           en: "Fork-Type Pay-Off",
@@ -1030,6 +1041,7 @@ export const products = [
         ],
       },
       {
+        index: 4,
         name: {
           tr: "Drum Çatal Toplayıcı",
           en: "Drum Fork Take-Up",
@@ -1107,6 +1119,7 @@ export const products = [
         ],
       },
       {
+        index: 5,
         name: {
           tr: "Drum Çatal Verici",
           en: "Drum Fork Pay-Off",
@@ -1184,6 +1197,7 @@ export const products = [
         ],
       },
       {
+        index: 5,
         name: {
           tr: "Double Verici",
           en: "Double Pay-Off",
@@ -1272,6 +1286,7 @@ export const products = [
     url: "extrusion-lines",
     types: [
       {
+        index: 0,
         name: {
           tr: "İzolasyon Ekstrüder Hattı",
           en: "Izolation Extrusion Line",
@@ -1335,6 +1350,7 @@ export const products = [
         ],
       },
       {
+        index: 1,
         name: {
           tr: "Kılıf Ekstrüder hattı",
           en: "Cable Sheathing Extrusion Line",
@@ -1405,6 +1421,7 @@ export const products = [
         ],
       },
       {
+        index: 2,
         name: {
           tr: "Tandem Ekstrüder Hattı",
           en: "Tandem Extrusion Line",
@@ -1486,6 +1503,7 @@ export const products = [
     url: "double-twist-lines",
     types: [
       {
+        index: 0,
         name: {
           tr: "Buncher Büküm Hattı 630-800",
           en: "Buncher Twist Line 630-800",
@@ -1563,6 +1581,7 @@ export const products = [
         ],
       },
       {
+        index: 1,
         name: {
           tr: "1000-1250 Buncher Büküm Hattı",
           en: "Buncher Twist Line 1000-1250",
