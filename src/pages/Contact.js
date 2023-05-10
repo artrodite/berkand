@@ -79,21 +79,21 @@ export default function Contact() {
           >
             <div className="flex flex-col xl:flex-row xl:justify-between">
               <input
-                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 outline-black"
+                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 2xl:w-64 outline-black"
                 type="text"
                 name="name"
                 placeholder={contact[0].name[`${lng}`]}
                 required
               />
               <input
-                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 outline-black"
+                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 2xl:w-64 outline-black"
                 type="email"
                 name="email"
                 placeholder={contact[0].email[`${lng}`]}
                 required
               />
               <input
-                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 outline-black"
+                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 2xl:w-64 outline-black"
                 type="tel"
                 name="tel"
                 placeholder="+90 ( _ _ _ ) _ _ _  _ _  _ _"
@@ -101,7 +101,7 @@ export default function Contact() {
               />
             </div>
             <textarea
-              className="rounded bg-form-input mt-5 h-64 xl:h-96 py-3 px-2 resize-none outline-black"
+              className="rounded bg-form-input xl:mt-8 mt-5 h-64 xl:h-96 py-3 px-2 resize-none outline-black"
               type="textarea"
               name="message"
               placeholder={contact[0].message[`${lng}`]}
@@ -111,7 +111,7 @@ export default function Contact() {
               <input
                 type="submit"
                 value={contact[0].send[`${lng}`]}
-                className="cursor-pointer mt-8 xl:mt-5 bg-berkand-orange hover:bg-white hover:text-berkand-orange duration-500 text-white border-2 border-berkand-orange xl:text-lg text-base w-full p-3 rounded"
+                className="cursor-pointer mt-8 xl:mt-5 bg-white hover:bg-berkand-orange hover:text-white duration-500 text-berkand-orange border-2 border-berkand-orange xl:text-lg text-base w-full p-3 rounded"
               />
             </div>
           </form>
@@ -139,64 +139,85 @@ export default function Contact() {
           >
             {common[0].contactinfo[`${lng}`]}
           </span>
-          <div>
-            <div
-              className="mt-11 xl:mt-24 flex flex-col xl:flex-row items-center"
-              data-aos="fade-up"
-              data-aos-delay="50"
-            >
-              <span className="font-semibold xl:text-xl xl:mr-[123px]">
-                CEO Ramazan Yılmaz{" "}
+          <div className="flex mt-4" data-aos="fade-up" data-aos-delay="50">
+            <div className="flex flex-col mr-[150px]">
+              <span
+                className="font-semibold xl:text-xl mt-11"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                {common[0].manager[`${lng}`]}
               </span>
-              <span className="mt-3 xl:mt-0 xl:mr-40">+90 536 630 96 11</span>
-              <span className="mt-3 xl:mt-0 mr-5">
-                info@berkandmakina.com.tr
-              </span>
-              <a href="mailto:info@berkandmakina.com.tr">
-                <img src="/assets/icons/north-east-arrow.svg" alt="" />
-              </a>
-            </div>
-            <div
-              className="mt-11 flex flex-col xl:flex-row items-center"
-              data-aos="fade-up"
-              data-aos-delay="50"
-            >
-              <span className="font-semibold xl:text-xl xl:mr-[222px]">
+              <span
+                className="font-semibold xl:text-xl mt-11"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
                 {common[0].marketing[`${lng}`]}
               </span>
-              <span className="mt-3 xl:mt-0 xl:mr-40">+90 552 295 96 11</span>
-              <span className="mt-3 xl:mt-0 mr-5">
-                sales@berkandmakina.com.tr
+              <span
+                className="font-semibold xl:text-xl mt-11"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                {common[0].office[`${lng}`]}
               </span>
-              <a href="mailto:sales@berkandmakina.com.tr">
+            </div>
+            <div className="flex flex-col mr-[150px]">
+              <span className="mt-11" data-aos="fade-up" data-aos-delay="50">
+                +90 552 295 96 11
+              </span>
+              <span className="mt-11" data-aos="fade-up" data-aos-delay="50">
+                +90 536 630 96 11
+              </span>
+              <span className="mt-11" data-aos="fade-up" data-aos-delay="50">
+                +90 258 251 25 82
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <a
+                className="flex items-center hover:text-berkand-orange duration-200 mt-11"
+                href="mailto:info@berkandmakina.com.tr"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                <span className="mt-3 xl:mt-0 mr-5">
+                  info@berkandmakina.com.tr
+                </span>
+                <img src="/assets/icons/north-east-arrow.svg" alt="" />
+              </a>
+              <a
+                className="flex items-center hover:text-berkand-orange duration-200 mt-11"
+                href="mailto:sales@berkandmakina.com.tr"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                <span className="mt-3 xl:mt-0 mr-5">
+                  sales@berkandmakina.com.tr
+                </span>
+                <img src="/assets/icons/north-east-arrow.svg" alt="" />
+              </a>
+              <a
+                className="flex items-center hover:text-berkand-orange duration-200 mt-11"
+                href="mailto:info@berkandmakina.com.tr"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                <span className="mt-3 xl:mt-0 mr-5">
+                  info@berkandmakina.com.tr
+                </span>
                 <img src="/assets/icons/north-east-arrow.svg" alt="" />
               </a>
             </div>
-            <div
-              className="mt-11 xl:mb-24 flex flex-col xl:flex-row items-center"
-              data-aos="fade-up"
-              data-aos-delay="50"
-            >
-              <span className="font-semibold xl:text-xl xl:mr-[230px]">
-                {common[0].fixedline[`${lng}`]}
-              </span>
-              <span className="mt-3 xl:mt-0 xl:mr-40">+90 258 251 25 82</span>
-              <span className="mt-3 xl:mt-0 mr-5">
-                info@berkandmakina.com.tr
-              </span>
-              <a href="mailto:info@berkandmakina.com.tr">
-                <img src="/assets/icons/north-east-arrow.svg" alt="" />
-              </a>
-            </div>
-            <hr
-              className="w-auto border-black border my-11"
-              data-aos="fade-up"
-              data-aos-delay="50"
-            />
           </div>
+          <hr
+            className="w-auto border-black border my-36"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          />
         </div>
         <div className="w-7/12 container xl:flex xl:flex-col hidden">
-          <div className="xl:my-24 xl:flex">
+          <div className="xl:mb-24 xl:flex">
             <span
               className="font-semibold xl:mr-48 xl:text-xl"
               data-aos="fade-up"
@@ -205,45 +226,36 @@ export default function Contact() {
               {common[0].socialmedia[`${lng}`]}
             </span>
             <div className="flex flex-col">
-              <div
-                className="flex items-center"
-                data-aos="fade-up"
-                data-aos-delay="50"
-              >
-                <span className="mt-3 xl:mt-0 mr-5">Instagram</span>
+              <div data-aos="fade-up" data-aos-delay="50">
                 <a
+                  className="flex items-center hover:text-berkand-orange duration-200"
                   href="https://www.instagram.com/berkandmakina/"
                   target="_blank"
                   rel="noreferrer"
                 >
+                  <span className="mt-3 xl:mt-0 mr-5">Instagram</span>
                   <img src="/assets/icons/north-east-arrow.svg" alt="" />
                 </a>
               </div>
-              <div
-                className="flex items-center mt-3"
-                data-aos="fade-up"
-                data-aos-delay="50"
-              >
-                <span className="mr-5">Facebook</span>
+              <div className="mt-3" data-aos="fade-up" data-aos-delay="50">
                 <a
+                  className="flex items-center hover:text-berkand-orange duration-200"
                   href="https://www.facebook.com/berkand.makina.37/"
                   target="_blank"
                   rel="noreferrer"
                 >
+                  <span className="mr-5">Facebook</span>
                   <img src="/assets/icons/north-east-arrow.svg" alt="" />
                 </a>
               </div>
-              <div
-                className="flex items-center mt-3"
-                data-aos="fade-up"
-                data-aos-delay="50"
-              >
-                <span className="mr-5">Linkedin</span>
+              <div className="mt-3" data-aos="fade-up" data-aos-delay="50">
                 <a
+                  className="flex items-center hover:text-berkand-orange duration-200"
                   href="https://www.linkedin.com/company/berkand-makina/"
                   target="_blank"
                   rel="noreferrer"
                 >
+                  <span className="mr-5">Linkedin</span>
                   <img src="/assets/icons/north-east-arrow.svg" alt="" />
                 </a>
               </div>
@@ -262,20 +274,21 @@ export default function Contact() {
             >
               {common[0].address[`${lng}`]}
             </span>
-            <span
-              className="mt-3 xl:mt-0 mr-5"
-              data-aos="fade-up"
-              data-aos-delay="50"
-            >
-              Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
-            </span>
             <a
+              className="flex items-center hover:text-berkand-orange duration-200"
               target="_blank"
               rel="noreferrer"
               href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en"
               data-aos="fade-up"
               data-aos-delay="50"
             >
+              <span
+                className="mt-3 xl:mt-0 mr-5"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
+              </span>
               <img src="/assets/icons/north-east-arrow.svg" alt="" />
             </a>
           </div>

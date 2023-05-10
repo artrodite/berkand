@@ -85,9 +85,9 @@ export default function Footer() {
             </span>
             <div className="flex mt-4">
               <div className="flex flex-col mr-16">
-                <span>CEO Ramazan Yılmaz</span>
+                <span>{common[0].manager[`${lng}`]}</span>
                 <span className="mt-2">{common[0].marketing[`${lng}`]}</span>
-                <span className="mt-2">{common[0].fixedline[`${lng}`]}</span>
+                <span className="mt-2">{common[0].office[`${lng}`]}</span>
               </div>
               <div className="flex flex-col mr-16">
                 <span>+90 552 295 96 11</span>
@@ -117,13 +117,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-start my-12">
+        <div className="flex items-center justify-start my-12 relative">
           <span className="font-normal font-[Catamaran]">
             © {new Date().getFullYear()} {common[0].rights[`${lng}`]}
           </span>
           <a href="https://artrodite.com/" target="_blank" rel="noreferrer">
             <img
-              className="absolute left-1/2 -translate-x-1/2"
+              className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-11 h-11"
               src="/assets/artrodite.svg"
               alt=""
             />
@@ -154,7 +154,7 @@ export default function Footer() {
           <div>
             <div className="mt-11 xl:mt-24 flex flex-col xl:flex-row">
               <span className="font-semibold xl:text-xl xl:mr-[123px]">
-                CEO Ramazan Yılmaz{" "}
+                {common[0].manager[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 536 630 96 11</span>
               <span className="mt-3 xl:mt-0">
@@ -182,7 +182,7 @@ export default function Footer() {
             </div>
             <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row">
               <span className="font-semibold xl:text-xl xl:mr-[235px]">
-                {common[0].fixedline[`${lng}`]}
+                {common[0].office[`${lng}`]}
               </span>
               <span className="mt-3 xl:mt-0 xl:mr-40">+90 258 251 25 82</span>
               <span className="mt-3 xl:mt-0">
@@ -236,8 +236,13 @@ export default function Footer() {
             <span className="font-normal font-[Catamaran] text-xs">
               © {new Date().getFullYear()} {common[0].rights[`${lng}`]}
             </span>
-            <a className="mt-10" href="https://artrodite.com/" target="_blank" rel="noreferrer">
-              <img src="/assets/artrodite.svg" alt="" />
+            <a
+              className="mt-10"
+              href="https://artrodite.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img className="w-10 h-10" src="/assets/artrodite.svg" alt="" />
             </a>
           </div>
         </div>
