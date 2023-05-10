@@ -2,7 +2,7 @@ export const common = [
   {
     references: {
       tr: "Referanslarımız",
-      en: "Our references",
+      en: "References",
       ru: "Наши рекомендации",
     },
     site: {
@@ -42,18 +42,23 @@ export const common = [
     },
     contactinfo: {
       tr: "İletişim Bilgilerimiz",
-      en: "Our Contact Information",
-      ru: "Наша контактная информация",
+      en: "Contact Information",
+      ru: "контактная информация",
+    },
+    manager: {
+      tr: "Genel Müdür",
+      en: "General Manager",
+      ru: "Главный управляющий",
     },
     marketing: {
       tr: "Pazarlama",
       en: "Marketing",
       ru: "Маркетинг",
     },
-    fixedline: {
-      tr: "Sabit Hat",
-      en: "Fixed-line",
-      ru: "Фиксированная линия",
+    office: {
+      tr: "Ofis",
+      en: "Office",
+      ru: "Офис",
     },
     rights: {
       tr: "Berkand Makina, Tüm Hakları Saklıdır",
@@ -1685,7 +1690,7 @@ export const productIcons = [
         icon: "/assets/icons/eco.svg",
         title: {
           tr: "Tasarruflu",
-          en: "Thrifty",
+          en: "Eco Friendly",
           ru: "ru-Tasarruflu",
         },
         desc: {
