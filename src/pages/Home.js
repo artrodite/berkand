@@ -7,6 +7,7 @@ import { home } from "../data";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HomeSwiper from "../components/HomeSwiper"
 
 export default function Home() {
   let [over, setOver] = useState(false);
@@ -52,7 +53,7 @@ export default function Home() {
       {/* section1 */}
 
       <section className="xl:flex pt-28 pb-72 h-full z-50 hidden container mx-auto">
-        <div className="flex flex-col pr-28" data-aos="fade-left">
+        <div className="flex flex-col pr-28 z-50" data-aos="fade-left">
           <span
             className="font-normal text-[64px] leading-tight"
             data-aos="fade-left"
@@ -88,8 +89,8 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="w-full" data-aos="fade-right" data-aos-delay="50">
-          <img src="/assets/630-buncher-hatti-1.png" alt="" />
+        <div className="w-1/2 z-50" data-aos="fade-right" data-aos-delay="50">
+          <HomeSwiper/>
         </div>
       </section>
 

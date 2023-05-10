@@ -14,6 +14,11 @@ module.exports = {
         "text-grey": "#585858",
         "form-input": "#F4F4F4",
       },
+      backgroundImage: {
+        'cable': "url('../public/assets/cable.svg')",
+        'cable1': "url('../public/assets/cable1.svg')",
+        'cable2': "url('../public/assets/cable2.svg')",
+      }
     },
   },
   plugins: [],
