@@ -55,7 +55,7 @@ export default function About() {
         <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5" data-aos="fade-right" data-aos-delay="50">
           <img
             className="h-3/4 lg:h-full object-cover  rounded-3xl"
-            src="https://www.gannett-cdn.com/media/USATODAY/popcandy/2012/10/30/regularshow-16_9.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+            src="/assets/about/about1.png"
             alt=""
           />
         </div>
@@ -75,7 +75,7 @@ export default function About() {
         <div className="xl:mr-20 lg:mr-10 lg:mt-0 mt-5" data-aos="fade-right" data-aos-delay="50">
           <img
             className="h-3/4 lg:h-full object-cover rounded-3xl"
-            src="/assets/about2.png"
+            src="/assets/about/about2.png"
             alt=""
           />
         </div>
@@ -95,7 +95,7 @@ export default function About() {
         <div className="xl:ml-20 lg:ml-10 lg:mt-0 mt-5" data-aos="fade-right" data-aos-delay="50">
           <img
             className="h-3/4 lg:h-full object-cover rounded-3xl"
-            src="https://a.ltrbxd.com/resized/sm/upload/1o/yl/2i/c5/xHGTnvmrNaDLyysdvqOGKAcaNpQ-1200-1200-675-675-crop-000000.jpg?v=6d89778ce0"
+            src="/assets/about/about3.png"
             alt=""
           />
         </div>
