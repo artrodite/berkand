@@ -27,22 +27,22 @@ export default function App() {
       >
         <SwiperSlide className="flex">
           <img
-            className="w-full h-full object-cover mx-auto"
-            src="https://letsplayadrinkinggame.com/wp-content/uploads/2020/09/Regular-show-cast.jpg"
+            className="w-full h-full object-contain mx-auto"
+            src="/assets/about/swiper/swiper1.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide className="">
           <img
-            className="w-full h-full object-cover mx-auto"
-            src="https://media.wired.com/photos/59330ce9714b881cb2969b3b/191:100/w_1280,c_limit/RegShow_Thumb_Group2.jpg"
+            className="w-full h-full object-contain mx-auto"
+            src="/assets/about/swiper/swiper2.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide className="">
           <img
-            className="w-full h-full object-cover mx-auto"
-            src="https://www.skwigly.co.uk/wp-content/uploads/2020/09/Regular-show-A1-poster-au-e1447099261159-1280x902-1-e1600348321444.jpg"
+            className="w-full h-full object-contain mx-auto"
+            src="/assets/about/swiper/swiper3.png"
             alt=""
           />
         </SwiperSlide>
