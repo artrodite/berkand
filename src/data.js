@@ -82,7 +82,12 @@ export const home = [
           en: "Committed to a bright future with top-quality cable manufacturing machines.",
           ru: "Ru-Hedefimiz, fabrikanızda en düşük maliyet ile en kaliteli bir ürünü elde etmeniz.",
         },
-        button: {
+        productsButton: {
+          tr: "Ürünler",
+          en: "Products",
+          ru: "Продукты",
+        },
+        contactButton: {
           tr: "İletişim",
           en: "Contact",
           ru: "Контакт",
