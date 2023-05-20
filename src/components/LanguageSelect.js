@@ -41,6 +41,7 @@ const LanguageSelect = ({ changeLanguage, lang }) => {
       onChange={(option) => changeLanguage(option.value)}
       placeholder={lang}
       className="min-w-[112px]"
+      isSearchable={false}
       styles={{
         placeholder: (provided) => ({ ...provided, color: "black" }),
       }}
