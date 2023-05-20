@@ -1703,6 +1703,11 @@ export const productIcons = [
           en: "Save energy with high-tech electronics.",
           ru: "ru-Yüksek teklonoji elektronikler ile enerjiden tasarrruf edin.",
         },
+        desc2: {
+          tr: "",
+          en: "",
+          ru: "",
+        },
       },
       {
         index: 1,
@@ -1716,6 +1721,11 @@ export const productIcons = [
           tr: "Kaliteli işçiliği ile uzun süren bir kullanım sağlayın.",
           en: "Provide a long-lasting use with quality workmanship.",
           ru: "ru-Kaliteli işçiliği ile uzun süren bir kullanım sağlayın.",
+        },
+        desc2: {
+          tr: "",
+          en: "",
+          ru: "",
         },
       },
       {
@@ -1731,6 +1741,11 @@ export const productIcons = [
           en: "Adjust the speed to your needs for maximum efficiency.",
           ru: "ru-Maksimum verim için hızını ihtiyacınıza göre ayarlayın.",
         },
+        desc2: {
+          tr: "",
+          en: "",
+          ru: "",
+        },
       },
       {
         index: 3,
@@ -1745,6 +1760,11 @@ export const productIcons = [
           en: "Mechanical parts are under warranty for 2 years and electronic components are under warranty for 1 year.*",
           ru: "ru-2 yıl boyunca mekanik, 1 yıl boyunca ise elektronik aksamları garanti altında.*",
         },
+        desc2: {
+          tr: "*Elektronik garanti, elektronik parça üreticileri tarafından verilen garantidir değişkenlik gösterebilir",
+          en: "*Electronic warranty is the warranty given by electronic component manufacturers.",
+          ru: "*Электронная гарантия — это гарантия, предоставляемая производителями электронных компонентов.",
+        },
       },
       {
         index: 4,
@@ -1758,6 +1778,11 @@ export const productIcons = [
           tr: "Kullanımı ve bakımı basit, tek tuşta işinizi halledin.",
           en: "Simple to use and maintain, get the job done at the click of a button.",
           ru: "ru-Kullanımı ve bakımı basit, tek tuşta işinizi halledin.",
+        },
+        desc2: {
+          tr: "",
+          en: "",
+          ru: "",
         },
       },
     ],

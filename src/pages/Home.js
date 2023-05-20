@@ -49,9 +49,9 @@ export default function Home() {
 
       {/* section1 */}
 
-      <section className="flex pt-28 pb-72 h-full z-50 container mx-auto xl:px-0 px-5">
+      <section className="flex xl:pt-28 pt-20 pb-72 h-full container mx-auto xl:px-0 px-5">
         <div
-          className="flex flex-col xl:pr-28 z-50 w-full xl:text-start text-center"
+          className="flex flex-col xl:pr-28 w-full xl:text-start text-center"
           data-aos="fade-left"
         >
           <span
@@ -69,16 +69,16 @@ export default function Home() {
             {home[0].section1[0].desc[`${lng}`]}
           </span>
           <div
-            className="xl:hidden w-auto z-50"
+            className="xl:hidden w-auto"
             data-aos="fade-right"
             data-aos-delay="50"
           >
             <HomeSwiper />
           </div>
           <div className="flex xl:flex-row flex-col mt-10">
-            <Link className="xl:w-max w-full z-50 xl:mr-12" to="/products">
+            <Link className="xl:w-max w-full xl:mr-12" to="/products">
               <button
-                className="xl:w-64 w-full z-50 h-11 rounded-md bg-berkand-blue font-semibold text-white flex justify-center items-center border-2 border-berkand-blue hover:bg-white hover:text-berkand-blue duration-500"
+                className="xl:w-64 w-full h-11 rounded-md bg-berkand-blue font-semibold text-white flex justify-center items-center border-2 border-berkand-blue hover:bg-white hover:text-berkand-blue duration-500"
                 onMouseOver={() => {
                   setTimeout(() => setOver(true), 100);
                 }}
@@ -96,9 +96,9 @@ export default function Home() {
                 {home[0].section1[0].productsButton[`${lng}`]}
               </button>
             </Link>
-            <Link className="xl:w-max w-full z-50 xl:mt-0 mt-6" to="/contact">
+            <Link className="xl:w-max w-full xl:mt-0 mt-6" to="/contact">
               <button
-                className="xl:w-64 w-full z-50 h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
+                className="xl:w-64 w-full h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
                 onMouseOver={() => {
                   setTimeout(() => setOver2(true), 100);
                 }}
@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="xl:inline hidden w-1/2 z-50"
+          className="xl:inline hidden w-1/2"
           data-aos="fade-right"
           data-aos-delay="50"
         >
