@@ -110,7 +110,7 @@ export default function Product() {
                 src={over ? support_agentHover : support_agent}
                 alt=""
               />
-              {home[0].section1[0].button[`${lng}`]}
+              {home[0].section1[0].contactButton[`${lng}`]}
             </button>
           </Link>
         </div>
@@ -175,6 +175,9 @@ export default function Product() {
                 </span>
                 <span className="font-light mt-3 xl:text-xl">
                   {p.desc[`${lng}`]}
+                </span>
+                <span className="font-light mt-3 xl:text-sm text-text-grey">
+                  {p.desc2[`${lng}`]}
                 </span>
               </div>
             ))}
