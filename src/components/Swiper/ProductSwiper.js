@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { products } from "../data";
+import { products } from "../../data";
 
 // Import Swiper styles
 import "swiper/css";

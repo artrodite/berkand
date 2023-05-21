@@ -5,11 +5,7 @@ import i18next from "i18next";
 import LanguageSelect from "./LanguageSelect";
 
 export default function Navbar({ group, types, product }) {
-  let [over, setOver] = useState(false);
   let [open, setOpen] = useState(false);
-
-  let catalog = "/assets/icons/catalog.svg";
-  let catalogHover = "/assets/icons/catalog-hover.svg";
 
   const path = useLocation().pathname;
 
@@ -69,18 +65,19 @@ export default function Navbar({ group, types, product }) {
           </ul>
         </div>
         <div className="flex z-50 items-center">
-          <div
-            className="items-center mr-20 cursor-pointer hover:text-berkand-orange xl:inline hidden"
-            onMouseOver={() => setOver(true)}
-            onMouseOut={() => setOver(false)}
-          >
-            <a className="flex" href="/assets/catalog.pdf" download>
-              <span>{t("catalog")}</span>
-              <img
+          <div className="items-center mr-20 cursor-pointer hover:text-berkand-orange xl:inline hidden">
+            <a
+              className="flex items-center"
+              href="/assets/catalog.pdf"
+              download
+            >
+              <span className="mr-2">{t("catalog")}</span>
+              <span class="material-symbols-outlined text-xl">download</span>
+              {/* <img
                 className="ml-1"
                 src={over ? catalogHover : catalog}
                 alt=""
-              />
+              /> */}
             </a>
           </div>
           <div className="xl:inline hidden">
@@ -90,7 +87,7 @@ export default function Navbar({ group, types, product }) {
           {/* mobile */}
 
           {path === "/" && (
-            <div className="xl:hidden text-4xl">
+            <div className="xl:hidden text-4xl z-50">
               <ion-icon
                 name={open ? "close-outline" : "menu-outline"}
                 onClick={menuHandler}
@@ -100,7 +97,7 @@ export default function Navbar({ group, types, product }) {
         </div>
       </div>
       <div
-        className={`bg-white flex flex-col justify-center xl:hidden mb-5 z-50 w-full container absolute opacity-0 -top-96 duration-300  ${
+        className={`bg-white flex flex-col justify-center xl:hidden mb-5 z-30 w-full container absolute opacity-0 -top-96 duration-300  ${
           open ? "opacity-100 top-20" : "opacity-0 -top-96"
         }`}
       >
@@ -135,11 +132,11 @@ export default function Navbar({ group, types, product }) {
       </div>
       {path === "/about" && (
         <div className="flex justify-between items-center mb-10 mt-0 mx-8 xl:hidden">
-          <Link to="/">
+          <Link className="z-50" to="/">
             <img src="/assets/logo-mobile-navbar.svg" alt="" />
           </Link>
           <span className="font-bold text-black">{t("about")}</span>
-          <div className="xl:hidden text-4xl">
+          <div className="xl:hidden text-4xl z-50">
             <ion-icon
               name={open ? "close-outline" : "menu-outline"}
               onClick={menuHandler}
@@ -149,11 +146,11 @@ export default function Navbar({ group, types, product }) {
       )}
       {path === "/products" && (
         <div className="flex justify-between items-center mb-10 mt-0 mx-8 xl:hidden">
-          <Link to="/">
+          <Link  className="z-50" to="/">
             <img src="/assets/logo-mobile-navbar.svg" alt="" />
           </Link>
           <span className="font-bold text-black">{t("products")}</span>
-          <div className="xl:hidden text-4xl">
+          <div className="xl:hidden text-4xl z-50">
             <ion-icon
               name={open ? "close-outline" : "menu-outline"}
               onClick={menuHandler}
@@ -163,11 +160,11 @@ export default function Navbar({ group, types, product }) {
       )}
       {path === "/contact" && (
         <div className="flex justify-between items-center mt-0 mb-16 mx-8 xl:hidden">
-          <Link to="/">
+          <Link className="z-50" to="/">
             <img src="/assets/logo-mobile-navbar.svg" alt="" />
           </Link>
           <span className="font-bold text-black">{t("contact")}</span>
-          <div className="xl:hidden text-4xl">
+          <div className="xl:hidden text-4xl z-50">
             <ion-icon
               name={open ? "close-outline" : "menu-outline"}
               onClick={menuHandler}
@@ -177,13 +174,13 @@ export default function Navbar({ group, types, product }) {
       )}
       {path === `/products/${group}/${types}` && (
         <div className="flex justify-between items-center mt-0 mb-16 mx-8 xl:hidden text-center">
-          <Link to="/">
+          <Link className="z-50" to="/">
             <img src="/assets/logo-mobile-navbar.svg" alt="" />
           </Link>
           <span className="font-bold text-black uppercase mx-5">
             {product[`${lng}`]}
           </span>
-          <div className="xl:hidden text-4xl">
+          <div className="xl:hidden text-4xl z-50">
             <ion-icon
               name={open ? "close-outline" : "menu-outline"}
               onClick={menuHandler}

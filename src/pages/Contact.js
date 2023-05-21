@@ -84,12 +84,10 @@ export default function Contact() {
             data-aos-delay="100"
           >
             <div className="flex flex-col xl:flex-row xl:justify-between">
-              <div className="flex border-form-placeholder rounded-md border-2 h-12 xl:mt-0 mt-5">
-                <img
-                  className="m-3"
-                  src="/assets/icons/name-surname.svg"
-                  alt=""
-                />
+              <div className="flex items-center border-form-placeholder rounded-md border h-12 xl:mt-0 mt-5">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  badge
+                </span>
                 <input
                   className="rounded bg-transparent xl:mt-0 h-11 py-3 px-2 outline-none placeholder:text-form-placeholder"
                   type="text"
@@ -98,8 +96,10 @@ export default function Contact() {
                   required
                 />
               </div>
-              <div className="flex border-form-placeholder rounded-md border-2 h-12 xl:mt-0 mt-5">
-                <img className="m-3" src="/assets/icons/mail.svg" alt="" />
+              <div className="flex border-form-placeholder rounded-md border h-12 xl:mt-0 mt-5">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  mail
+                </span>
                 <input
                   className="rounded bg-transparent xl:mt-0 h-11 py-3 px-2 outline-none placeholder:text-form-placeholder"
                   type="email"
@@ -108,8 +108,10 @@ export default function Contact() {
                   required
                 />
               </div>
-              <div className="flex border-form-placeholder rounded-md border-2 h-12 xl:mt-0 mt-5">
-                <img className="m-3" src="/assets/icons/phone.svg" alt="" />
+              <div className="flex border-form-placeholder rounded-md border h-12 xl:mt-0 mt-5">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  phone_iphone
+                </span>
                 <input
                   className="rounded bg-transparent xl:mt-0 h-11 py-3 px-2 outline-none placeholder:text-form-placeholder"
                   type="tel"
@@ -120,8 +122,10 @@ export default function Contact() {
               </div>
             </div>
             <div className="mt-4 flex sm:flex-row flex-col">
-              <div className="flex w-full h-12 items-center bg-form-input rounded-md">
-                <img className="m-3" src="/assets/icons/topic.svg" alt="" />
+              <div className="flex w-full h-12 items-center bg-form-input rounded-md hover:bg-form-input-dark duration-100">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  history_edu
+                </span>
                 <select
                   className="w-full h-full outline-none bg-transparent text-form-placeholder ml-2 mr-3 cursor-pointer"
                   id="topic"
@@ -136,21 +140,24 @@ export default function Contact() {
                   ))}
                 </select>
               </div>
-              <div className="sm:ml-12 ml-0 sm:mt-0 mt-5 w-full h-12 flex items-center justify-center bg-form-input rounded-md">
+              <div className="sm:ml-12 ml-0 sm:mt-0 mt-5 w-full h-12 flex items-center justify-center bg-form-input hover:bg-form-input-dark duration-100 rounded-md">
                 <label
-                  htmlFor="file"
-                  className="flex items-center h-full cursor-pointer"
+                  for="file"
+                  className="flex items-center h-full w-full cursor-pointer"
                 >
-                  <img src="/assets/icons/attach-file.svg" alt="" />
+                <div className="flex items-center mx-auto">
+
+                  <span class="material-symbols-outlined text-form-placeholder">attach_file</span>
                   <span className="ml-5 text-form-placeholder">
                     {contact[0].file[`${lng}`]}
                   </span>
+                </div>
                 </label>
                 <input type="file" id="file" name="file" className="hidden" />
               </div>
             </div>
-            <div className="py-2 pr-3 flex items-start rounded-md border-form-placeholder border-2 mt-4">
-              <img className="m-3" src="/assets/icons/message.svg" alt="" />
+            <div className="py-2 pr-3 flex items-start rounded-md border-form-placeholder border mt-4">
+            <span class="material-symbols-outlined text-form-placeholder m-3">chat_bubble</span>
               <textarea
                 className="rounded bg-transparent h-full min-h-[255px] w-full xl:h-96 py-2 px-2 resize-none outline-none placeholder:text-form-placeholder"
                 type="textarea"
@@ -163,7 +170,7 @@ export default function Contact() {
               <input
                 type="submit"
                 value={contact[0].send[`${lng}`]}
-                className="cursor-pointer mt-8 xl:mt-5 bg-white hover:bg-berkand-orange hover:text-white duration-500 text-berkand-orange border-2 border-berkand-orange xl:text-lg text-base w-full p-3 rounded"
+                className="cursor-pointer mt-8 xl:mt-5 bg-berkand-orange hover:bg-white hover:text-berkand-orange duration-500 text-white border-2 border-berkand-orange xl:text-lg text-base w-full p-3 rounded"
               />
             </div>
           </form>

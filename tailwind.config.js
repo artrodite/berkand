@@ -13,6 +13,7 @@ module.exports = {
         "grey": "#A8A8A8",
         "text-grey": "#585858",
         "form-input": "#F6F6F6",
+        "form-input-dark": "#F0F0F0",
         "form-placeholder": "#7B7B7B",
       },
       backgroundImage: {
