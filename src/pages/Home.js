@@ -7,16 +7,9 @@ import { home } from "../data";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import HomeSwiper from "../components/HomeSwiper";
+import HomeSwiper from "../components/Swiper/HomeSwiper";
 
 export default function Home() {
-  let [over, setOver] = useState(false);
-  let [over2, setOver2] = useState(false);
-  let support_agent = "/assets/icons/support_agent.svg";
-  let support_agentHover = "/assets/icons/support_agent-hover.svg";
-  let search = "/assets/icons/search.svg";
-  let search_hover = "/assets/icons/search-hover.svg";
-
   const [sticky, setSticky] = useState(false);
 
   const handleScroll = () => {
@@ -49,7 +42,7 @@ export default function Home() {
 
       {/* section1 */}
 
-      <section className="flex xl:pt-28 pt-20 pb-72 h-full container mx-auto xl:px-0 px-5">
+      <section className="flex xl:pt-28 pt-20 xl:pb-72 pb-6 h-full container mx-auto xl:px-0 px-5">
         <div
           className="flex flex-col xl:pr-28 w-full xl:text-start text-center"
           data-aos="fade-left"
@@ -69,52 +62,27 @@ export default function Home() {
             {home[0].section1[0].desc[`${lng}`]}
           </span>
           <div
-            className="xl:hidden w-auto"
+            className="xl:hidden w-auto xl:mt-0 mt-4"
             data-aos="fade-right"
             data-aos-delay="50"
           >
             <HomeSwiper />
           </div>
-          <div className="flex xl:flex-row flex-col mt-10">
-            <Link className="xl:w-max w-full xl:mr-12" to="/products">
-              <button
-                className="xl:w-64 w-full h-11 rounded-md bg-berkand-blue font-semibold text-white flex justify-center items-center border-2 border-berkand-blue hover:bg-white hover:text-berkand-blue duration-500"
-                onMouseOver={() => {
-                  setTimeout(() => setOver(true), 100);
-                }}
-                onMouseOut={() => {
-                  setTimeout(() => setOver(false), 100);
-                }}
-                data-aos="fade-left"
-                data-aos-delay="150"
-              >
-                <img
-                  className="mr-2"
-                  src={over ? search_hover : search}
-                  alt=""
-                />
+          <div className="flex xl:flex-row flex-col xl:mt-10 mt-0">
+            <Link className="xl:w-64 w-full h-11 xl:mr-12 rounded-md bg-berkand-blue font-semibold text-white flex justify-center items-center border-2 border-berkand-blue hover:bg-white hover:text-berkand-blue transition-all duration-500" to="/products">
+              <div className=" flex items-center">
+                <span class="material-symbols-outlined mr-2">search</span>
                 {home[0].section1[0].productsButton[`${lng}`]}
-              </button>
+              </div>
             </Link>
-            <Link className="xl:w-max w-full xl:mt-0 mt-6" to="/contact">
-              <button
-                className="xl:w-64 w-full h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
-                onMouseOver={() => {
-                  setTimeout(() => setOver2(true), 100);
-                }}
-                onMouseOut={() => {
-                  setTimeout(() => setOver2(false), 100);
-                }}
-                data-aos="fade-left"
-                data-aos-delay="150"
-              >
-                <img
-                  className="mr-2"
-                  src={over2 ? support_agentHover : support_agent}
-                  alt=""
-                />
+            <Link
+              className="xl:w-64 w-full h-11 flex justify-center items-center xl:mt-0 mt-6 rounded-md bg-berkand-orange font-semibold text-white  border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
+              to="/contact"
+            >
+              <div className="flex items-center">
+                <span class="material-symbols-outlined mr-2">support_agent</span>
                 {home[0].section1[0].contactButton[`${lng}`]}
-              </button>
+              </div>
             </Link>
           </div>
         </div>

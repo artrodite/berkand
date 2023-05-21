@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Swiper from "../components/Swiper";
+import Swiper from "../components/Swiper/AboutSwiper";
 import References from "../components/References";
 import GoTop from "../components/GoTop";
 import Navbar from "../components/Navbar";

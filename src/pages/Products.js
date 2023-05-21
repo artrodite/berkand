@@ -26,20 +26,12 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
         <div className="flex items-center">
           <span>
             {isOpen === index ? (
-              <img
-                className="md:h-8 md:w-8"
-                src="/assets/icons/arrow-up.svg"
-                alt=""
-              />
+              <span class="material-symbols-outlined text-7xl">expand_less</span>
             ) : (
-              <img
-                className="md:h-8 md:w-8"
-                src="/assets/icons/arrow-down.svg"
-                alt=""
-              />
+              <span class="material-symbols-outlined text-7xl">expand_more</span>
             )}
           </span>
-          <span className="ml-5 font-medium text-xl md:font-bold md:text-3xl">
+          <span className="font-medium text-xl md:font-bold md:text-3xl">
             {title[`${lng}`]}
           </span>
         </div>

@@ -7,10 +7,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import "./aboutSwiper.css"
 
 export default function App() {
 
@@ -22,7 +24,11 @@ export default function App() {
     <div className="h-72 xl:h-[643px] lg:h-[426px] md:h-[342px] my-28 mx-auto select-none container" data-aos="fade-up">
       <Swiper
         navigation={true}
-        modules={[Navigation]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, Navigation]}
         className="h-full w-auto"
       >
         <SwiperSlide className="flex">

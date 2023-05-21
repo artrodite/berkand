@@ -17,13 +17,13 @@ const languageOptions = [
       label: "English",
     },
   },
-  {
+  /* {
     value: "ru",
     data: {
       image: "/assets/flags/ru-flag.png",
       label: "Russian",
     },
-  },
+  }, */
 ];
 
 const formatOptionLabel = ({ data }) => (

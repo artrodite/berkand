@@ -55,6 +55,12 @@ export default function Contact() {
     AOS.init();
   }, []);
 
+  const [topic, setTopic] = useState("");
+
+  const handleTopicChange = (e) => {
+    setTopic(e.target.value);
+  };
+
   return (
     <div>
       {sticky && <GoTop />}
@@ -78,40 +84,93 @@ export default function Contact() {
             data-aos-delay="100"
           >
             <div className="flex flex-col xl:flex-row xl:justify-between">
-              <input
-                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 2xl:w-64 outline-black"
-                type="text"
-                name="name"
-                placeholder={contact[0].name[`${lng}`]}
-                required
-              />
-              <input
-                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 2xl:w-64 outline-black"
-                type="email"
-                name="email"
-                placeholder={contact[0].email[`${lng}`]}
-                required
-              />
-              <input
-                className="rounded bg-form-input mt-5 xl:mt-0 h-11 py-3 px-2 2xl:w-64 outline-black"
-                type="tel"
-                name="tel"
-                placeholder="+90 ( _ _ _ ) _ _ _  _ _  _ _"
+              <div className="flex items-center border-form-placeholder rounded-md border h-12 xl:mt-0 mt-5">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  badge
+                </span>
+                <input
+                  className="rounded bg-transparent xl:mt-0 h-11 py-3 px-2 outline-none placeholder:text-form-placeholder"
+                  type="text"
+                  name="name"
+                  placeholder={contact[0].name[`${lng}`]}
+                  required
+                />
+              </div>
+              <div className="flex border-form-placeholder rounded-md border h-12 xl:mt-0 mt-5">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  mail
+                </span>
+                <input
+                  className="rounded bg-transparent xl:mt-0 h-11 py-3 px-2 outline-none placeholder:text-form-placeholder"
+                  type="email"
+                  name="email"
+                  placeholder={contact[0].email[`${lng}`]}
+                  required
+                />
+              </div>
+              <div className="flex border-form-placeholder rounded-md border h-12 xl:mt-0 mt-5">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  phone_iphone
+                </span>
+                <input
+                  className="rounded bg-transparent xl:mt-0 h-11 py-3 px-2 outline-none placeholder:text-form-placeholder"
+                  type="tel"
+                  name="tel"
+                  placeholder={contact[0].tel[`${lng}`]}
+                  required
+                />
+              </div>
+            </div>
+            <div className="mt-4 flex sm:flex-row flex-col">
+              <div className="flex w-full h-12 items-center bg-form-input rounded-md hover:bg-form-input-dark duration-100">
+                <span class="material-symbols-outlined text-form-placeholder m-3">
+                  history_edu
+                </span>
+                <select
+                  className="w-full h-full outline-none bg-transparent text-form-placeholder ml-2 mr-3 cursor-pointer"
+                  id="topic"
+                  name="topic"
+                  value={topic}
+                  onChange={handleTopicChange}
+                  required
+                >
+                  <option value="">{contact[0].topic[`${lng}`]}</option>
+                  {contact[0].subjects.map((p) => (
+                    <option value={p[`${lng}`]}>{p[`${lng}`]}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="sm:ml-12 ml-0 sm:mt-0 mt-5 w-full h-12 flex items-center justify-center bg-form-input hover:bg-form-input-dark duration-100 rounded-md">
+                <label
+                  for="file"
+                  className="flex items-center h-full w-full cursor-pointer"
+                >
+                <div className="flex items-center mx-auto">
+
+                  <span class="material-symbols-outlined text-form-placeholder">attach_file</span>
+                  <span className="ml-5 text-form-placeholder">
+                    {contact[0].file[`${lng}`]}
+                  </span>
+                </div>
+                </label>
+                <input type="file" id="file" name="file" className="hidden" />
+              </div>
+            </div>
+            <div className="py-2 pr-3 flex items-start rounded-md border-form-placeholder border mt-4">
+            <span class="material-symbols-outlined text-form-placeholder m-3">chat_bubble</span>
+              <textarea
+                className="rounded bg-transparent h-full min-h-[255px] w-full xl:h-96 py-2 px-2 resize-none outline-none placeholder:text-form-placeholder"
+                type="textarea"
+                name="message"
+                placeholder={contact[0].message[`${lng}`]}
                 required
               />
             </div>
-            <textarea
-              className="rounded bg-form-input xl:mt-8 mt-5 h-64 xl:h-96 py-3 px-2 resize-none outline-black"
-              type="textarea"
-              name="message"
-              placeholder={contact[0].message[`${lng}`]}
-              required
-            />
             <div className="flex items-center">
               <input
                 type="submit"
                 value={contact[0].send[`${lng}`]}
-                className="cursor-pointer mt-8 xl:mt-5 bg-white hover:bg-berkand-orange hover:text-white duration-500 text-berkand-orange border-2 border-berkand-orange xl:text-lg text-base w-full p-3 rounded"
+                className="cursor-pointer mt-8 xl:mt-5 bg-berkand-orange hover:bg-white hover:text-berkand-orange duration-500 text-white border-2 border-berkand-orange xl:text-lg text-base w-full p-3 rounded"
               />
             </div>
           </form>

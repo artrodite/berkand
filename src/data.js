@@ -231,10 +231,72 @@ export const contact = [
       ru: "Имя Фамилия",
     },
     email: {
-      tr: "örnek@mail.com",
-      en: "example@mail.com",
-      ru: "пример@mail.com",
+      tr: "Mail Adresiniz",
+      en: "Email Address",
+      ru: "Адрес электронной почты",
     },
+    tel: {
+      tr: "Telefon Numaranız",
+      en: "Phone Number",
+      ru: "Номер телефона",
+    },
+    file: {
+      tr: "Dosya Ekle",
+      en: "Add File",
+      ru: "Добавить файл",
+    },
+    topic: {
+      tr: "Konu",
+      en: "Subject",
+      ru: "Предмет",
+    },
+    subjects: [
+      {
+        tr: "Ürün",
+        en: "Product",
+        ru: "Продукт",
+      },
+      {
+        tr: "Satış",
+        en: "Sales",
+        ru: "Продажи",
+      },
+      {
+        tr: "Yedek Parça",
+        en: "Spare part",
+        ru: "Запасная часть",
+      },
+      {
+        tr: "Servis",
+        en: "Service",
+        ru: "Услуга",
+      },
+      {
+        tr: "Bilgi Talebi",
+        en: "Information request",
+        ru: "Запрос информации",
+      },
+      {
+        tr: "Şikayet",
+        en: "Complaint",
+        ru: "Жалоба",
+      },
+      {
+        tr: "Öneri",
+        en: "Suggestion",
+        ru: "Предположение",
+      },
+      {
+        tr: "Teşekkür",
+        en: "Thanks",
+        ru: "Спасибо",
+      },
+      {
+        tr: "Diğer",
+        en: "Other",
+        ru: "Другой",
+      },
+    ],
     message: {
       tr: "Mesajınız",
       en: "Your message",
@@ -700,16 +762,37 @@ export const products = [
         },
         icon: "/assets/products/icons/machine-groups/kangallama-makineleri.svg",
         url: "wire-coiling-machines",
-        img: "/assets/empty.png",
+        img: "/assets//products/images/machine-groups/kangallama.png",
         desc: {
-          tr: "",
+          tr: "Kablo üretim sektöründe kangallama makinesi, kablo demetlerini düzenlemek ve korumak için kullanılan bir cihazdır. Kabloların etrafına bant veya özel malzeme sararak düzenlemeyi sağlar, kablo demetlerinin güvenli ve düzenli bir şekilde montajlanmasını ve taşınmasını sağlar.",
           en: "en-",
           ru: "ru-",
         },
         article: [
           {
             desc: {
-              tr: "",
+              tr: "Kablo üretim sektöründe kangallama makinesi, kablo demetlerini düzenlemek ve korumak için kullanılan bir cihazdır. Kablo demetleri, farklı tellerin bir araya getirilerek oluşturduğu gruplardır ve genellikle elektrik, iletişim veya endüstriyel uygulamalarda kullanılan kabloların düzenlenmesinde önemli bir rol oynar.",
+              en: "en-",
+              ru: "ru-",
+            },
+          },
+          {
+            desc: {
+              tr: "Kangallama makinesi, kablo demetlerinin etrafına özel bir malzeme veya bant sararak düzenlemeyi sağlar. Bu işlem, kabloların düzgün bir şekilde gruplandırılmasını, korunmasını ve taşınmasını sağlar. Ayrıca, kabloların bükülmesini ve zarar görmesini önler.",
+              en: "en-",
+              ru: "ru-",
+            },
+          },
+          {
+            desc: {
+              tr: "Kangallama makinesi, kablo demetlerini otomatik veya yarı otomatik olarak sarabilir. Makine, belirli bir genişlikteki kangalı veya bantı kabloların etrafına sarar ve gerekirse keser veya bağlar. Bu, kablo demetlerinin güvenli ve düzenli bir şekilde montajlanmasını sağlar.",
+              en: "en-",
+              ru: "ru-",
+            },
+          },
+          {
+            desc: {
+              tr: "Kangallama makinesi, kablo üretim sürecinde verimliliği artırır, zaman tasarrufu sağlar ve düzenli bir ürün çıktısı elde edilmesini sağlar. Ayrıca, kablo demetlerinin taşınması ve depolanması sırasında düzeni korur ve kabloların zarar görmesini engeller.",
               en: "en-",
               ru: "ru-",
             },
@@ -1059,7 +1142,7 @@ export const products = [
         },
         icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
         url: "drum-fork-take-up",
-        img: "/assets/empty.png",
+        img: "/assets/products/images/transmitter-collector/drum-catal-toplayici.png",
         desc: {
           tr: "Drum Çatal Toplayıcı, kablo üretim hattında kablonun son aşamasında düzenli bir şekilde sarılmasını sağlamak için kullanılan bir makinedir. Kabloyu tutarak, belirlenmiş bir çapta bir tambura sarar ve kablonun düzgün bir şekilde sarılmasını sağlar. Bu makine, kablonun depolanması, taşınması ve satılması daha kolay hale getirir ve kablonun kullanım ömrünü uzatır.",
           en: "Drum Fork Type take-up is a machine used in the cable production line to ensure that the cable is wrapped in a regular manner in the final stage of the process. By holding the cable, it winds it onto a drum of a predetermined diameter, ensuring that the cable is wrapped properly. This machine makes it easier to store, transport and sell the cable, while also extending its lifespan.",
@@ -1137,7 +1220,7 @@ export const products = [
         },
         icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
         url: "drum-fork-pay-off",
-        img: "/assets/empty.png",
+        img: "/assets/products/images/transmitter-collector/drum-catal-verici.png",
         desc: {
           tr: "Drum Çatal Verici, kablo üretim hattında kablonun düzgün ve güvenli bir şekilde ilerlemesini sağlayan bir makinedir. İki çatal yapısı tambura sarılı kabloları tutar ve gerilimini kontrol eder.",
           en: "Drum Fork Pay-Off, is a machine used in cable production line to ensure the smooth and safe progress of the cable. The machine holds and controls the tension of the cables wound onto a drum with a two-fork structure.",
@@ -1298,13 +1381,13 @@ export const products = [
       {
         index: 0,
         name: {
-          tr: "İzolasyon Ekstrüder Hattı",
-          en: "Izolation Extrusion Line",
-          ru: "ru-İzolasyon Ekstrüder Hattı",
+          tr: "İzolasyon Ekstrüder Hattı 80 + 45",
+          en: "Izolation Extrusion Line 80 + 45",
+          ru: "ru-İzolasyon Ekstrüder Hattı 80 + 45",
         },
         icon: "/assets/products/icons/extrusion-lines/hat.svg",
         url: "izolation-extrusion-line",
-        img: "/assets/empty.png",
+        img: "/assets/products/images/extrusion-lines/izolasyon.png",
         desc: {
           tr: "İzolasyon ekstrüder hattı, kablo üretiminde kullanılan bir makine hattıdır. Bu hattın amacı, metal iletkenin etrafında izolasyon tabakası oluşturmak için sıcak polimer malzemesinin kontrollü ekstrüzyonunu yapmaktır.",
           en: "An insulation extruder line is a machine line used in cable manufacturing. The purpose of this line is to perform controlled extrusion of hot polymer material around the metal conductor to create an insulation layer.",
@@ -1362,13 +1445,13 @@ export const products = [
       {
         index: 1,
         name: {
-          tr: "Kılıf Ekstrüder hattı",
-          en: "Cable Sheathing Extrusion Line",
-          ru: "ru-Kılıf Ekstrüder hattı",
+          tr: "Kılıf Ekstrüder hattı 100 + 60",
+          en: "Cable Sheathing Extrusion Line 100 + 60",
+          ru: "ru-Kılıf Ekstrüder hattı 100 + 60",
         },
         icon: "/assets/products/icons/extrusion-lines/hat.svg",
         url: "cable-sheathing-extrusion-line",
-        img: "/assets/empty.png",
+        img: "/assets/products/images/extrusion-lines/kılıf.png",
         desc: {
           tr: "Kılıf ekstrüder hattı, kablo üretiminde kullanılan bir makine hattıdır ve kablo kılıfı üretmek için kullanılır. Kılıflar, kablo bölümünü korumak, mekanik dayanıklılığı artırmak veya çevresel etkilerden korumak amacıyla kullanılır. Kılıf ekstrüder hattı, farklı malzemeler kullanarak çeşitli tiplerde kılıflar üretebilir ve kablo üretiminde sıkça kullanılır.",
           en: "A Cable Sheathing Extrusion Line is a machine used in cable production to produce cable sheathing. Cable sheaths are used to protect the cable section, increase mechanical durability, or protect against environmental factors. The Cable Sheathing Extrusion Line can produce various types of sheaths using different materials and is commonly used in cable production. The quality of the sheathing produced by the extrusion line has a significant impact on the durability, insulation properties, and other characteristics of the cable.",
@@ -1433,13 +1516,13 @@ export const products = [
       {
         index: 2,
         name: {
-          tr: "Tandem Ekstrüder Hattı",
-          en: "Tandem Extrusion Line",
-          ru: "ru-Tandem Ekstrüder Hattı",
+          tr: "Tandem Ekstrüder Hattı 120 + 120",
+          en: "Tandem Extrusion Line 120 + 120",
+          ru: "ru-Tandem Ekstrüder Hattı 120 + 120",
         },
         icon: "/assets/products/icons/extrusion-lines/hat.svg",
         url: "tandem-extrusion-line",
-        img: "/assets/empty.png",
+        img: "/assets/products/images/extrusion-lines/tandem.png",
         desc: {
           tr: "Tandem ekstrüder hattı, birden fazla ekstrüderin bir araya getirilerek oluşturulmuş bir kablo üretim hattıdır. Büyük çaplı kabloların üretiminde kullanılır ve farklı malzemeler kullanılarak farklı katmanlar oluşturulabilir. Bu katmanlar, kablo bölümünü korumak, yalıtım sağlamak veya mekanik dayanıklılığı artırmak gibi farklı amaçlar için kullanılabilir.",
           en: "A Tandem Extrusion Line is a cable manufacturing line created by combining multiple extruders. It is used for the production of large diameter cables and allows for the creation of different layers using different materials. These layers can serve various purposes, such as protecting the cable section, providing insulation, or enhancing mechanical durability.",
@@ -1521,7 +1604,7 @@ export const products = [
         },
         icon: "/assets/products/icons/double-twist/double-twist.svg",
         url: "buncher-twist-line-630-800",
-        img: "/assets/products/images/double-twist/630-buncher-hatti-1.png",
+        img: "/assets/products/images/double-twist/630-800.png",
         desc: {
           tr: "Kablo üretim hattında buncher büküm, birçok ince telin bir araya getirilerek daha kalın bir kablo haline getirildiği bir büküm işlemidir. Bu işlem, kablo üretim hattının önemli bir adımıdır ve birçok farklı kablo türü için kullanılır.",
           en: "Buncher twist is a process in cable production where multiple thin wires are twisted together to form a thicker cable. This process is a crucial step in cable production and is used for various types of cables.",
@@ -1599,7 +1682,7 @@ export const products = [
         },
         icon: "/assets/products/icons/double-twist/double-twist.svg",
         url: "buncher-twist-line-1000-1250",
-        img: "/assets/empty.png",
+        img: "/assets/products/images/double-twist/1000-1250.png",
         desc: {
           tr: "Kablo üretim hattında buncher büküm, birçok ince telin bir araya getirilerek daha kalın bir kablo haline getirildiği bir büküm işlemidir. Bu işlem, kablo üretim hattının önemli bir adımıdır ve birçok farklı kablo türü için kullanılır.",
           en: "The Buncher twist process in a cable production line is a twisting operation that transforms multiple thin wires into a thicker cable. This process is a crucial step in the cable production line and is used for various types of cables.",
