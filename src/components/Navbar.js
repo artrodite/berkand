@@ -108,6 +108,9 @@ export default function Navbar({ group, types, product }) {
           {/* <span className="text-4xl font-normal">{t("welcome")}</span> */}
           <ul className="md:justify-center mb-10 bg-white xl:w-auto flex flex-col justify-center items-center">
             <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+              <Link to="/">{t("home")}</Link>
+            </li>
+            <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
               <Link to="/about">{t("about")}</Link>
             </li>
             <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
