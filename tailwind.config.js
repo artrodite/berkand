@@ -12,7 +12,8 @@ module.exports = {
         "white": "#FFFFFF",
         "grey": "#A8A8A8",
         "text-grey": "#585858",
-        "form-input": "#F4F4F4",
+        "form-input": "#F6F6F6",
+        "form-placeholder": "#7B7B7B",
       },
       backgroundImage: {
         'cable': "url('../public/assets/cable.svg')",

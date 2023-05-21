@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { home, products, productIcons } from "../data";
 import { useTranslation } from "react-i18next";
-import ProductSwiper from "../components/ProductSwiper";
 import GoTop from "../components/GoTop";
 import Navbar from "../components/Navbar";
 import AOS from "aos";
@@ -147,7 +146,7 @@ export default function Product() {
         </div>
       </section>
 
-      <ProductSwiper />
+      {/* <ProductSwiper /> */}
 
       {/* section3 */}
       <section className="xl:my-[430px] my-40 container sm:mx-auto mx-7 w-auto">

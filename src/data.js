@@ -231,10 +231,72 @@ export const contact = [
       ru: "Имя Фамилия",
     },
     email: {
-      tr: "örnek@mail.com",
-      en: "example@mail.com",
-      ru: "пример@mail.com",
+      tr: "Mail Adresiniz",
+      en: "Email Address",
+      ru: "Адрес электронной почты",
     },
+    tel: {
+      tr: "Telefon Numaranız",
+      en: "Phone Number",
+      ru: "Номер телефона",
+    },
+    file: {
+      tr: "Dosya Ekle",
+      en: "Add File",
+      ru: "Добавить файл",
+    },
+    topic: {
+      tr: "Konu",
+      en: "Subject",
+      ru: "Предмет",
+    },
+    subjects: [
+      {
+        tr: "Ürün",
+        en: "Product",
+        ru: "Продукт",
+      },
+      {
+        tr: "Satış",
+        en: "Sales",
+        ru: "Продажи",
+      },
+      {
+        tr: "Yedek Parça",
+        en: "Spare part",
+        ru: "Запасная часть",
+      },
+      {
+        tr: "Servis",
+        en: "Service",
+        ru: "Услуга",
+      },
+      {
+        tr: "Bilgi Talebi",
+        en: "Information request",
+        ru: "Запрос информации",
+      },
+      {
+        tr: "Şikayet",
+        en: "Complaint",
+        ru: "Жалоба",
+      },
+      {
+        tr: "Öneri",
+        en: "Suggestion",
+        ru: "Предположение",
+      },
+      {
+        tr: "Teşekkür",
+        en: "Thanks",
+        ru: "Спасибо",
+      },
+      {
+        tr: "Diğer",
+        en: "Other",
+        ru: "Другой",
+      },
+    ],
     message: {
       tr: "Mesajınız",
       en: "Your message",
