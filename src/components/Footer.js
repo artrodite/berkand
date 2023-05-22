@@ -45,23 +45,23 @@ export default function Footer() {
             </div>
             <div className="flex flex-col mr-[150px]">
               <a
-                href="tel:+905522959611"
-                className="mt-11 flex items-center hover:text-berkand-orange"
-                data-aos="fade-up"
-                data-aos-delay="50"
-              >
-                <span className="mr-5">+90 552 295 96 11</span>
-                <span class="material-symbols-outlined rotate-45">
-                  arrow_upward
-                </span>
-              </a>
-              <a
                 href="tel:+905366309611"
                 className="mt-11 flex items-center hover:text-berkand-orange"
                 data-aos="fade-up"
                 data-aos-delay="50"
               >
                 <span className="mr-5">+90 536 630 96 11</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
+              </a>
+              <a
+                href="tel:+905522959611"
+                className="mt-11 flex items-center hover:text-berkand-orange"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                <span className="mr-5">+90 552 295 96 11</span>
                 <span class="material-symbols-outlined rotate-45">
                   arrow_upward
                 </span>
