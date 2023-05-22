@@ -44,15 +44,39 @@ export default function Footer() {
               </span>
             </div>
             <div className="flex flex-col mr-[150px]">
-              <span className="mt-11" data-aos="fade-up" data-aos-delay="50">
-                +90 552 295 96 11
-              </span>
-              <span className="mt-11" data-aos="fade-up" data-aos-delay="50">
-                +90 536 630 96 11
-              </span>
-              <span className="mt-11" data-aos="fade-up" data-aos-delay="50">
-                +90 258 251 25 82
-              </span>
+              <a
+                href="tel:+905522959611"
+                className="mt-11 flex items-center hover:text-berkand-orange"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                <span className="mr-5">+90 552 295 96 11</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
+              </a>
+              <a
+                href="tel:+905366309611"
+                className="mt-11 flex items-center hover:text-berkand-orange"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                <span className="mr-5">+90 536 630 96 11</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
+              </a>
+              <a
+                href="tel:+902582512582"
+                className="mt-11 flex items-center hover:text-berkand-orange"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                <span className="mr-5">+90 258 251 25 82</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
+              </a>
             </div>
             <div className="flex flex-col">
               <a
@@ -64,7 +88,9 @@ export default function Footer() {
                 <span className="mt-3 xl:mt-0 min-w-[210px] mr-5">
                   info@berkandmakina.com.tr
                 </span>
-                <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
               </a>
               <a
                 className="flex items-center hover:text-berkand-orange duration-200 mt-11"
@@ -75,7 +101,9 @@ export default function Footer() {
                 <span className="mt-3 xl:mt-0 min-w-[210px] mr-5">
                   sales@berkandmakina.com.tr
                 </span>
-                <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
               </a>
               <a
                 className="flex items-center hover:text-berkand-orange duration-200 mt-11"
@@ -86,7 +114,9 @@ export default function Footer() {
                 <span className="mt-3 xl:mt-0 min-w-[210px] mr-5">
                   info@berkandmakina.com.tr
                 </span>
-                <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
               </a>
             </div>
           </div>
@@ -114,7 +144,9 @@ export default function Footer() {
             >
               Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
             </span>
-            <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+            <span class="material-symbols-outlined rotate-45">
+              arrow_upward
+            </span>
           </a>
         </div>
         <div className="w-full container xl:flex xl:flex-col hidden">
@@ -135,7 +167,9 @@ export default function Footer() {
                   rel="noreferrer"
                 >
                   <span className="mt-3 xl:mt-0 mr-5">Instagram</span>
-                  <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
                 </a>
               </div>
               <div className="ml-14" data-aos="fade-up" data-aos-delay="50">
@@ -146,7 +180,9 @@ export default function Footer() {
                   rel="noreferrer"
                 >
                   <span className="mr-5">Facebook</span>
-                  <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
                 </a>
               </div>
               <div className="ml-14" data-aos="fade-up" data-aos-delay="50">
@@ -157,7 +193,9 @@ export default function Footer() {
                   rel="noreferrer"
                 >
                   <span className="mr-5">Linkedin</span>
-                  <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
                 </a>
               </div>
               <div className="ml-14" data-aos="fade-up" data-aos-delay="50">
@@ -168,7 +206,9 @@ export default function Footer() {
                   rel="noreferrer"
                 >
                   <span className="mr-5">Youtube</span>
-                  <span class="material-symbols-outlined rotate-45">arrow_upward</span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
                 </a>
               </div>
             </div>
@@ -225,9 +265,7 @@ export default function Footer() {
           data-aos="fade-up"
           data-aos-delay="50"
         />
-        <div
-          className="flex justify-between relative mb-14 items-center"
-        >
+        <div className="flex justify-between relative mb-14 items-center">
           <img src="/assets/footer-logo.svg" alt="" />
           <a href="https://artrodite.com/" target="_blank" rel="noreferrer">
             <img
@@ -254,7 +292,14 @@ export default function Footer() {
                 rel="noreferrer"
                 href="https://www.google.com/maps/place/Hac%C4%B1ey%C3%BCpl%C3%BC,+3075.+Sk.+No:20+D:2,+20050+Merkezefendi%2FDenizli/@37.829231,29.031147,16z/data=!4m5!3m4!1s0x14c76aa44bceb091:0x2fca4193fea905ce!8m2!3d37.829231!4d29.031147?hl=en"
               >
-                Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
+                <div className="flex items-center">
+                  <span className="xl:mr-5 mr-1">
+                    Hacıeyüplü Mahallesi 3075 Sokak No:20/2 Merkezefendi DENİZLİ
+                  </span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
+                </div>
               </a>
             </span>
           </div>
@@ -267,13 +312,26 @@ export default function Footer() {
               <span className="font-semibold xl:text-xl min-w-[200px] xl:mr-[200px]">
                 {common[0].manager[`${lng}`]}
               </span>
-              <span className="mt-3 xl:mt-0 xl:mr-40">+90 536 630 96 11</span>
+              <a
+                className="mt-3 xl:mt-0 xl:mr-40 w-max flex items-center"
+                href="tel:+905366309611"
+              >
+                <span className="xl:mr-5 mr-1">+90 536 630 96 11</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
+              </a>
               <span className="mt-3 xl:mt-0">
                 <a
-                  className="hover:text-berkand-orange duration-200 w-max"
+                  className="hover:text-berkand-orange duration-200 w-max flex items-center"
                   href="mailto:info@berkandmakina.com.tr"
                 >
-                  <span>info@berkandmakina.com.tr</span>
+                  <span className="xl:mr-5 mr-1 min-w-[210px]">
+                    info@berkandmakina.com.tr
+                  </span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
                 </a>
               </span>
             </div>
@@ -281,27 +339,53 @@ export default function Footer() {
               <span className="font-semibold xl:text-xl min-w-[200px] xl:mr-[200px]">
                 {common[0].marketing[`${lng}`]}
               </span>
-              <span className="mt-3 xl:mt-0 xl:mr-40">+90 552 295 96 11</span>
+              <a
+                className="mt-3 xl:mt-0 xl:mr-40 w-max flex items-center"
+                href="tel:+905522959611"
+              >
+                <span className="xl:mr-5 mr-1">+90 552 295 96 11</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
+              </a>
               <span className="mt-3 xl:mt-0">
                 <a
-                  className="mt-2 hover:text-berkand-orange duration-200 w-max"
+                  className="hover:text-berkand-orange duration-200 w-max flex xl:items-center"
                   href="mailto:sales@berkandmakina.com.tr"
                 >
-                  <span>sales@berkandmakina.com.tr</span>
+                  <span className="xl:mr-5 mr-1 min-w-[210px]">
+                    sales@berkandmakina.com.tr
+                  </span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
                 </a>
               </span>
             </div>
-            <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row">
+            <div className="mt-11 xl:mb-24 flex flex-col xl:flex-row xl:items-center">
               <span className="font-semibold xl:text-xl min-w-[200px] xl:mr-[200px]">
                 {common[0].office[`${lng}`]}
               </span>
-              <span className="mt-3 xl:mt-0 xl:mr-40">+90 258 251 25 82</span>
+              <a
+                className="mt-3 xl:mt-0 xl:mr-40 w-max flex items-center"
+                href="tel:+902582512582"
+              >
+                <span className="xl:mr-5 mr-1">+90 258 251 25 82</span>
+                <span class="material-symbols-outlined rotate-45">
+                  arrow_upward
+                </span>
+              </a>
               <span className="mt-3 xl:mt-0">
                 <a
-                  className="mt-2 hover:text-berkand-orange duration-200 w-max"
+                  className="hover:text-berkand-orange duration-200 w-max flex xl:items-center"
                   href="mailto:info@berkandmakina.com.tr"
                 >
-                  <span>info@berkandmakina.com.tr</span>
+                  <span className="xl:mr-5 mr-1 min-w-[210px]">
+                    info@berkandmakina.com.tr
+                  </span>
+                  <span class="material-symbols-outlined rotate-45">
+                    arrow_upward
+                  </span>
                 </a>
               </span>
             </div>
@@ -315,29 +399,54 @@ export default function Footer() {
               <div className="flex flex-col">
                 <span className="mt-3 xl:mt-0">
                   <a
+                    className="flex items-center"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.instagram.com/berkandmakina/"
                   >
-                    Instagram
+                    <span className="xl:mr-5 mr-1 min-w-[70px]">Instagram</span>
+                    <span class="material-symbols-outlined rotate-45">
+                      arrow_upward
+                    </span>
                   </a>
                 </span>
                 <span className="mt-3">
                   <a
+                    className="flex items-center"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.facebook.com/berkand.makina.37/"
                   >
-                    Facebook
+                    <span className="xl:mr-5 mr-1 min-w-[70px]">Facebook</span>
+                    <span class="material-symbols-outlined rotate-45">
+                      arrow_upward
+                    </span>
                   </a>
                 </span>
                 <span className="mt-3">
                   <a
+                    className="flex items-center"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.linkedin.com/company/berkand-makina/"
                   >
-                    LinkedIn
+                    <span className="xl:mr-5 mr-1 min-w-[70px]">LinkedIn</span>
+                    <span class="material-symbols-outlined rotate-45">
+                      arrow_upward
+                    </span>
+                  </a>
+                </span>
+                <span className="mt-3">
+                  <a
+                    className="flex items-center"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.youtube.com/@berkandmakina1134/featured"
+                  >
+                    <span className="xl:mr-5 mr-1 min-w-[70px]">Youtube</span>
+                    <span class="material-symbols-outlined rotate-45">
+                      arrow_upward
+                    </span>
                   </a>
                 </span>
               </div>

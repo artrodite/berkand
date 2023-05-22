@@ -16,9 +16,9 @@ const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
   }, []);
 
   return (
-    <div className="mb-9">
+    <div className="mb-2">
       <button
-        className="w-full p-4 pb-0 text-left focus:outline-none"
+        className="w-full pb-0 text-left focus:outline-none"
         onClick={() => setIsOpen(isOpen === index ? -1 : index)}
         data-aos="fade-up"
         data-aos-delay={index*50}
