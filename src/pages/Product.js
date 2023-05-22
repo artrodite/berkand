@@ -8,10 +8,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Product() {
-  let [over, setOver] = useState(false);
-  let support_agent = "/assets/icons/support_agent.svg";
-  let support_agentHover = "/assets/icons/support_agent-hover.svg";
-
   useTranslation();
 
   let lng = localStorage.getItem("i18nextLng");
@@ -92,25 +88,11 @@ export default function Product() {
           >
             {product.desc[`${lng}`]}
           </span>
-          <Link className="xl:w-max xl:mt-32 mt-11" to="/contact">
-            <button
-              className="z-50 xl:w-64 w-full h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500"
-              onMouseOver={() => {
-                setTimeout(() => setOver(true), 100);
-              }}
-              onMouseOut={() => {
-                setTimeout(() => setOver(false), 100);
-              }}
-              data-aos="fade-left"
-              data-aos-delay="150"
-            >
-              <img
-                className="mr-2"
-                src={over ? support_agentHover : support_agent}
-                alt=""
-              />
+          <Link className="xl:w-64 w-full h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500 xl:mt-32 mt-11" to="/contact">
+            <div className="flex items-center">
+              <span class="material-symbols-outlined mr-2">support_agent</span>
               {home[0].section1[0].contactButton[`${lng}`]}
-            </button>
+            </div>
           </Link>
         </div>
         <div className="w-auto" data-aos="fade-right" data-aos-delay="50">
@@ -175,7 +157,7 @@ export default function Product() {
                 <span className="font-light mt-3 xl:text-xl">
                   {p.desc[`${lng}`]}
                 </span>
-                <span className="font-light mt-3 xl:text-sm text-text-grey">
+                <span className="font-light mt-3 xl:text-sm text-xs text-text-grey">
                   {p.desc2[`${lng}`]}
                 </span>
               </div>
