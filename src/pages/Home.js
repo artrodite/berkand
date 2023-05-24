@@ -12,15 +12,21 @@ import HomeSwiper from "../components/Swiper/HomeSwiper";
 export default function Home() {
   const [sticky, setSticky] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY >= 30) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 30) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useTranslation();
 

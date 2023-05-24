@@ -14,15 +14,21 @@ export default function Product() {
 
   const [sticky, setSticky] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY >= 30) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 30) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const { group, types } = useParams();
 
@@ -84,7 +90,10 @@ export default function Product() {
           >
             {product.desc[`${lng}`]}
           </span>
-          <Link className="xl:w-64 w-full h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500 xl:mt-32 mt-11" to="/contact">
+          <Link
+            className="xl:w-64 w-full h-11 rounded-md bg-berkand-orange font-semibold text-white flex justify-center items-center border-2 border-berkand-orange hover:bg-white hover:text-berkand-orange duration-500 xl:mt-32 mt-11"
+            to="/contact"
+          >
             <div className="flex items-center">
               <span class="material-symbols-outlined mr-2">support_agent</span>
               {home[0].section1[0].contactButton[`${lng}`]}
