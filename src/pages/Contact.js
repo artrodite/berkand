@@ -10,15 +10,21 @@ import "aos/dist/aos.css";
 export default function Contact() {
   const [sticky, setSticky] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY >= 30) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 30) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useTranslation();
 
@@ -141,19 +147,22 @@ export default function Contact() {
                   for="file"
                   className="flex items-center h-full w-full cursor-pointer"
                 >
-                <div className="flex items-center mx-auto">
-
-                  <span class="material-symbols-outlined text-form-placeholder">attach_file</span>
-                  <span className="ml-5 text-form-placeholder">
-                    {contact[0].file[`${lng}`]}
-                  </span>
-                </div>
+                  <div className="flex items-center mx-auto">
+                    <span class="material-symbols-outlined text-form-placeholder">
+                      attach_file
+                    </span>
+                    <span className="ml-5 text-form-placeholder">
+                      {contact[0].file[`${lng}`]}
+                    </span>
+                  </div>
                 </label>
                 <input type="file" id="file" name="file" className="hidden" />
               </div>
             </div>
             <div className="py-2 pr-3 flex items-start rounded-md border-form-placeholder border mt-4">
-            <span class="material-symbols-outlined text-form-placeholder m-3">chat_bubble</span>
+              <span class="material-symbols-outlined text-form-placeholder m-3">
+                chat_bubble
+              </span>
               <textarea
                 className="rounded bg-transparent h-full min-h-[255px] w-full xl:h-96 py-2 px-2 resize-none outline-none placeholder:text-form-placeholder"
                 type="textarea"
