@@ -21,10 +21,6 @@ export default function About() {
 
   window.addEventListener("scroll", handleScroll);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   useTranslation();
 
   let lng = localStorage.getItem("i18nextLng");

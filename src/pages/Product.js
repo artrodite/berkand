@@ -24,10 +24,6 @@ export default function Product() {
 
   window.addEventListener("scroll", handleScroll);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const { group, types } = useParams();
 
   const product = products
