@@ -100,7 +100,7 @@ export default function Home() {
       {/* section2 */}
       <section className="bg-black">
         <div className="w-auto h-screen relative flex  container md:mx-auto mx-7 xl:justify-normal justify-center">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 max-sm:w-screen w-auto">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 max-[515px]:w-screen w-auto">
             <img
               src="/assets/world.png"
               alt=""
@@ -123,7 +123,7 @@ export default function Home() {
             >
               {home[0].section2[0].subtitle[`${lng}`]}
             </span>
-            <div className="font-normal xl:text-xl text-sm mt-9 mb-11 flex flex-col">
+            <div className="font-normal xl:text-xl text-sm mt-9 mb-20 flex flex-col">
               <span data-aos="fade-up" data-aos-delay="150">
                 {home[0].section2[0].desc1[`${lng}`]}
               </span>
