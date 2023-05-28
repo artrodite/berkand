@@ -765,35 +765,35 @@ export const products = [
         img: "/assets//products/images/machine-groups/kangallama.png",
         desc: {
           tr: "Kablo üretim sektöründe kangallama makinesi, kablo demetlerini düzenlemek ve korumak için kullanılan bir cihazdır. Kabloların etrafına bant veya özel malzeme sararak düzenlemeyi sağlar, kablo demetlerinin güvenli ve düzenli bir şekilde montajlanmasını ve taşınmasını sağlar.",
-          en: "en-",
+          en: "A wire coiling machine is a device used in the cable manufacturing industry to organize and protect cable bundles. It enables the organization by wrapping tape or specialized material around the cables, ensuring the secure and orderly assembly and transportation of cable bundles.",
           ru: "ru-",
         },
         article: [
           {
             desc: {
               tr: "Kablo üretim sektöründe kangallama makinesi, kablo demetlerini düzenlemek ve korumak için kullanılan bir cihazdır. Kablo demetleri, farklı tellerin bir araya getirilerek oluşturduğu gruplardır ve genellikle elektrik, iletişim veya endüstriyel uygulamalarda kullanılan kabloların düzenlenmesinde önemli bir rol oynar.",
-              en: "en-",
+              en: "A wire coiling machine is a device used in the cable manufacturing industry to organize and protect wire cable bundles. Wire cable bundles are groups formed by combining different wires and play a significant role in organizing cables used in electrical, communication, or industrial applications.",
               ru: "ru-",
             },
           },
           {
             desc: {
               tr: "Kangallama makinesi, kablo demetlerinin etrafına özel bir malzeme veya bant sararak düzenlemeyi sağlar. Bu işlem, kabloların düzgün bir şekilde gruplandırılmasını, korunmasını ve taşınmasını sağlar. Ayrıca, kabloların bükülmesini ve zarar görmesini önler.",
-              en: "en-",
+              en: "The wire coiling machine ensures organization by wrapping a specialized material or tape around the wire cable bundles. This process allows for the proper grouping, protection, and transportation of wires. It also prevents the wires from being bent or damaged.",
               ru: "ru-",
             },
           },
           {
             desc: {
               tr: "Kangallama makinesi, kablo demetlerini otomatik veya yarı otomatik olarak sarabilir. Makine, belirli bir genişlikteki kangalı veya bantı kabloların etrafına sarar ve gerekirse keser veya bağlar. Bu, kablo demetlerinin güvenli ve düzenli bir şekilde montajlanmasını sağlar.",
-              en: "en-",
+              en: "The wire coiling machine ensures organization by wrapping a special material or tape around the cable bundles. The machine wraps and, if necessary, cuts or fastens a specific width of coil or tape around the wires. This ensures the secure and orderly assembly of wire cable bundles.",
               ru: "ru-",
             },
           },
           {
             desc: {
               tr: "Kangallama makinesi, kablo üretim sürecinde verimliliği artırır, zaman tasarrufu sağlar ve düzenli bir ürün çıktısı elde edilmesini sağlar. Ayrıca, kablo demetlerinin taşınması ve depolanması sırasında düzeni korur ve kabloların zarar görmesini engeller.",
-              en: "en-",
+              en: "The wire coiling machine enhances efficiency, saves time, and ensures consistent product output in the cable production process. It also maintains order during the transportation and storage of wire cable bundles, preventing damage to the wires.",
               ru: "ru-",
             },
           },
