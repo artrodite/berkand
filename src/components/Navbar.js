@@ -50,16 +50,16 @@ export default function Navbar({ group, types, product }) {
             </span>
           </Link>
           <ul className="xl:flex md:justify-center bg-white xl:w-auto w-full hidden">
-            <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/">{t("home")}</Link>
             </li>
-            <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/about" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/about">{t("about")}</Link>
             </li>
-            <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/products" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/products">{t("products")}</Link>
             </li>
-            <li className="ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/contact" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/contact">{t("contact")}</Link>
             </li>
           </ul>
@@ -104,13 +104,13 @@ export default function Navbar({ group, types, product }) {
         <div className="mx-auto flex flex-col items-center">
           {/* <span className="text-4xl font-normal">{t("welcome")}</span> */}
           <ul className="md:justify-center mb-10 bg-white xl:w-auto flex flex-col justify-center items-center">
-            <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/">{t("home")}</Link>
             </li>
-            <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/about" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/about">{t("about")}</Link>
             </li>
-            <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/products" ? "text-berkand-orange underline": "text-black"}`}>
               <Link to="/products">{t("products")}</Link>
             </li>
             <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
@@ -118,7 +118,7 @@ export default function Navbar({ group, types, product }) {
                 <span>{t("catalog")}</span>
               </a>
             </li>
-            <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
+            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/contact" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/contact">{t("contact")}</Link>
             </li>
             <li className="mt-10">
