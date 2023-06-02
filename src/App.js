@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import ScrollToTop from "./components/ScrollToTop";
+import ProductsGroup from "./pages/ProductsGroup";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:group" element={<ProductsGroup />} />
           <Route path="/products/:group/:types" element={<Product />} />
         </Routes>
         <Footer />

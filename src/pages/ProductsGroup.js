@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GoTop from "../components/GoTop";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-export default function Products() {
+export default function ProductsGroup() {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -30,14 +30,21 @@ export default function Products() {
 
   let lng = localStorage.getItem("i18nextLng");
 
+  const { group } = useParams();
+
+  const productGroup = products.filter((item) => item.url === group)[0];
+
   const createProducts = () => {
     let obj = [];
 
-    products.map((p) =>
+    productGroup.types.map((p) =>
       obj.push(
-        <Link to={`/products/${p.url}`} className="md:w-max w-full">
+        <Link
+          to={`/products/${productGroup.url}/${p.url}`}
+          className="md:w-max w-full"
+        >
           <div className="flex flex-col justify-center items-center text-center sm:w-80 h-full border-2 rounded-lg border-berkand-orange text-berkand-orange hover:text-white hover:bg-berkand-orange cursor-pointer duration-500">
-            {p.url === "extrusion-lines" ? (
+            {p.url === "tubular-drum" || p.url === "accumulator" || p.url === "buncher-twist-line-630-800" || p.url === "buncher-twist-line-1000-1250" ? (
               <span class="material-symbols-outlined xl:text-7xl text-5xl mt-9 rotate-90">
                 {p.icon}
               </span>
@@ -46,8 +53,8 @@ export default function Products() {
                 {p.icon}
               </span>
             )}
-            <span className="xl:text-2xl text-lg font-black mt-9 mb-7 md:mx-5 mx-10">
-              {p.title[`${lng}`]}
+            <span className="text-2xl font-black mt-9 mb-7 md:mx-5 mx-10">
+              {p.name[`${lng}`]}
             </span>
           </div>
         </Link>
@@ -63,10 +70,10 @@ export default function Products() {
   return (
     <div>
       {sticky && <GoTop />}
-      <Navbar />
+      <Navbar group={productGroup.url} />
 
       <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-24 md:mb-52">
-        <div className="xl:inline flex justify-center">
+        <div className="xl:inline flex justify-center ">
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-24">
             {createProducts()}
           </div>

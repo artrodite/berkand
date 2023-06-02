@@ -319,6 +319,7 @@ export const products = [
       ru: "ru-Makine Grupları",
     },
     url: "machine-groups",
+    icon: "settings",
     types: [
       {
         index: 0,
@@ -327,7 +328,7 @@ export const products = [
           en: "Extruder",
           ru: "ru-Ekstruder",
         },
-        icon: "/assets/products/icons/machine-groups/ekstruder.svg",
+        icon: "local_fire_department",
         url: "extruder",
         img: "/assets/products/images/machine-groups/ekstruder.png",
         desc: {
@@ -398,7 +399,7 @@ export const products = [
           en: "Rigid Drum",
           ru: "ru-Rigid Tambur",
         },
-        icon: "/assets/products/icons/machine-groups/rigid-tambur.svg",
+        icon: "360",
         url: "rigid-drum",
         img: "/assets/products/images/machine-groups/rigid-tambur.png",
         desc: {
@@ -476,7 +477,7 @@ export const products = [
           en: "Tubular Drum",
           ru: "ru-Tübüler Tambur",
         },
-        icon: "/assets/products/icons/machine-groups/tubuler-tambur.svg",
+        icon: "call_merge",
         url: "tubular-drum",
         img: "/assets/products/images/machine-groups/tubuler-tambur.png",
         desc: {
@@ -547,7 +548,7 @@ export const products = [
           en: "Tensioner",
           ru: "ru-Kapistan",
         },
-        icon: "/assets/products/icons/machine-groups/kapistan.svg",
+        icon: "radio_button_unchecked",
         url: "tensioner",
         img: "/assets/products/images/machine-groups/kapistan.png",
         desc: {
@@ -618,7 +619,7 @@ export const products = [
           en: "Caterpillars",
           ru: "ru-Katerpiller",
         },
-        icon: "/assets/products/icons/machine-groups/katerpiller.svg",
+        icon: "settings_ethernet",
         url: "caterpillars",
         img: "/assets/products/images/machine-groups/katerpiller.png",
         desc: {
@@ -689,7 +690,7 @@ export const products = [
           en: "Accumulator",
           ru: "ru-Akümülatör",
         },
-        icon: "/assets/products/icons/machine-groups/akumulator.svg",
+        icon: "sync_alt",
         url: "accumulator",
         img: "/assets/products/images/machine-groups/akumulator.png",
         desc: {
@@ -760,7 +761,7 @@ export const products = [
           en: "Wire Coiling Machines",
           ru: "ru-Kangallama Makineleri",
         },
-        icon: "/assets/products/icons/machine-groups/kangallama-makineleri.svg",
+        icon: "autorenew",
         url: "wire-coiling-machines",
         img: "/assets//products/images/machine-groups/kangallama.png",
         desc: {
@@ -841,6 +842,7 @@ export const products = [
       ru: "ru-Verici ve Toplayıcılar",
     },
     url: "pay-off-and-take-ups",
+    icon: "sync_alt",
     types: [
       {
         index: 0,
@@ -1377,6 +1379,7 @@ export const products = [
       ru: "ru-Ekstrüzyon Hatları",
     },
     url: "extrusion-lines",
+    icon: "merge_type",
     types: [
       {
         index: 0,
@@ -1385,7 +1388,7 @@ export const products = [
           en: "Izolation Extrusion Line 80 + 45",
           ru: "ru-İzolasyon Ekstrüder Hattı 80 + 45",
         },
-        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+        icon: "radio_button_unchecked",
         url: "izolation-extrusion-line",
         img: "/assets/products/images/extrusion-lines/izolasyon.png",
         desc: {
@@ -1449,7 +1452,7 @@ export const products = [
           en: "Cable Sheathing Extrusion Line 100 + 60",
           ru: "ru-Kılıf Ekstrüder hattı 100 + 60",
         },
-        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+        icon: "radio_button_unchecked",
         url: "cable-sheathing-extrusion-line",
         img: "/assets/products/images/extrusion-lines/kılıf.png",
         desc: {
@@ -1520,7 +1523,7 @@ export const products = [
           en: "Tandem Extrusion Line 120 + 120",
           ru: "ru-Tandem Ekstrüder Hattı 120 + 120",
         },
-        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+        icon: "radio_button_unchecked",
         url: "tandem-extrusion-line",
         img: "/assets/products/images/extrusion-lines/tandem.png",
         desc: {
@@ -1594,6 +1597,7 @@ export const products = [
       ru: "ru-Double Twist Büküm Hatları",
     },
     url: "double-twist-lines",
+    icon: "360",
     types: [
       {
         index: 0,
@@ -1602,9 +1606,10 @@ export const products = [
           en: "Buncher Twist Line 630-800",
           ru: "ru-630-800 Buncher Büküm Hattı",
         },
-        icon: "/assets/products/icons/double-twist/double-twist.svg",
+        icon: "360",
         url: "buncher-twist-line-630-800",
         img: "/assets/products/images/double-twist/630-800.png",
+        video: "https://www.youtube.com/embed/3NeCn-c-YGE",
         desc: {
           tr: "Kablo üretim hattında buncher büküm, birçok ince telin bir araya getirilerek daha kalın bir kablo haline getirildiği bir büküm işlemidir. Bu işlem, kablo üretim hattının önemli bir adımıdır ve birçok farklı kablo türü için kullanılır.",
           en: "Buncher twist is a process in cable production where multiple thin wires are twisted together to form a thicker cable. This process is a crucial step in cable production and is used for various types of cables.",
@@ -1680,7 +1685,7 @@ export const products = [
           en: "Buncher Twist Line 1000-1250",
           ru: "ru-1000-1250 Buncher Büküm Hattı",
         },
-        icon: "/assets/products/icons/double-twist/double-twist.svg",
+        icon: "360",
         url: "buncher-twist-line-1000-1250",
         img: "/assets/products/images/double-twist/1000-1250.png",
         desc: {
@@ -1752,6 +1757,16 @@ export const products = [
         ],
       },
     ],
+  },
+  {
+    index: 4,
+    title: {
+      tr: "Anahtar Teslim Fabrika Projeleri",
+      en: "Turnkey Factory Projects",
+      ru: "ru-Anahtar Teslim Fabrika Projeleri",
+    },
+    url: "turnkey-factory-projects",
+    icon: "key",
   },
 ];
 
