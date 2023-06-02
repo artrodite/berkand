@@ -314,11 +314,12 @@ export const products = [
   {
     index: 0,
     title: {
-      tr: "Makine Grupları",
+      tr: "Makina Grupları",
       en: "Machine Groups",
       ru: "ru-Makine Grupları",
     },
     url: "machine-groups",
+    icon: "settings",
     types: [
       {
         index: 0,
@@ -327,7 +328,7 @@ export const products = [
           en: "Extruder",
           ru: "ru-Ekstruder",
         },
-        icon: "/assets/products/icons/machine-groups/ekstruder.svg",
+        icon: "local_fire_department",
         url: "extruder",
         img: "/assets/products/images/machine-groups/ekstruder.png",
         desc: {
@@ -398,7 +399,7 @@ export const products = [
           en: "Rigid Drum",
           ru: "ru-Rigid Tambur",
         },
-        icon: "/assets/products/icons/machine-groups/rigid-tambur.svg",
+        icon: "360",
         url: "rigid-drum",
         img: "/assets/products/images/machine-groups/rigid-tambur.png",
         desc: {
@@ -476,7 +477,7 @@ export const products = [
           en: "Tubular Drum",
           ru: "ru-Tübüler Tambur",
         },
-        icon: "/assets/products/icons/machine-groups/tubuler-tambur.svg",
+        icon: "call_merge",
         url: "tubular-drum",
         img: "/assets/products/images/machine-groups/tubuler-tambur.png",
         desc: {
@@ -547,7 +548,7 @@ export const products = [
           en: "Tensioner",
           ru: "ru-Kapistan",
         },
-        icon: "/assets/products/icons/machine-groups/kapistan.svg",
+        icon: "radio_button_unchecked",
         url: "tensioner",
         img: "/assets/products/images/machine-groups/kapistan.png",
         desc: {
@@ -618,7 +619,7 @@ export const products = [
           en: "Caterpillars",
           ru: "ru-Katerpiller",
         },
-        icon: "/assets/products/icons/machine-groups/katerpiller.svg",
+        icon: "settings_ethernet",
         url: "caterpillars",
         img: "/assets/products/images/machine-groups/katerpiller.png",
         desc: {
@@ -689,7 +690,7 @@ export const products = [
           en: "Accumulator",
           ru: "ru-Akümülatör",
         },
-        icon: "/assets/products/icons/machine-groups/akumulator.svg",
+        icon: "sync_alt",
         url: "accumulator",
         img: "/assets/products/images/machine-groups/akumulator.png",
         desc: {
@@ -760,7 +761,7 @@ export const products = [
           en: "Wire Coiling Machines",
           ru: "ru-Kangallama Makineleri",
         },
-        icon: "/assets/products/icons/machine-groups/kangallama-makineleri.svg",
+        icon: "autorenew",
         url: "wire-coiling-machines",
         img: "/assets//products/images/machine-groups/kangallama.png",
         desc: {
@@ -841,6 +842,7 @@ export const products = [
       ru: "ru-Verici ve Toplayıcılar",
     },
     url: "pay-off-and-take-ups",
+    icon: "sync_alt",
     types: [
       {
         index: 0,
@@ -849,7 +851,8 @@ export const products = [
           en: "Portal-Type Take-Up",
           ru: "ru-Portal Tip Toplayıcılar",
         },
-        icon: "/assets/products/icons/transmitter-collector/portal-toplayici.svg",
+        icon: "/assets/products/icons/transmitter-collector/portal-take-up.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/portal-take-up-hover.svg",
         url: "portal-type-take-up",
         img: "/assets/products/images/transmitter-collector/portal-tip-toplayici.png",
         desc: {
@@ -920,7 +923,8 @@ export const products = [
           en: "Portal-Type Pay-Off",
           ru: "ru-Portal Tip Vericiler",
         },
-        icon: "/assets/products/icons/transmitter-collector/portal-verici.svg",
+        icon: "/assets/products/icons/transmitter-collector/portal-pay-off.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/portal-pay-off-hover.svg",
         url: "portal-type-pay-off",
         img: "/assets/products/images/transmitter-collector/portal-tip-verici.png",
         desc: {
@@ -991,7 +995,8 @@ export const products = [
           en: "Fork-Type Take-Up",
           ru: "ru-Çatal Tip Toplayıcılar",
         },
-        icon: "/assets/products/icons/transmitter-collector/catal-toplayici.svg",
+        icon: "/assets/products/icons/transmitter-collector/fork-take-up.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/fork-take-up-hover.svg",
         url: "fork-type-take-up",
         img: "/assets/products/images/transmitter-collector/catal-tip-toplayici.png",
         desc: {
@@ -1062,7 +1067,8 @@ export const products = [
           en: "Fork-Type Pay-Off",
           ru: "ru-Çatal Tip Vericiler",
         },
-        icon: "/assets/products/icons/transmitter-collector/catal-verici.svg",
+        icon: "/assets/products/icons/transmitter-collector/fork-pay-off.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/fork-pay-off-hover.svg",
         url: "fork-type-pay-off",
         img: "/assets/products/images/transmitter-collector/catal-tip-verici.png",
         desc: {
@@ -1140,7 +1146,8 @@ export const products = [
           en: "Drum Fork Take-Up",
           ru: "ru-Drum Çatal Toplayıcı",
         },
-        icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
+        icon: "/assets/products/icons/transmitter-collector/drum-fork-take-up.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/drum-fork-take-up-hover.svg",
         url: "drum-fork-take-up",
         img: "/assets/products/images/transmitter-collector/drum-catal-toplayici.png",
         desc: {
@@ -1218,7 +1225,8 @@ export const products = [
           en: "Drum Fork Pay-Off",
           ru: "ru-Drum Çatal Verici",
         },
-        icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
+        icon: "/assets/products/icons/transmitter-collector/drum-fork-pay-off.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/drum-fork-pay-off-hover.svg",
         url: "drum-fork-pay-off",
         img: "/assets/products/images/transmitter-collector/drum-catal-verici.png",
         desc: {
@@ -1290,13 +1298,13 @@ export const products = [
         ],
       },
       {
-        index: 5,
+        index: 6,
         name: {
           tr: "Double Verici",
           en: "Double Pay-Off",
           ru: "ru-Double Verici",
         },
-        icon: "/assets/products/icons/transmitter-collector/double-verici.svg",
+        icon: "360",
         url: "double-pay-off",
         img: "/assets/products/images/transmitter-collector/double-verici.png",
         desc: {
@@ -1377,6 +1385,7 @@ export const products = [
       ru: "ru-Ekstrüzyon Hatları",
     },
     url: "extrusion-lines",
+    icon: "merge_type",
     types: [
       {
         index: 0,
@@ -1385,7 +1394,7 @@ export const products = [
           en: "Izolation Extrusion Line 80 + 45",
           ru: "ru-İzolasyon Ekstrüder Hattı 80 + 45",
         },
-        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+        icon: "radio_button_unchecked",
         url: "izolation-extrusion-line",
         img: "/assets/products/images/extrusion-lines/izolasyon.png",
         desc: {
@@ -1449,7 +1458,7 @@ export const products = [
           en: "Cable Sheathing Extrusion Line 100 + 60",
           ru: "ru-Kılıf Ekstrüder hattı 100 + 60",
         },
-        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+        icon: "radio_button_unchecked",
         url: "cable-sheathing-extrusion-line",
         img: "/assets/products/images/extrusion-lines/kılıf.png",
         desc: {
@@ -1520,7 +1529,7 @@ export const products = [
           en: "Tandem Extrusion Line 120 + 120",
           ru: "ru-Tandem Ekstrüder Hattı 120 + 120",
         },
-        icon: "/assets/products/icons/extrusion-lines/hat.svg",
+        icon: "radio_button_unchecked",
         url: "tandem-extrusion-line",
         img: "/assets/products/images/extrusion-lines/tandem.png",
         desc: {
@@ -1594,17 +1603,19 @@ export const products = [
       ru: "ru-Double Twist Büküm Hatları",
     },
     url: "double-twist-lines",
+    icon: "360",
     types: [
       {
         index: 0,
         name: {
-          tr: "Buncher Büküm Hattı 630-800",
+          tr: "630-800 Buncher Büküm Hattı",
           en: "Buncher Twist Line 630-800",
           ru: "ru-630-800 Buncher Büküm Hattı",
         },
-        icon: "/assets/products/icons/double-twist/double-twist.svg",
+        icon: "360",
         url: "buncher-twist-line-630-800",
         img: "/assets/products/images/double-twist/630-800.png",
+        video: "https://www.youtube.com/embed/3NeCn-c-YGE",
         desc: {
           tr: "Kablo üretim hattında buncher büküm, birçok ince telin bir araya getirilerek daha kalın bir kablo haline getirildiği bir büküm işlemidir. Bu işlem, kablo üretim hattının önemli bir adımıdır ve birçok farklı kablo türü için kullanılır.",
           en: "Buncher twist is a process in cable production where multiple thin wires are twisted together to form a thicker cable. This process is a crucial step in cable production and is used for various types of cables.",
@@ -1680,7 +1691,7 @@ export const products = [
           en: "Buncher Twist Line 1000-1250",
           ru: "ru-1000-1250 Buncher Büküm Hattı",
         },
-        icon: "/assets/products/icons/double-twist/double-twist.svg",
+        icon: "360",
         url: "buncher-twist-line-1000-1250",
         img: "/assets/products/images/double-twist/1000-1250.png",
         desc: {
@@ -1752,6 +1763,16 @@ export const products = [
         ],
       },
     ],
+  },
+  {
+    index: 4,
+    title: {
+      tr: "Anahtar Teslim Fabrika Projeleri",
+      en: "Turnkey Factory Projects",
+      ru: "ru-Anahtar Teslim Fabrika Projeleri",
+    },
+    url: "",
+    icon: "key",
   },
 ];
 

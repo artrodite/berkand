@@ -1,78 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { products } from "../data";
-import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GoTop from "../components/GoTop";
-
-const AccordionItem = ({ title, isOpen, setIsOpen, index, product, url }) => {
-  useTranslation();
-
-  let lng = localStorage.getItem("i18nextLng");
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
-  return (
-    <div className="mb-2">
-      <button
-        className="w-full pb-0 text-left focus:outline-none"
-        onClick={() => setIsOpen(isOpen === index ? -1 : index)}
-        data-aos="fade-up"
-        data-aos-delay={index * 50}
-      >
-        <div className="flex items-center">
-          <span>
-            {isOpen === index ? (
-              <span class="material-symbols-outlined text-7xl">
-                expand_less
-              </span>
-            ) : (
-              <span class="material-symbols-outlined text-7xl">
-                expand_more
-              </span>
-            )}
-          </span>
-          <span className="font-medium text-xl md:font-bold md:text-3xl">
-            {title[`${lng}`]}
-          </span>
-        </div>
-      </button>
-      {isOpen === index && (
-        <div className="p-4 pt-0">
-          <ul className="">
-            {product.map((p) => (
-              <li
-                className="flex ml-8 md:ml-12 mt-7 items-center w-max1"
-                data-aos="fade-up"
-                data-aos-delay={p.index * 50}
-              >
-                <Link to={`/products/${url}/${p.url}`} className="flex">
-                  <img className="h-6 w-6 md:h-8 md:w-8" src={p.icon} alt="" />
-                  <span className="font-normal md:font-medium ml-5">
-                    {p.name[`${lng}`]}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
-};
+import { Link } from "react-router-dom";
 
 export default function Products() {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const openIndex = queryParams.get("open")
-    ? parseInt(queryParams.get("open"), 10)
-    : -1;
-  const [isOpen, setIsOpen] = useState(openIndex);
-
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -91,22 +26,55 @@ export default function Products() {
     };
   }, []);
 
+  useTranslation();
+
+  let lng = localStorage.getItem("i18nextLng");
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const createProducts = () => {
+    let obj = [];
+
+    products.map((p) =>
+      obj.push(
+        <Link to={`/products/${p.url}`} className="md:w-max w-full" data-aos="fade-up" data-aos-delay={p.index*50}>
+          <div className="flex flex-col justify-center items-center text-center sm:w-80 h-full border-2 rounded-lg border-berkand-orange text-berkand-orange hover:text-white hover:bg-berkand-orange cursor-pointer duration-500">
+            {p.url === "extrusion-lines" ? (
+              <span class="material-symbols-outlined xl:text-7xl text-5xl mt-9 rotate-90">
+                {p.icon}
+              </span>
+            ) : (
+              <span class="material-symbols-outlined xl:text-7xl text-5xl mt-9">
+                {p.icon}
+              </span>
+            )}
+            <span className="xl:text-2xl text-lg font-black mt-9 mb-7 md:mx-5 mx-10">
+              {p.title[`${lng}`]}
+            </span>
+          </div>
+        </Link>
+      )
+    );
+    return obj;
+  };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       {sticky && <GoTop />}
       <Navbar />
 
       <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-24 md:mb-52">
-        {products.map((p) => (
-          <AccordionItem
-            title={p.title}
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            index={p.index}
-            product={p.types}
-            url={p.url}
-          />
-        ))}
+        <div className="xl:inline flex justify-center">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-24">
+            {createProducts()}
+          </div>
+        </div>
       </div>
     </div>
   );

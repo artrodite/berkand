@@ -71,7 +71,7 @@ export default function Product() {
             data-aos="fade-left"
             data-aos-delay="50"
           >
-            <Link to={`/products?open=${groupName.index}`}>
+            <Link to={`/products/${groupName.url}`}>
               {groupName.title[`${lng}`]}
             </Link>
             {" > " + product.name[`${lng}`]}
@@ -104,6 +104,20 @@ export default function Product() {
           <img className="" src={product.img} alt="" />
         </div>
       </section>
+      {product.video && (
+        <div className="container sm:mx-auto mx-7 w-auto sm:mt-36" data-aos="fade-up">
+          <iframe
+            className="mt-16 sm:mt-0 w-full lg:h-[calc(100vh-150px)] sm:h-[500px] h-56"
+            width="560"
+            height="315"
+            src={product.video}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      )}
 
       {/* section2 */}
 

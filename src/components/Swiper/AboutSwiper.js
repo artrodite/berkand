@@ -21,7 +21,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="h-72 xl:h-[643px] lg:h-[426px] md:h-[342px] my-28 mx-auto select-none container" data-aos="fade-up">
+    <div className="h-72 xl:h-[643px] lg:h-[426px] md:h-[342px] sm:my-28 mb-20 mt-16 mx-auto select-none container" data-aos="fade-up">
       <Swiper
         navigation={true}
         autoplay={{

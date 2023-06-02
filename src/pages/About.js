@@ -41,6 +41,19 @@ export default function About() {
 
       <Navbar />
 
+      <div className="container sm:mx-auto mx-7 w-auto">
+        <iframe
+          className="mt-16 sm:mt-0 w-full lg:h-[calc(100vh-150px)] sm:h-[500px] h-56"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/abDcY-FEDqg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
       <Swiper />
 
       {/* section1 */}
