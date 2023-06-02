@@ -71,7 +71,7 @@ export default function Product() {
             data-aos="fade-left"
             data-aos-delay="50"
           >
-            <Link to={`/products?open=${groupName.index}`}>
+            <Link to={`/products/${groupName.url}`}>
               {groupName.title[`${lng}`]}
             </Link>
             {" > " + product.name[`${lng}`]}

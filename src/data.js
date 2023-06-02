@@ -314,7 +314,7 @@ export const products = [
   {
     index: 0,
     title: {
-      tr: "Makine Grupları",
+      tr: "Makina Grupları",
       en: "Machine Groups",
       ru: "ru-Makine Grupları",
     },
@@ -851,7 +851,8 @@ export const products = [
           en: "Portal-Type Take-Up",
           ru: "ru-Portal Tip Toplayıcılar",
         },
-        icon: "/assets/products/icons/transmitter-collector/portal-toplayici.svg",
+        icon: "/assets/products/icons/transmitter-collector/portal-take-up.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/portal-take-up-hover.svg",
         url: "portal-type-take-up",
         img: "/assets/products/images/transmitter-collector/portal-tip-toplayici.png",
         desc: {
@@ -922,7 +923,8 @@ export const products = [
           en: "Portal-Type Pay-Off",
           ru: "ru-Portal Tip Vericiler",
         },
-        icon: "/assets/products/icons/transmitter-collector/portal-verici.svg",
+        icon: "/assets/products/icons/transmitter-collector/portal-pay-off.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/portal-pay-off-hover.svg",
         url: "portal-type-pay-off",
         img: "/assets/products/images/transmitter-collector/portal-tip-verici.png",
         desc: {
@@ -993,7 +995,8 @@ export const products = [
           en: "Fork-Type Take-Up",
           ru: "ru-Çatal Tip Toplayıcılar",
         },
-        icon: "/assets/products/icons/transmitter-collector/catal-toplayici.svg",
+        icon: "/assets/products/icons/transmitter-collector/fork-take-up.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/fork-take-up-hover.svg",
         url: "fork-type-take-up",
         img: "/assets/products/images/transmitter-collector/catal-tip-toplayici.png",
         desc: {
@@ -1064,7 +1067,8 @@ export const products = [
           en: "Fork-Type Pay-Off",
           ru: "ru-Çatal Tip Vericiler",
         },
-        icon: "/assets/products/icons/transmitter-collector/catal-verici.svg",
+        icon: "/assets/products/icons/transmitter-collector/fork-pay-off.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/fork-pay-off-hover.svg",
         url: "fork-type-pay-off",
         img: "/assets/products/images/transmitter-collector/catal-tip-verici.png",
         desc: {
@@ -1142,7 +1146,8 @@ export const products = [
           en: "Drum Fork Take-Up",
           ru: "ru-Drum Çatal Toplayıcı",
         },
-        icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
+        icon: "/assets/products/icons/transmitter-collector/drum-fork-take-up.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/drum-fork-take-up-hover.svg",
         url: "drum-fork-take-up",
         img: "/assets/products/images/transmitter-collector/drum-catal-toplayici.png",
         desc: {
@@ -1220,7 +1225,8 @@ export const products = [
           en: "Drum Fork Pay-Off",
           ru: "ru-Drum Çatal Verici",
         },
-        icon: "/assets/products/icons/transmitter-collector/drum-catal.svg",
+        icon: "/assets/products/icons/transmitter-collector/drum-fork-pay-off.svg",
+        iconHover: "/assets/products/icons/transmitter-collector/drum-fork-pay-off-hover.svg",
         url: "drum-fork-pay-off",
         img: "/assets/products/images/transmitter-collector/drum-catal-verici.png",
         desc: {
@@ -1292,13 +1298,13 @@ export const products = [
         ],
       },
       {
-        index: 5,
+        index: 6,
         name: {
           tr: "Double Verici",
           en: "Double Pay-Off",
           ru: "ru-Double Verici",
         },
-        icon: "/assets/products/icons/transmitter-collector/double-verici.svg",
+        icon: "360",
         url: "double-pay-off",
         img: "/assets/products/images/transmitter-collector/double-verici.png",
         desc: {
@@ -1602,7 +1608,7 @@ export const products = [
       {
         index: 0,
         name: {
-          tr: "Buncher Büküm Hattı 630-800",
+          tr: "630-800 Buncher Büküm Hattı",
           en: "Buncher Twist Line 630-800",
           ru: "ru-630-800 Buncher Büküm Hattı",
         },
@@ -1765,7 +1771,7 @@ export const products = [
       en: "Turnkey Factory Projects",
       ru: "ru-Anahtar Teslim Fabrika Projeleri",
     },
-    url: "turnkey-factory-projects",
+    url: "",
     icon: "key",
   },
 ];

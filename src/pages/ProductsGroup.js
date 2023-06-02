@@ -34,6 +34,12 @@ export default function ProductsGroup() {
 
   const productGroup = products.filter((item) => item.url === group)[0];
 
+  const [hoveredProductId, setHoveredProductId] = useState(null);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const createProducts = () => {
     let obj = [];
 
@@ -42,9 +48,29 @@ export default function ProductsGroup() {
         <Link
           to={`/products/${productGroup.url}/${p.url}`}
           className="md:w-max w-full"
+          data-aos="fade-up" data-aos-delay={p.index*50}
         >
-          <div className="flex flex-col justify-center items-center text-center sm:w-80 h-full border-2 rounded-lg border-berkand-orange text-berkand-orange hover:text-white hover:bg-berkand-orange cursor-pointer duration-500">
-            {p.url === "tubular-drum" || p.url === "accumulator" || p.url === "buncher-twist-line-630-800" || p.url === "buncher-twist-line-1000-1250" ? (
+          <div
+            className="flex flex-col justify-center items-center text-center sm:w-80 h-full border-2 rounded-lg border-berkand-orange text-berkand-orange hover:text-white hover:bg-berkand-orange cursor-pointer duration-500"
+            onMouseOver={() => {
+              setTimeout(() => setHoveredProductId(p.index), 150);
+            }}
+            onMouseOut={() => {
+              setTimeout(() => setHoveredProductId(null), 150);
+            }}
+          >
+            {productGroup.url === "pay-off-and-take-ups" &&
+            p.url !== "double-pay-off" ? (
+              <img
+                className="mt-9 w-12"
+                src={hoveredProductId === p.index ? p.iconHover : p.icon}
+                alt=""
+              />
+            ) : p.url === "tubular-drum" ||
+              p.url === "accumulator" ||
+              p.url === "double-pay-off" ||
+              p.url === "buncher-twist-line-630-800" ||
+              p.url === "buncher-twist-line-1000-1250" ? (
               <span class="material-symbols-outlined xl:text-7xl text-5xl mt-9 rotate-90">
                 {p.icon}
               </span>
