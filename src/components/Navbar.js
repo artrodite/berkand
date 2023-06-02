@@ -56,7 +56,7 @@ export default function Navbar({ group, types, product }) {
             <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/about" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/about">{t("about")}</Link>
             </li>
-            <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/products" ? "text-berkand-orange underline" : "text-black"}`}>
+            <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path.includes("/products") ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/products">{t("products")}</Link>
             </li>
             <li className={`ml-16 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/contact" ? "text-berkand-orange underline" : "text-black"}`}>
@@ -73,11 +73,6 @@ export default function Navbar({ group, types, product }) {
             >
               <span className="mr-2">{t("catalog")}</span>
               <span class="material-symbols-outlined text-xl">download</span>
-              {/* <img
-                className="ml-1"
-                src={over ? catalogHover : catalog}
-                alt=""
-              /> */}
             </a>
           </div>
           <div className="xl:inline hidden">
@@ -110,7 +105,7 @@ export default function Navbar({ group, types, product }) {
             <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/about" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/about">{t("about")}</Link>
             </li>
-            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/products" ? "text-berkand-orange underline": "text-black"}`}>
+            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${(path === "/products" || path === `/products/${group}` || path === `/products/${group}/${types}`) ? "text-berkand-orange underline": "text-black"}`}>
               <Link to="/products">{t("products")}</Link>
             </li>
             <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
@@ -145,6 +140,20 @@ export default function Navbar({ group, types, product }) {
         </div>
       )}
       {path === "/products" && (
+        <div className="flex justify-between items-center mb-10 mt-0 mx-8 xl:hidden">
+          <Link  className="z-50" to="/">
+            <img src="/assets/logo-mobile-navbar.svg" alt="" />
+          </Link>
+          <span className="font-bold text-black">{t("products")}</span>
+          <div className="xl:hidden text-4xl z-50">
+            <ion-icon
+              name={open ? "close-outline" : "menu-outline"}
+              onClick={menuHandler}
+            ></ion-icon>
+          </div>
+        </div>
+      )}
+      {path === `/products/${group}` && (
         <div className="flex justify-between items-center mb-10 mt-0 mx-8 xl:hidden">
           <Link  className="z-50" to="/">
             <img src="/assets/logo-mobile-navbar.svg" alt="" />
