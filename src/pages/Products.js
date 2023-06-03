@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { products } from "../data";
+import { common, products } from "../data";
 import Navbar from "../components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -39,7 +39,12 @@ export default function Products() {
 
     products.map((p) =>
       obj.push(
-        <Link to={`/products/${p.url}`} className="md:w-max w-full" data-aos="fade-up" data-aos-delay={p.index*50}>
+        <Link
+          to={`/products/${p.url}`}
+          className="md:w-max w-full"
+          data-aos="fade-up"
+          data-aos-delay={p.index * 50}
+        >
           <div className="flex flex-col justify-center items-center text-center sm:w-80 h-full border-2 rounded-lg border-berkand-orange text-berkand-orange hover:text-white hover:bg-berkand-orange cursor-pointer duration-500">
             {p.url === "extrusion-lines" ? (
               <span class="material-symbols-outlined xl:text-7xl text-5xl mt-9 rotate-90">
@@ -68,6 +73,12 @@ export default function Products() {
     <div>
       {sticky && <GoTop />}
       <Navbar />
+
+      <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-16 flex justify-center xl:justify-normal text-center">
+        <span className="font-bold xl:text-6xl text-4xl">
+          {common[0].products[`${lng}`]}
+        </span>
+      </div>
 
       <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-24 md:mb-52">
         <div className="xl:inline flex justify-center">

@@ -98,6 +98,12 @@ export default function ProductsGroup() {
       {sticky && <GoTop />}
       <Navbar group={productGroup.url} />
 
+      <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-16 flex justify-center xl:justify-normal text-center">
+        <span className="font-bold xl:text-6xl text-4xl">
+          {productGroup.title[`${lng}`]}
+        </span>
+      </div>
+
       <div className="w-auto sm:mx-auto mx-7 container mt-20 md:mt-16 mb-24 md:mb-52">
         <div className="xl:inline flex justify-center ">
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-24">
