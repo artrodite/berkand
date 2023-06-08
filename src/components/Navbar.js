@@ -105,7 +105,7 @@ export default function Navbar({ group, types, product }) {
             <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/about" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/about">{t("about")}</Link>
             </li>
-            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${(path === "/products" || path === `/products/${group}` || path === `/products/${group}/${types}`) ? "text-berkand-orange underline": "text-black"}`}>
+            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${(path === "/products" || path === `/products/${group}` || path === `/products/${group}/${types}` || path === `/products/${group}/single`) ? "text-berkand-orange underline": "text-black"}`}>
               <Link to="/products">{t("products")}</Link>
             </li>
             <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
