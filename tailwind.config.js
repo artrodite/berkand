@@ -16,11 +16,6 @@ module.exports = {
         "form-input-dark": "#F0F0F0",
         "form-placeholder": "#7B7B7B",
       },
-      backgroundImage: {
-        'cable': "url('../public/assets/cable.svg')",
-        'cable1': "url('../public/assets/cable1.svg')",
-        'cable2': "url('../public/assets/cable2.svg')",
-      }
     },
   },
   plugins: [],
