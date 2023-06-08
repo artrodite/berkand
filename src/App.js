@@ -19,6 +19,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:group" element={<ProductsGroup />} />
+          <Route path="/products/:group/single" element={<Product />} />
           <Route path="/products/:group/:types" element={<Product />} />
         </Routes>
         <Footer />

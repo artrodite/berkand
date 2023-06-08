@@ -197,6 +197,22 @@ export default function Navbar({ group, types, product }) {
           </div>
         </div>
       )}
+      {path === `/products/${group}/single` && (
+        <div className="flex justify-between items-center mt-0 mb-16 mx-8 xl:hidden text-center">
+          <Link className="z-50" to="/">
+            <img src="/assets/logo-mobile-navbar.svg" alt="" />
+          </Link>
+          <span className="font-bold text-black uppercase mx-5">
+            {product[`${lng}`]}
+          </span>
+          <div className="xl:hidden text-4xl z-50">
+            <ion-icon
+              name={open ? "close-outline" : "menu-outline"}
+              onClick={menuHandler}
+            ></ion-icon>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
