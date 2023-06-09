@@ -852,7 +852,8 @@ export const products = [
           ru: "ru-Portal Tip Toplayıcılar",
         },
         icon: "/assets/products/icons/transmitter-collector/portal-take-up.svg",
-        iconHover: "/assets/products/icons/transmitter-collector/portal-take-up-hover.svg",
+        iconHover:
+          "/assets/products/icons/transmitter-collector/portal-take-up-hover.svg",
         url: "portal-type-take-up",
         img: "/assets/products/images/transmitter-collector/portal-tip-toplayici.png",
         desc: {
@@ -924,7 +925,8 @@ export const products = [
           ru: "ru-Portal Tip Vericiler",
         },
         icon: "/assets/products/icons/transmitter-collector/portal-pay-off.svg",
-        iconHover: "/assets/products/icons/transmitter-collector/portal-pay-off-hover.svg",
+        iconHover:
+          "/assets/products/icons/transmitter-collector/portal-pay-off-hover.svg",
         url: "portal-type-pay-off",
         img: "/assets/products/images/transmitter-collector/portal-tip-verici.png",
         desc: {
@@ -996,7 +998,8 @@ export const products = [
           ru: "ru-Çatal Tip Toplayıcılar",
         },
         icon: "/assets/products/icons/transmitter-collector/fork-take-up.svg",
-        iconHover: "/assets/products/icons/transmitter-collector/fork-take-up-hover.svg",
+        iconHover:
+          "/assets/products/icons/transmitter-collector/fork-take-up-hover.svg",
         url: "fork-type-take-up",
         img: "/assets/products/images/transmitter-collector/catal-tip-toplayici.png",
         desc: {
@@ -1068,7 +1071,8 @@ export const products = [
           ru: "ru-Çatal Tip Vericiler",
         },
         icon: "/assets/products/icons/transmitter-collector/fork-pay-off.svg",
-        iconHover: "/assets/products/icons/transmitter-collector/fork-pay-off-hover.svg",
+        iconHover:
+          "/assets/products/icons/transmitter-collector/fork-pay-off-hover.svg",
         url: "fork-type-pay-off",
         img: "/assets/products/images/transmitter-collector/catal-tip-verici.png",
         desc: {
@@ -1147,7 +1151,8 @@ export const products = [
           ru: "ru-Drum Çatal Toplayıcı",
         },
         icon: "/assets/products/icons/transmitter-collector/drum-fork-take-up.svg",
-        iconHover: "/assets/products/icons/transmitter-collector/drum-fork-take-up-hover.svg",
+        iconHover:
+          "/assets/products/icons/transmitter-collector/drum-fork-take-up-hover.svg",
         url: "drum-fork-take-up",
         img: "/assets/products/images/transmitter-collector/drum-catal-toplayici.png",
         desc: {
@@ -1226,7 +1231,8 @@ export const products = [
           ru: "ru-Drum Çatal Verici",
         },
         icon: "/assets/products/icons/transmitter-collector/drum-fork-pay-off.svg",
-        iconHover: "/assets/products/icons/transmitter-collector/drum-fork-pay-off-hover.svg",
+        iconHover:
+          "/assets/products/icons/transmitter-collector/drum-fork-pay-off-hover.svg",
         url: "drum-fork-pay-off",
         img: "/assets/products/images/transmitter-collector/drum-catal-verici.png",
         desc: {
@@ -1764,6 +1770,9 @@ export const products = [
       },
     ],
   },
+];
+
+export const productsNoType = [
   {
     index: 4,
     title: {
@@ -1771,8 +1780,89 @@ export const products = [
       en: "Turnkey Factory Projects",
       ru: "ru-Anahtar Teslim Fabrika Projeleri",
     },
-    url: "",
+    url: "turnkey-factory-projects",
     icon: "key",
+    desc1: {
+      tr: "Firmamız yeni kurulacak tel ve kablo üretim fabrikaları için istekleriniz doğrultusunda anahtar teslim fabrika faaliyetlerinde de bulunmaktadır. Yeni kurulacak fabrikalar için üretim aşamalarımız:",
+      en: "Our company is also engaged in turnkey factory activities in line with your requests for wire and cable production factories to be established. Our production stages for the factories to be established:",
+      ru: "ru-Firmamız yeni kurulacak tel ve kablo üretim fabrikaları için istekleriniz doğrultusunda anahtar teslim fabrika faaliyetlerinde de bulunmaktadır. Yeni kurulacak fabrikalar için üretim aşamalarımız:",
+    },
+    desc2: {
+      tr: "Bu aşamaların ardından fabrikanız kullanıma hazırdır.",
+      en: "After these stages, your factory is ready for use.",
+      ru: "ru-Bu aşamaların ardından fabrikanız kullanıma hazırdır.",
+    },
+    desc3: {
+      tr: "Sıfırdan fabrika kurulumunun yanı sıra mevcut fabrikanızda bulunan makinelerin bakım-revizyonu ve ihtiyaç duyulan eksik makine ve ekipmanların temini için de bizlere başvurabilirsiniz.",
+      en: "In addition to the factory installation from scratch, you can also apply to us for the maintenance and revision of the machines in your existing factory and the supply of the missing machinery and equipment.",
+      ru: "ru-Sıfırdan fabrika kurulumunun yanı sıra mevcut fabrikanızda bulunan makinelerin bakım-revizyonu ve ihtiyaç duyulan eksik makine ve ekipmanların temini için de bizlere başvurabilirsiniz.",
+    },
+    list: [
+      {
+        index: 0,
+        desc: {
+          tr: "Fabrikanın üretimini yapacağı ürün için gerekli makine ve ekipmanların tespiti yapılır.",
+          en: "The necessary machinery and equipment for the product to be produced by the factory are determined.",
+          ru: "ru-Fabrikanın üretimini yapacağı ürün için gerekli makine ve ekipmanların tespiti yapılır.",
+        }, 
+      },
+      {
+        index: 1,
+        desc: {
+          tr: "Fabrikanın kurulumu üretimin en hızlı ve en güvenli olacağı şekilde projelendirilerek makine gruplarının yerleşimi yapılır. Zemine gömülmesi gereken makinelerin olması durumunda bilgi verilir ve beton ona göre atılır.",
+          en: "The installation of the factory is designed in such a way that the production will be the fastest and safest, and the machine groups are placed. In case of machines that need to be buried in the ground, information is given and concrete is poured accordingly.",
+          ru: "ru-Fabrikanın kurulumu üretimin en hızlı ve en güvenli olacağı şekilde projelendirilerek makine gruplarının yerleşimi yapılır. Zemine gömülmesi gereken makinelerin olması durumunda bilgi verilir ve beton ona göre atılır.",
+        }, 
+      },
+      {
+        index: 2,
+        desc: {
+          tr: "İhtiyaç duyulan makineler teyit edildikten sonra imalata başlanır.",
+          en: "After the required machines are confirmed, production begins.",
+          ru: "ru-İhtiyaç duyulan makineler teyit edildikten sonra imalata başlanır.",
+        }, 
+      },
+      {
+        index: 3,
+        desc: {
+          tr: "İmalatı biten makinelerin sevkiyat öncesinde son kontrolleri yapılır ve fabrikadaki yerlerine projeye uygun olarak yerleştirilmek üzere fabrikaya gönderilir.",
+          en: "Final checks of the finished machines are made before shipment and they are sent to the factory to be placed in their places in the factory in accordance with the project.",
+          ru: "ru-İmalatı biten makinelerin sevkiyat öncesinde son kontrolleri yapılır ve fabrikadaki yerlerine projeye uygun olarak yerleştirilmek üzere fabrikaya gönderilir.",
+        }, 
+      },
+      {
+        index: 4,
+        desc: {
+          tr: "Yerleşim işlemi biten makinelerin tüm elektrik ve otomasyon işlemleri elektrik bölümümüz tarafından yapılır.",
+          en: "All electrical and automation processes of the machines whose settlement process is completed are done by our electrical department.",
+          ru: "ru-Yerleşim işlemi biten makinelerin tüm elektrik ve otomasyon işlemleri elektrik bölümümüz tarafından yapılır.",
+        }, 
+      },
+      {
+        index: 5,
+        desc: {
+          tr: "Elektrik ve otomasyon işlemlerinin tamamlanmasının ardından makineler boşta çalıştırılarak kontroller yapılır.",
+          en: "After the completion of the electrical and automation processes, the machines are run idle and the controls are made.",
+          ru: "ru-Elektrik ve otomasyon işlemlerinin tamamlanmasının ardından makineler boşta çalıştırılarak kontroller yapılır.",
+        }, 
+      },
+      {
+        index: 6,
+        desc: {
+          tr: "Son olarak ürün hatlara verilir ve çıktılar istenilen sonuçlar ile karşılaştırılır. İstenilen sonuç ile çıkan ürün aynı olana kadar gerekli ayarlamalar yapılır.",
+          en: "Finally, the product is given to the lines and the outputs are compared with the desired results. Necessary adjustments are made until the desired result and the product obtained are the same.",
+          ru: "ru-Son olarak ürün hatlara verilir ve çıktılar istenilen sonuçlar ile karşılaştırılır. İstenilen sonuç ile çıkan ürün aynı olana kadar gerekli ayarlamalar yapılır.",
+        }, 
+      },
+      {
+        index: 7,
+        desc: {
+          tr: "Tüm bu işlemlerin ardından makineleri kullanacak olan operatörlere gerekli eğitimler verilir. ",
+          en: "After all these processes, necessary trainings are given to the operators who will use the machines.",
+          ru: "ru-Tüm bu işlemlerin ardından makineleri kullanacak olan operatörlere gerekli eğitimler verilir. ",
+        }, 
+      },
+    ],
   },
 ];
 

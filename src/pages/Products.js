@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { common, products } from "../data";
+import { common, products, productsNoType } from "../data";
 import Navbar from "../components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,6 +41,32 @@ export default function Products() {
       obj.push(
         <Link
           to={`/products/${p.url}`}
+          className="md:w-max w-full"
+          data-aos="fade-up"
+          data-aos-delay={p.index * 50}
+        >
+          <div className="flex flex-col justify-center items-center text-center sm:w-80 h-full border-2 rounded-lg border-berkand-orange text-berkand-orange hover:text-white hover:bg-berkand-orange cursor-pointer duration-500">
+            {p.url === "extrusion-lines" ? (
+              <span class="material-symbols-outlined xl:text-7xl text-5xl mt-9 rotate-90">
+                {p.icon}
+              </span>
+            ) : (
+              <span class="material-symbols-outlined xl:text-7xl text-5xl mt-9">
+                {p.icon}
+              </span>
+            )}
+            <span className="xl:text-2xl text-lg font-black mt-9 mb-7 md:mx-5 mx-10">
+              {p.title[`${lng}`]}
+            </span>
+          </div>
+        </Link>
+      )
+    );
+
+    productsNoType.map((p) =>
+      obj.push(
+        <Link
+          to={`/products/${p.url}/single`}
           className="md:w-max w-full"
           data-aos="fade-up"
           data-aos-delay={p.index * 50}

@@ -105,7 +105,7 @@ export default function Navbar({ group, types, product }) {
             <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${path === "/about" ? "text-berkand-orange underline" : "text-black"}`}>
               <Link to="/about">{t("about")}</Link>
             </li>
-            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${(path === "/products" || path === `/products/${group}` || path === `/products/${group}/${types}`) ? "text-berkand-orange underline": "text-black"}`}>
+            <li className={`mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200 ${(path === "/products" || path === `/products/${group}` || path === `/products/${group}/${types}` || path === `/products/${group}/single`) ? "text-berkand-orange underline": "text-black"}`}>
               <Link to="/products">{t("products")}</Link>
             </li>
             <li className="mt-10 cursor-pointer hover:text-berkand-orange hover:underline duration-200">
@@ -182,6 +182,22 @@ export default function Navbar({ group, types, product }) {
         </div>
       )}
       {path === `/products/${group}/${types}` && (
+        <div className="flex justify-between items-center mt-0 mb-16 mx-8 xl:hidden text-center">
+          <Link className="z-50" to="/">
+            <img src="/assets/logo-mobile-navbar.svg" alt="" />
+          </Link>
+          <span className="font-bold text-black uppercase mx-5">
+            {product[`${lng}`]}
+          </span>
+          <div className="xl:hidden text-4xl z-50">
+            <ion-icon
+              name={open ? "close-outline" : "menu-outline"}
+              onClick={menuHandler}
+            ></ion-icon>
+          </div>
+        </div>
+      )}
+      {path === `/products/${group}/single` && (
         <div className="flex justify-between items-center mt-0 mb-16 mx-8 xl:hidden text-center">
           <Link className="z-50" to="/">
             <img src="/assets/logo-mobile-navbar.svg" alt="" />
